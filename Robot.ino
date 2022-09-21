@@ -41,6 +41,7 @@ const double LF = 53;
 const double LT = 79.5;
 
 AngleCoo ConvertPointToAngle(int x, int y, int z){
+  z += 27;
   int angleH = atan(y/x);
   int hypo = sqrt(pow(x,2)+pow(y,2));
   int v = hypo - LH;
@@ -178,7 +179,7 @@ void setup() {
 }
 
 void loop() {
-  AngleCoo toto = ConvertPointToAngle(100,70,42);
+  AngleCoo toto = ConvertPointToAngle(100,70,15);
   move(R2, toto);
   move(R1, toto);
   move(L1, toto);
