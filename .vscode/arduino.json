@@ -1,0 +1,6 @@
+{
+    "sketch": "Sweep.ino",
+    "port": "COM1",
+    "configuration": "cpu=atmega328",
+    "board": "arduino:avr:nano"
+}
