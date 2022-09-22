@@ -40,135 +40,115 @@ const double LH = 30.5;
 const double LF = 53;
 const double LT = 79.5;
 
-AngleCoo ConvertPointToAngle(int x, int y, int z){
-  z += 27;
-  int angleH = atan(y/x);
+void setPLS(){
+  servo[0][0].write(90);
+  servo[1][0].write(90);
+  servo[2][0].write(90);
+  servo[3][0].write(90);
+
+  servo[0][1].write(90);
+  servo[1][1].write(90);
+  servo[2][1].write(90);
+  servo[3][1].write(90);
+
+  servo[0][2].write(160);
+  servo[1][2].write(20);
+  servo[2][2].write(20);
+  servo[3][2].write(160);
+}
+
+AngleCoo ConvertPointToAngle(float x, float y, float z){
+  z -= 27;
+  int gamma = atan(y/x)*(180/M_PI);
   int hypo = sqrt(pow(x,2)+pow(y,2));
   int v = hypo - LH;
   int d = sqrt(pow(v,2)+pow(z,2));
-  int alphaOne = atan(z / v);
-  int alphaTwo = acos((pow(LF,2)+ pow(d,2) - pow(LT,2))/(2*LF*LT));
+  int alphaOne = atan(z / v) * (180/M_PI);
+  int alphaTwo = acos((pow(LF,2)+ pow(d,2) - pow(LT,2))/(2*LF*LT)) * (180/M_PI);
   int alpha = alphaOne+alphaTwo;
-  int beta = acos((pow(LT,2)+pow(LF,2)-pow(d,2))/(2*LT*LF));
-  return AngleCoo(angleH, alpha, beta);
+  int beta = acos((pow(LT,2)+pow(LF,2)-pow(d,2))/(2*LT*LF)) * (180/M_PI);
+  return AngleCoo(gamma, alpha, beta);
 }
 
 void move(int indexLeg, AngleCoo coo)
 {
   switch (indexLeg)
   {
-    case 0:
-      coo.Gamma += 90;
+    case R2:
+      coo.Gamma = 90 + coo.Gamma;
       coo.Alpha = 90 - coo.Alpha;
       break;
-    case 1:
+    case R1:
       coo.Gamma = 90 - coo.Gamma;
       coo.Alpha = 90 + coo.Alpha;
+      coo.Beta = 180 - coo.Beta;
       break;
-    case 2:
+    case L1:
       coo.Gamma = 90 - coo.Gamma;
       coo.Alpha = 90 + coo.Alpha;
+      coo.Beta = 180 - coo.Beta;
       break;
-    case 3:
-      coo.Gamma += 90;
+    case L2:
+      coo.Gamma = 90 + coo.Gamma;
       coo.Alpha = 90 - coo.Alpha;
       break;
     default:
       break;
   }
-  coo = checkAngle(indexLeg, coo);
-  servo[indexLeg][0].write(coo.Gamma);
-  servo[indexLeg][1].write(coo.Alpha);
-  servo[indexLeg][2].write(coo.Beta);
+
+  if(checkAngle(indexLeg, coo)){
+    servo[indexLeg][0].write(coo.Gamma);
+    servo[indexLeg][1].write(coo.Alpha);
+    servo[indexLeg][2].write(coo.Beta);
+  }else{
+    setPLS();
+  }
 }
 
-AngleCoo checkAngle(int indexLeg, AngleCoo coo){
-  AngleCoo newAngle;
-  switch (indexLeg)
-  {
-    case 0:
+bool checkAngle(int indexLeg, AngleCoo coo){
+  if(indexLeg == R2 || indexLeg == L2){
       if(coo.Gamma <60){
-        newAngle.Gamma = 60;
+        return false;
       }else if(coo.Gamma > 175){
-        newAngle.Gamma = 175;
+        return false;
       }
       
       if(coo.Alpha < 5){
-        newAngle.Alpha = 5;
+        return false;
       }else if(coo.Alpha > 120){
-        newAngle.Alpha = 120;
+        return false;
       }
       
       if(coo.Beta < 40){
-        newAngle.Beta = 40;
+        return false;
       }else if(coo.Beta > 160){
-        newAngle.Beta = 160;
+        return false;
       }
-      break;
-    case 1:
+  }else{
       if(coo.Gamma <5){
-        newAngle.Gamma = 5;
+        return false;
       }else if(coo.Gamma > 120){
-        newAngle.Gamma = 120;
+        return false;
       }
       
       if(coo.Alpha < 60){
-        newAngle.Alpha = 60;
+        return false;
       }else if(coo.Alpha > 175){
-        newAngle.Alpha = 175;
+        return false;
       }
       
       if(coo.Beta < 20){
-        newAngle.Beta = 20;
+        return false;
       }else if(coo.Beta > 140){
-        newAngle.Beta = 140;
+        return false;
       }
-      break;
-    case 2:
-      if(coo.Gamma <5){
-        newAngle.Gamma = 5;
-      }else if(coo.Gamma > 120){
-        newAngle.Gamma = 120;
-      }
-      
-      if(coo.Alpha < 60){
-        newAngle.Alpha = 60;
-      }else if(coo.Alpha > 175){
-        newAngle.Alpha = 175;
-      }
-      
-      if(coo.Beta < 20){
-        newAngle.Beta = 20;
-      }else if(coo.Beta > 140){
-        newAngle.Beta = 140;
-      }
-      break;
-    case 3:
-      if(coo.Gamma <60){
-        newAngle.Gamma = 60;
-      }else if(coo.Gamma > 175){
-        newAngle.Gamma = 175;
-      }
-      
-      if(coo.Alpha < 5){
-        newAngle.Alpha = 5;
-      }else if(coo.Alpha > 120){
-        newAngle.Alpha = 120;
-      }
-      
-      if(coo.Beta < 40){
-        newAngle.Beta = 40;
-      }else if(coo.Beta > 160){
-        newAngle.Beta = 160;
-      }
-      break;
-    default:
-    return coo;
   }
-  return newAngle;
+
+  return true;
 }
 
 void setup() {
+  Serial.begin(9600);
   for (int i = 0; i < 4; i++)
   {
     for (int y = 0; y < 3; y++)
@@ -176,12 +156,14 @@ void setup() {
       servo[i][y].attach(servo_pin[i][y]);
     }
   }
+  Serial.println("fin du setup");
 }
 
 void loop() {
-  AngleCoo toto = ConvertPointToAngle(100,70,15);
-  move(R2, toto);
-  move(R1, toto);
-  move(L1, toto);
-  move(L2, toto);
+  AngleCoo calibration = ConvertPointToAngle(100,70,42);
+  //AngleCoo calibration = AngleCoo(34.99, 68.08, 86.46);
+  move(R2, calibration);
+  move(R1, calibration);
+  move(L1, calibration);
+  move(L2, calibration);
 }
