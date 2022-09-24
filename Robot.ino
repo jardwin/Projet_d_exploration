@@ -30,6 +30,17 @@ const int servo_pin[4][3] = {
   { 16, 14, 15 }, // Leg 3 - Front left (L1) - {H, F, T}
   { 19, 17, 18 } // Leg 4 - Back left (L2) - {H, F, T}
 };
+/*
+34
+63
+85
+*/
+const int offset[4][3] = {
+  {9,-2,-1},
+  {-1,-2,9},
+  {3,10,-10},
+  {1,0,-3}
+};
 
 const int R2 = 0;
 const int R1 = 1;
@@ -97,9 +108,9 @@ void move(int indexLeg, AngleCoo coo)
   }
 
   if(checkAngle(indexLeg, coo)){
-    servo[indexLeg][0].write(coo.Gamma);
-    servo[indexLeg][1].write(coo.Alpha);
-    servo[indexLeg][2].write(coo.Beta);
+    servo[indexLeg][0].write(coo.Gamma+offset[indexLeg][0]);
+    servo[indexLeg][1].write(coo.Alpha+offset[indexLeg][1]);
+    servo[indexLeg][2].write(coo.Beta+offset[indexLeg][2]);
   }else{
     setPLS();
   }

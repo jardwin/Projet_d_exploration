@@ -1,6 +1,6 @@
 {
-    "sketch": "Sweep.ino",
-    "port": "COM1",
+    "sketch": "Robot.ino",
+    "port": "COM5",
     "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano"
 }
