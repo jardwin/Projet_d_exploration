@@ -35,11 +35,21 @@ const int servo_pin[4][3] = {
 63
 85
 */
-const int offset[4][3] = {
-  {9,-2,-1},
-  {-1,-2,9},
-  {3,10,-10},
-  {1,0,-3}
+
+/*const int offset[4][3] = {
+  {6,-19,16},
+  {0,-7,13},
+  {5,9,-13},
+  {0,-16,1}
+};*/
+
+int offset[4][3];
+
+const int realPosition[4][3] = {
+  {96,52,43},
+  {93,63,30},
+  {111,64,61}, 
+  {94,65,65}
 };
 
 const int R2 = 0;
@@ -50,6 +60,65 @@ const int L2 = 3;
 const double LH = 30.5;
 const double LF = 53;
 const double LT = 79.5;
+
+void calculateOffset(){
+  AngleCoo target = ConvertPointToAngle(100,70,42);
+
+  Serial.println("TARGET");
+  Serial.println(target.Gamma);
+  Serial.println(target.Alpha);
+  Serial.println(target.Beta);
+  
+  AngleCoo realR2 = ConvertPointToAngle(realPosition[0][0],realPosition[0][1],realPosition[0][2]);
+  AngleCoo realR1 = ConvertPointToAngle(realPosition[1][0],realPosition[1][1],realPosition[1][2]);
+  AngleCoo realL1 = ConvertPointToAngle(realPosition[2][0],realPosition[2][1],realPosition[2][2]);
+  AngleCoo realL2 = ConvertPointToAngle(realPosition[3][0],realPosition[3][1],realPosition[3][2]);
+
+  Serial.println("R2");
+  Serial.println(realR2.Gamma);
+  Serial.println(realR2.Alpha);
+  Serial.println(realR2.Beta);
+
+  offset[0][0] = realR2.Gamma < target.Gamma ? target.Gamma-realR2.Gamma : realR2.Gamma-target.Gamma;
+  offset[0][1] = realR2.Alpha > target.Alpha ? target.Alpha-realR2.Alpha : realR2.Alpha-target.Alpha;
+  offset[0][2] = realR2.Beta < target.Beta ? target.Beta-realR2.Beta : realR2.Beta-target.Beta;
+
+  Serial.println("R1");
+  Serial.println(realR1.Gamma);
+  Serial.println(realR1.Alpha);
+  Serial.println(realR1.Beta);
+
+  offset[1][0] = realR1.Gamma < target.Gamma ? target.Gamma-realR1.Gamma : realR1.Gamma-target.Gamma;
+  offset[1][1] = realR1.Alpha > target.Alpha ? target.Alpha-realR1.Alpha : realR1.Alpha-target.Alpha;
+  offset[1][2] = realR1.Beta < target.Beta ? target.Beta-realR1.Beta : realR1.Beta-target.Beta;
+
+  Serial.println("L1");
+  Serial.println(realL1.Gamma);
+  Serial.println(realL1.Alpha);
+  Serial.println(realL1.Beta);
+    
+  offset[2][0] = realL1.Gamma < target.Gamma ? target.Gamma-realL1.Gamma : realL1.Gamma-target.Gamma;
+  offset[2][1] = realL1.Alpha < target.Alpha ? target.Alpha-realL1.Alpha : realL1.Alpha-target.Alpha;
+  offset[2][2] = realL1.Beta > target.Beta ? target.Beta-realL1.Beta : realL1.Beta-target.Beta;
+
+  Serial.println("L2");
+  Serial.println(realL2.Gamma);
+  Serial.println(realL2.Alpha);
+  Serial.println(realL2.Beta);
+    
+  offset[3][0] = realL2.Gamma < target.Gamma ? target.Gamma-realL2.Gamma : realL2.Gamma-target.Gamma;
+  offset[3][1] = realL2.Alpha > target.Alpha ? target.Alpha-realL2.Alpha : realL2.Alpha-target.Alpha;
+  offset[3][2] = realL2.Beta < target.Beta ? target.Beta-realL2.Beta : realL2.Beta-target.Beta;
+
+  for (int i = 0; i < 4; i++)
+  {
+    Serial.println("");
+    for (int y = 0; y < 3; y++)
+    {
+      Serial.println(offset[i][y]);
+    }
+  }  
+}
 
 void setPLS(){
   servo[0][0].write(90);
@@ -168,6 +237,7 @@ void setup() {
     }
   }
   Serial.println("fin du setup");
+  calculateOffset();
 }
 
 void loop() {
