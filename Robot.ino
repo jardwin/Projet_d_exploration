@@ -120,7 +120,18 @@ void calculateOffset(){
   }  
 }
 
-void setPLS(){
+void setPLS(int indexLeg, AngleCoo coo){
+  Serial.println("enter in PLS");
+  Serial.println("Gamma");
+  Serial.println(coo.Gamma);
+  Serial.println("Alpha");
+  Serial.println(coo.Alpha);
+  Serial.println("Beta");
+  Serial.println(coo.Beta);
+  Serial.println("Leg");
+  Serial.println(indexLeg);
+
+  
   servo[0][0].write(90);
   servo[1][0].write(90);
   servo[2][0].write(90);
@@ -159,7 +170,7 @@ void move(int indexLeg, AngleCoo coo)
   {
     case R2:
       coo.Gamma = 90 + coo.Gamma;
-      coo.Alpha = 90 - coo.Alpha;
+      coo.Alpha = 95 - coo.Alpha;
       break;
     case R1:
       coo.Gamma = 90 - coo.Gamma;
@@ -169,7 +180,7 @@ void move(int indexLeg, AngleCoo coo)
     case L1:
       coo.Gamma = 90 - coo.Gamma;
       coo.Alpha = 90 + coo.Alpha;
-      coo.Beta = 205 - coo.Beta;
+      coo.Beta = 190 - coo.Beta;
       break;
     case L2:
       coo.Gamma = 90 + coo.Gamma;
@@ -184,7 +195,7 @@ void move(int indexLeg, AngleCoo coo)
     servo[indexLeg][1].write(coo.Alpha);
     servo[indexLeg][2].write(coo.Beta);
   }else{
-    setPLS();
+    setPLS(indexLeg, coo);
   }
 }
 
@@ -230,6 +241,41 @@ bool checkAngle(int indexLeg, AngleCoo coo){
   return true;
 }
 
+void moveTriangleR2(){
+  AngleCoo firstStep = ConvertPointToAngle(90,10,0);
+  AngleCoo calibration = ConvertPointToAngle(100,70,42);
+  
+  move(R2, firstStep);
+  move(R1, calibration);
+  move(L1, calibration);
+  move(L2, calibration);
+
+  delay(1000);
+  AngleCoo secondStep = ConvertPointToAngle(140,10,0);
+  move(R2, secondStep);
+  
+  delay(1000);
+  AngleCoo thirdStep = ConvertPointToAngle(80,90,0);
+  move(R2, thirdStep);
+  delay(1000);
+}
+
+void sit(){
+  AngleCoo assis = ConvertPointToAngle(70,50,0);
+  move(R2, assis);
+  move(R1, assis);
+  move(L1, assis);
+  move(L2, assis);
+}
+
+void stand(){
+  AngleCoo debout = ConvertPointToAngle(70,50,-13);
+  move(R2, debout);
+  move(R1, debout);
+  move(L1, debout);
+  move(L2, debout);
+}
+
 void setup() {
   Serial.begin(9600);
   for (int i = 0; i < 4; i++)
@@ -244,7 +290,8 @@ void setup() {
 }
 
 void loop() {
-  AngleCoo firstStep = ConvertPointToAngle(90,10,-27);
-  //AngleCoo calibration = AngleCoo(34.99, 68.08, 86.46);
-  move(R2, calibration);
+  sit();
+  delay(1000);
+  stand();
+  delay(1000);
 }
