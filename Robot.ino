@@ -244,10 +244,7 @@ void setup() {
 }
 
 void loop() {
-  AngleCoo calibration = ConvertPointToAngle(100,70,42);
+  AngleCoo firstStep = ConvertPointToAngle(90,10,-27);
   //AngleCoo calibration = AngleCoo(34.99, 68.08, 86.46);
   move(R2, calibration);
-  move(R1, calibration);
-  move(L1, calibration);
-  move(L2, calibration);
 }
