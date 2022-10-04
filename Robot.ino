@@ -279,38 +279,26 @@ void stand(){
 void Walk(int nbr = 1){
   for (int i = 0; i < nbr; i++)
   {
-    AngleCoo step1R2 = ConvertPointToAngle(70, 100, -20);
-    move(R2, step1R2);
+    move(R2, ConvertPointToAngle(70, 100, -20));
     delay(300);
-    AngleCoo step2R2 = ConvertPointToAngle(70, 100, -40);
-    move(R2, step2R2);
+    move(R2, ConvertPointToAngle(70, 100, -40));
     delay(300);
-    AngleCoo step3L1 = ConvertPointToAngle(70, 0, -40);
-    AngleCoo step3L2 = ConvertPointToAngle(70, 100, -40);
-    AngleCoo step3R1 = ConvertPointToAngle(70, 100, -40);
-    AngleCoo step3R2 = ConvertPointToAngle(70, 50, -40);
-    move(L1, step3L1);
-    move(L2, step3L2);
-    move(R1, step3R1);
-    move(R2, step3R2);
+    move(L1, ConvertPointToAngle(70, 0, -40));
+    move(L2, ConvertPointToAngle(70, 100, -40));
+    move(R1, ConvertPointToAngle(70, 100, -40));
+    move(R2, ConvertPointToAngle(70, 50, -40));
     delay(500);
-    AngleCoo step4R1 = ConvertPointToAngle(70, 50, -20);
-    move(R1, step4R1);
+    move(R1, ConvertPointToAngle(70, 50, -20));
     delay(300);
-    AngleCoo step5R1 = ConvertPointToAngle(70, 50, -40);
-    move(R1, step5R1);
+    move(R1, ConvertPointToAngle(70, 50, -40));
     delay(500);
-    AngleCoo step6L2 = ConvertPointToAngle(70, 50, -20);
-    move(L2, step6L2);
+    move(L2, ConvertPointToAngle(70, 50, -20));
     delay(300);
-    AngleCoo step7L2 = ConvertPointToAngle(70, 50, -40);
-    move(L2, step7L2);
+    move(L2, ConvertPointToAngle(70, 50, -40));
     delay(500);
-    AngleCoo step8L1 = ConvertPointToAngle(70, 50, -20);
-    move(L1, step8L1);
+    move(L1, ConvertPointToAngle(70, 50, -20));
     delay(300);
-    AngleCoo step9L1 = ConvertPointToAngle(70, 50, -40);
-    move(L1, step9L1);
+    move(L1, ConvertPointToAngle(70, 50, -40));
     delay(500);
   }  
 }
@@ -319,65 +307,44 @@ void Walk(int nbr = 1){
 void TurnLeft(int nbr = 1){
   for (int i = 0; i < nbr; i++)
   {
-    AngleCoo step1L1 = ConvertPointToAngle(75, 25, -20);
-    move(L1, step1L1);
+    move(L1, ConvertPointToAngle(75, 25, -20));
     delay(300);
-    AngleCoo step2L1 = ConvertPointToAngle(75, 25, -40);
-    move(L1, step2L1);
+    move(L1, ConvertPointToAngle(75, 25, -40));
     delay(300);
-    AngleCoo step3L2 = ConvertPointToAngle(33, 70, -20);
-    move(L2, step3L2);
+    move(L2, ConvertPointToAngle(33, 70, -20));
     delay(300);
-    AngleCoo step4L2 = ConvertPointToAngle(33, 70, -40);
-    move(L2, step4L2);
+    move(L2, ConvertPointToAngle(33, 70, -40));
     delay(300);
-    AngleCoo step5R1 = ConvertPointToAngle(73, 25, -20);
-    move(R1, step5R1);
+    move(R1, ConvertPointToAngle(73, 25, -20));
     delay(300);
-    AngleCoo step6R1 = ConvertPointToAngle(73, 25, -40);
-    move(R1, step6R1);
+    move(R1, ConvertPointToAngle(73, 25, -40));
     delay(300);
-    AngleCoo step7R2 = ConvertPointToAngle(33, 70, -20);
-    move(R2, step7R2);
+    move(R2, ConvertPointToAngle(33, 70, -20));
     delay(300);
-    AngleCoo step8R2 = ConvertPointToAngle(33, 70, -40);
-    move(R2, step8R2);
+    move(R2, ConvertPointToAngle(33, 70, -40));
     delay(300);
-    AngleCoo step9L1 = ConvertPointToAngle(33, 70, -40);
-    AngleCoo step9L2 = ConvertPointToAngle(73, 25, -40);
-    AngleCoo step9R1 = ConvertPointToAngle(33, 70, -40);
-    AngleCoo step9R2 = ConvertPointToAngle(73, 25, -40);
-    move(L1, step9L1);
-    move(L2, step9L2);
-    move(R1, step9R1);
-    move(R2, step9R2);
+    move(L1, ConvertPointToAngle(33, 70, -40));
+    move(L2, ConvertPointToAngle(73, 25, -40));
+    move(R1, ConvertPointToAngle(33, 70, -40));
+    move(R2, ConvertPointToAngle(73, 25, -40));
     delay(500);
   }  
-    AngleCoo step10L1 = ConvertPointToAngle(70, 50, -20);
-    move(L1, step10L1);
+    move(L1, ConvertPointToAngle(70, 50, -20));
     delay(300);
-    AngleCoo step11L1 = ConvertPointToAngle(70, 50, -40);
-    move(L1, step11L1);
+    move(L1, ConvertPointToAngle(70, 50, -40));
     delay(300);
-    AngleCoo step12L2 = ConvertPointToAngle(70, 50, -20);
-    move(L2, step12L2);
+    move(L2, ConvertPointToAngle(70, 50, -20));
     delay(300);
-    AngleCoo step13L2 = ConvertPointToAngle(70, 50, -40);
-    move(L2, step13L2);
+    move(L2, ConvertPointToAngle(70, 50, -40));
     delay(300);
-    AngleCoo step14R1 = ConvertPointToAngle(70, 50, -20);
-    move(R1, step14R1);
+    move(R1, ConvertPointToAngle(70, 50, -20));
     delay(300);
-    AngleCoo step15R1 = ConvertPointToAngle(70, 50, -40);
-    move(R1, step15R1);
+    move(R1, ConvertPointToAngle(70, 50, -40));
     delay(300);
-    AngleCoo step16R2 = ConvertPointToAngle(70, 50, -20);
-    move(R2, step16R2);
+    move(R2, ConvertPointToAngle(70, 50, -20));
     delay(300);
-    AngleCoo step17R2 = ConvertPointToAngle(70, 50, -40);
-    move(R2, step17R2);
+    move(R2, ConvertPointToAngle(70, 50, -40));
     delay(300);
-  
 }
 
 void setup() {
