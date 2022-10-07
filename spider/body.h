@@ -38,22 +38,48 @@ class Body4 : public Body<4, 3> {
         void init(Vectorf corrections[4]) {
 
             auto angles0 = [](float angles[3]){
-                //0 ou 3 / R2 et L2
+                //0 / R2
+                angles[0] = 90. + angles[0];  // servo_proximal_angle proximal angle of the leg
+                angles[1] = 95. - angles[1]; // servo_median_angle median angle of the leg
+                angles[2] = 90. - ( 90. - angles[2]);  // servo_distal_angle distal angle of the leg
+            };
+
+            auto angles1 = [](float angles[3]){
+                // 1 / R1
+                angles[0] = 90. - angles[0];
+                angles[1] = 90. + angles[1];
+                angles[2] = 90. + ( 90. - angles[2]);
+            };
+
+            auto angles2 = [](float angles[3]){
+                // 2 / L1
+                angles[0] = 90. - angles[0];
+                angles[1] = 90. + angles[1];
+                angles[2] = 80. + ( 90. - angles[2]);
+            };
+
+            auto angles3 = [](float angles[3]){
+                //3 / L2
                 angles[0] = 90. + angles[0];  // servo_proximal_angle proximal angle of the leg
                 angles[1] = 90. - angles[1]; // servo_median_angle median angle of the leg
                 angles[2] = 90. - ( 90. - angles[2]);  // servo_distal_angle distal angle of the leg
             };
 
-            auto angles1 = [](float angles[3]){
-                // 1 ou 2 / R1 et L1
-                angles[0] = 90. - angles[0];
-                angles[1] = 90. + angles[1];
-                angles[2] = 90. + ( 90. - angles[2]);
-            };
             for (int i = 0; i < 4; i++) {
                 int k = i * 3;
                 int ids[] = {k + 0, k + 1, k + 2};
-                armController.getArm(i).init(ids, model.legs_lengths, (i == 0 || i == 3) ? angles0 : angles1);
+                if(i == 0){
+                  armController.getArm(i).init(ids, model.legs_lengths, angles0);                  
+                }
+                if(i == 1){
+                  armController.getArm(i).init(ids, model.legs_lengths, angles1);                  
+                }
+                if(i == 2){
+                  armController.getArm(i).init(ids, model.legs_lengths, angles2);                  
+                }
+                if(i == 3){
+                  armController.getArm(i).init(ids, model.legs_lengths, angles3);                  
+                }
                 if (corrections)
                     armController.getArm(i).correct(corrections[i]);
                 else

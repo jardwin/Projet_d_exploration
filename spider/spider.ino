@@ -16,7 +16,9 @@ Motors<12> motors;
 
 // On choisit 4 bras qui ont chacun 3 axes
 ArmController<4, 3> armController{motors};
-Vectorf corrections[] = {{102,53,26}, {92,67,15}, {107,80,61}, {101,58,33}}; // Default
+Vectorf corrections[] = {{103,53,33},{95,63,28},{105,66,75},{96,65,46}}; // Default
+//Vectorf corrections[] = {{103,53,45},{95,63,40},{105,66,97},{96,65,58}}; // Default
+//Vectorf corrections[] = {{102,53,26}, {92,67,15}, {107,80,61}, {101,58,33}}; // Default
 //Vectorf corrections[] = {{114, 73, 59}, {90, 71, 58}, {103, 83, 50}, {115, 75, 54}}; // Bleue
 //Vectorf corrections[] = {{106, 84, 62}, {109, 85, 45}, {92, 87, 40}, {104, 69, 30}}; // grise
 

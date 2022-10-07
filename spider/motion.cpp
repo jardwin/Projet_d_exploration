@@ -115,28 +115,27 @@ void Motion4::step_forward()
   direction = direction::FORWARD;
   current_speed = model->leg_move_speed;
   armMove(0, {KEEP, KEEP, model->z_up}, true);
-  armMove(0, {model->x_default, model->y_default + 2.f * model->y_step, KEEP}, true);
+  armMove(0, {70, 100, KEEP}, true);
   armMove(0, {KEEP, KEEP, model->z_default}, true);
 
   current_speed = model->body_move_speed;
-  armMove(0, {model->x_default, model->y_default - 1.f * model->y_step, model->z_default});
-  armMove(1, {model->x_default, model->y_default + 2.f * model->y_step, model->z_default});
-  armMove(2, {model->x_default, model->y_default - 2.f * model->y_step, model->z_default});
-  armMove(3, {model->x_default, model->y_default + 2.f * model->y_step, model->z_default}, true);
+  armMove(0, {70, 50, model->z_default});
+  armMove(1, {70, 100, model->z_default});
+  armMove(2, {70, 0, model->z_default});
+  armMove(3, {70, 100, model->z_default}, true);
 
-    current_speed = model->leg_move_speed;
-    armMove(2, {KEEP, KEEP, model->z_up}, true);
-    armMove(2, {model->x_default, model->y_default + 1.f * model->y_step, KEEP}, true);
-    armMove(2, {KEEP, KEEP, model->z_default}, true);
+  current_speed = model->leg_move_speed;
+  armMove(2, {KEEP, KEEP, model->z_up}, true);
+  armMove(2, {70, 50, KEEP}, true);
+  armMove(2, {KEEP, KEEP, model->z_default}, true);
 
-    armMove(0, {KEEP, KEEP, model->z_up}, true);
-    armMove(0, {model->x_default, model->y_default + 1.f * model->y_step, KEEP}, true);
-    armMove(0, {KEEP, KEEP, model->z_default}, true);
+  armMove(3, {KEEP, KEEP, model->z_up}, true);
+  armMove(3, {70, 50, KEEP}, true);
+  armMove(3, {KEEP, KEEP, model->z_default}, true);
 
-    armMove(1, {KEEP, KEEP, model->z_up}, true);
-    armMove(1, {model->x_default, model->y_default - 1.f * model->y_step, KEEP}, true);
-    armMove(1, {KEEP, KEEP, model->z_default}, true);
-
+  armMove(1, {KEEP, KEEP, model->z_up}, true);
+  armMove(1, {70, 50, KEEP}, true);
+  armMove(1, {KEEP, KEEP, model->z_default}, true);
 }
 
 void Motion4::step_back()
