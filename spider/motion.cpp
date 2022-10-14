@@ -62,7 +62,46 @@ void Motion4::armWait()
 
 void Motion4::turn_left(bool lastmovement)
 {
-        //TODO add the left turn code
+    current_speed = model->spot_turn_speed;
+    armMove(0, {KEEP, KEEP, model->z_up}, true);
+    armMove(0, {73, 25, model->z_up}, true);
+    armMove(0, {73, 25, model->z_default}, true);
+
+    armMove(1, {KEEP, KEEP, model->z_up}, true);
+    armMove(1, {33, 70, model->z_up}, true);
+    armMove(1, {33, 70, model->z_default}, true);
+
+    armMove(3, {KEEP, KEEP, model->z_up}, true);
+    armMove(3, {73, 25, model->z_up}, true);
+    armMove(3, {73, 25, model->z_default}, true);
+
+    armMove(2, {KEEP, KEEP, model->z_up}, true);
+    armMove(2, {33, 70, model->z_up}, true);
+    armMove(2, {33, 70, model->z_default}, true);
+
+    armMove(0, {33, 70, model->z_default});
+    armMove(1, {73, 25, model->z_default});
+    armMove(2, {73, 25, model->z_default});
+    armMove(3, {33, 70, model->z_default}, true);
+
+    if(lastmovement){
+      armMove(0, {KEEP, KEEP, model->z_up}, true);
+      armMove(0, {70, 50, model->z_up}, true);
+      armMove(0, {70, 50, model->z_default}, true);
+  
+      armMove(1, {KEEP, KEEP, model->z_up}, true);
+      armMove(1, {70, 50, model->z_up}, true);
+      armMove(1, {70, 50, model->z_default}, true);
+  
+      armMove(3, {KEEP, KEEP, model->z_up}, true);
+      armMove(3, {70, 50, model->z_up}, true);
+      armMove(3, {70, 50, model->z_default}, true);
+  
+      armMove(2, {KEEP, KEEP, model->z_up}, true);
+      armMove(2, {70, 50, model->z_up}, true);
+      armMove(2, {70, 50, model->z_default}, true);
+    }
+
 }
 
 void Motion4::turn_right(bool lastmovement)
