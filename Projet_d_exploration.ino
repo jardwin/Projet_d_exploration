@@ -1,4 +1,3 @@
-#include <Servo.h>
 #include <math.h>
 
 class AngleCoo
