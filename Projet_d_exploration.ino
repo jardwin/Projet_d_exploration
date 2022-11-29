@@ -1,5 +1,76 @@
-#include <Servo.h>
 #include <math.h>
+
+#if ( defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_RASPBERRY_PI_PICO) || defined(ARDUINO_ADAFRUIT_FEATHER_RP2040) || \
+      defined(ARDUINO_GENERIC_RP2040) ) && !defined(ARDUINO_ARCH_MBED)
+#if !defined(RP2040_ISR_SERVO_USING_MBED)
+  #define RP2040_ISR_SERVO_USING_MBED     false
+#endif
+
+#elif ( defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_RASPBERRY_PI_PICO) || defined(ARDUINO_ADAFRUIT_FEATHER_RP2040) || \
+      defined(ARDUINO_GENERIC_RP2040) ) && defined(ARDUINO_ARCH_MBED)
+
+#if !defined(RP2040_ISR_SERVO_USING_MBED)
+  #define RP2040_ISR_SERVO_USING_MBED     true
+#endif
+
+#else
+#error This code is intended to run on the mbed / non-mbed RP2040 platform! Please check your Tools->Board setting.
+#endif
+
+#define ISR_SERVO_DEBUG             4
+
+// Can be included as many times as necessary, without `Multiple Definitions` Linker Error
+#include "RP2040_ISR_Servo.h"
+
+//#include <Servo.h>
+#include <math.h>
+#define MIN_MICROS        800
+#define MAX_MICROS        2450
+/*
+const int servo_pin[4][3] = { 
+  { 4, 2, 3 }, // Leg 1 - Front right (R2) - {H, F, T}
+  { 7, 5, 6 }, // Leg 2 - Back right (R1) - {H, F, T}
+  { 16, 14, 15 }, // Leg 3 - Front left (L1) - {H, F, T}
+  { 19, 17, 18 } // Leg 4 - Back left (L2) - {H, F, T}
+};*/
+
+
+#define SERVO_PIN_1       4
+#define SERVO_PIN_2       2
+#define SERVO_PIN_3       3
+#define SERVO_PIN_4       7
+#define SERVO_PIN_5       5
+#define SERVO_PIN_6       6
+#define SERVO_PIN_7       16
+#define SERVO_PIN_8       14
+#define SERVO_PIN_9       15
+#define SERVO_PIN_10      19
+#define SERVO_PIN_11      17
+#define SERVO_PIN_12      18
+
+typedef struct
+{
+  int     servoIndex;
+  uint8_t servoPin;
+} ISR_servo_t;
+
+#define NUMBER_LEG       4
+#define NUMBER_SERVOS_BY_LEG       3
+
+ISR_servo_t servo[NUMBER_LEG][NUMBER_SERVOS_BY_LEG] = {
+  {{ -1, SERVO_PIN_1 },
+  { -1, SERVO_PIN_2 },
+  { -1, SERVO_PIN_3 }},
+  {{ -1, SERVO_PIN_4 },
+  { -1, SERVO_PIN_5 },
+  { -1, SERVO_PIN_6 }},
+  {{ -1, SERVO_PIN_7 },
+  { -1, SERVO_PIN_8 },
+  { -1, SERVO_PIN_9 }},
+  {{ -1, SERVO_PIN_10 },
+  { -1, SERVO_PIN_11 },
+  { -1, SERVO_PIN_12 }}
+};
 
 class AngleCoo
 {
@@ -19,22 +90,6 @@ class AngleCoo
     }
 };
 
-
-/* Array storing the 12 servos */
-Servo servo[4][3]; // 4 legs of 3 segments each
-
-/* Array of pins connected to the servo */
-const int servo_pin[4][3] = { 
-  { 4, 2, 3 }, // Leg 1 - Front right (R2) - {H, F, T}
-  { 7, 5, 6 }, // Leg 2 - Back right (R1) - {H, F, T}
-  { 16, 14, 15 }, // Leg 3 - Front left (L1) - {H, F, T}
-  { 19, 17, 18 } // Leg 4 - Back left (L2) - {H, F, T}
-};
-/*
-34
-63
-85
-*/
 
 /*const int offset[4][3] = {
   {6,-19,16},
@@ -132,20 +187,20 @@ void setPLS(int indexLeg, AngleCoo coo){
   Serial.println(indexLeg);
 
   
-  servo[0][0].write(90);
-  servo[1][0].write(90);
-  servo[2][0].write(90);
-  servo[3][0].write(90);
+  RP2040_ISR_Servos.setPosition(servo[0][0].servoIndex,90);
+  RP2040_ISR_Servos.setPosition(servo[1][0].servoIndex,90);
+  RP2040_ISR_Servos.setPosition(servo[2][0].servoIndex,90);
+  RP2040_ISR_Servos.setPosition(servo[3][0].servoIndex,90);
 
-  servo[0][1].write(90);
-  servo[1][1].write(90);
-  servo[2][1].write(90);
-  servo[3][1].write(90);
+  RP2040_ISR_Servos.setPosition(servo[0][1].servoIndex,90);
+  RP2040_ISR_Servos.setPosition(servo[1][1].servoIndex,90);
+  RP2040_ISR_Servos.setPosition(servo[2][1].servoIndex,90);
+  RP2040_ISR_Servos.setPosition(servo[3][1].servoIndex,90);
 
-  servo[0][2].write(160);
-  servo[1][2].write(20);
-  servo[2][2].write(20);
-  servo[3][2].write(160);
+  RP2040_ISR_Servos.setPosition(servo[0][2].servoIndex,160);
+  RP2040_ISR_Servos.setPosition(servo[1][2].servoIndex,20);
+  RP2040_ISR_Servos.setPosition(servo[2][2].servoIndex,20);
+  RP2040_ISR_Servos.setPosition(servo[3][2].servoIndex,160);
 }
 
 AngleCoo ConvertPointToAngle(float x, float y, float z){
@@ -191,9 +246,9 @@ void move(int indexLeg, AngleCoo coo)
   }
 
   if(checkAngle(indexLeg, coo)){
-    servo[indexLeg][0].write(coo.Gamma);
-    servo[indexLeg][1].write(coo.Alpha);
-    servo[indexLeg][2].write(coo.Beta);
+    RP2040_ISR_Servos.setPosition(servo[indexLeg][0].servoIndex, coo.Gamma);
+    RP2040_ISR_Servos.setPosition(servo[indexLeg][1].servoIndex, coo.Alpha);
+    RP2040_ISR_Servos.setPosition(servo[indexLeg][2].servoIndex, coo.Beta);
   }else{
     setPLS(indexLeg, coo);
   }
@@ -349,11 +404,29 @@ void TurnLeft(int nbr = 1){
 
 void setup() {
   Serial.begin(9600);
-  for (int i = 0; i < 4; i++)
+  for (int i = 0; i < NUMBER_LEG; i++)
   {
-    for (int y = 0; y < 3; y++)
+    for (int y = 0; y < NUMBER_SERVOS_BY_LEG; y++)
     {
-      servo[i][y].attach(servo_pin[i][y]);
+      pinMode(servo[i][y].servoPin, OUTPUT);
+      digitalWrite(servo[i][y].servoPin, LOW);
+
+      delay(200);
+  
+      servo[i][y].servoIndex = RP2040_ISR_Servos.setupServo(servo[i][y].servoPin, MIN_MICROS, MAX_MICROS);
+
+      if (servo[i][y].servoIndex != -1)
+      {
+        Serial.print(F("Setup OK Servo index = "));
+        Serial.println(servo[i][y].servoIndex);
+
+        RP2040_ISR_Servos.setPosition(servo[i][y].servoIndex, 0);
+      }
+      else
+      {
+        Serial.print(F("Setup Failed Servo index = "));
+        Serial.println(servo[i][y].servoIndex);
+      }
     }
   }
   Serial.println("fin du setup");
