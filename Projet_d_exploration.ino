@@ -100,11 +100,18 @@ class AngleCoo
 
 int offset[4][3];
 
-const int realPosition[4][3] = {
+/*const int realPosition[4][3] = {
   {102,53,53},
   {92,67,42},
   {107,80,88}, 
   {101,58,60}
+};*/
+
+const int realPosition[4][3] = {
+  {100,70,42},
+  {100,70,42},
+  {100,70,42}, 
+  {100,70,42}
 };
 
 const int R2 = 0;
@@ -402,8 +409,15 @@ void TurnLeft(int nbr = 1){
     delay(300);
 }
 
-void setup() {
-  Serial.begin(9600);
+void Calibrage(){
+  for (int i = 0; i < NUMBER_LEG; i++)
+  {
+    move(i, ConvertPointToAngle(100,70,42));
+  }
+  
+}
+
+void initServo(){
   for (int i = 0; i < NUMBER_LEG; i++)
   {
     for (int y = 0; y < NUMBER_SERVOS_BY_LEG; y++)
@@ -429,16 +443,21 @@ void setup() {
       }
     }
   }
+}
+
+void setup() {
+  Serial.begin(9600);
+  initServo();
   Serial.println("fin du setup");
   calculateOffset();
 }
 
 void loop() {
-  sit();
-  delay(1000);
-  stand();
+  Calibrage();
+  delay(100);
+  /*stand();
   delay(1000);
   TurnLeft(10);
   sit();
-  delay(1000);
+  delay(1000);*/
 }
