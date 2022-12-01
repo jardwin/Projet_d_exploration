@@ -1,4 +1,12 @@
-#include <math.h>
+#include <micro_ros_arduino.h>
+
+#include <stdio.h>
+#include <rcl/rcl.h>
+#include <rcl/error_handling.h>
+#include <rclc/rclc.h>
+#include <rclc/executor.h>
+
+#include <std_msgs/msg/int32.h>
 
 #if ( defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_RASPBERRY_PI_PICO) || defined(ARDUINO_ADAFRUIT_FEATHER_RP2040) || \
       defined(ARDUINO_GENERIC_RP2040) ) && !defined(ARDUINO_ARCH_MBED)
@@ -22,7 +30,6 @@
 // Can be included as many times as necessary, without `Multiple Definitions` Linker Error
 #include "RP2040_ISR_Servo.h"
 
-//#include <Servo.h>
 #include <math.h>
 #define MIN_MICROS        800
 #define MAX_MICROS        2450
@@ -72,8 +79,18 @@ ISR_servo_t servo[NUMBER_LEG][NUMBER_SERVOS_BY_LEG] = {
   { -1, SERVO_PIN_12 }}
 };
 
-class AngleCoo
-{
+
+rcl_subscription_t subscriber;
+std_msgs__msg__Int32 msg;
+rclc_executor_t executor;
+rclc_support_t support;
+rcl_allocator_t allocator;
+rcl_node_t node;
+rcl_timer_t timer;
+
+#define LED_PIN 13
+
+class AngleCoo {
   public:
     float Gamma;
     float Alpha;
@@ -91,27 +108,13 @@ class AngleCoo
 };
 
 
-/*const int offset[4][3] = {
-  {6,-19,16},
-  {0,-7,13},
-  {5,9,-13},
-  {0,-16,1}
-};*/
-
 int offset[4][3];
 
-/*const int realPosition[4][3] = {
-  {102,53,53},
-  {92,67,42},
-  {107,80,88}, 
-  {101,58,60}
-};*/
-
 const int realPosition[4][3] = {
-  {100,70,42},
-  {100,70,42},
-  {100,70,42}, 
-  {100,70,42}
+  {92,73,68},
+  {104,64,42},
+  {105,35,53}, 
+  {97,70,65}
 };
 
 const int R2 = 0;
@@ -122,6 +125,20 @@ const int L2 = 3;
 const float LH = 30.5;
 const float LF = 53;
 const float LT = 79.5;
+
+AngleCoo ConvertPointToAngle(float x, float y, float z){
+  z -= 27;
+  float gamma = atan(y/x)*(180/M_PI);
+  float hypo = sqrt(pow(x,2)+pow(y,2));
+  float v = hypo - LH;
+  float d = sqrt(pow(v,2)+pow(z,2));
+  float alphaOne = atan(z / v) * (180/M_PI);
+  float alphaTwo = acos((pow(d,2) + pow(LF,2) - pow(LT,2))/(2*LF*d)) * (180/M_PI);
+  float alpha = alphaOne+alphaTwo;
+  float beta = acos((pow(LF,2)+pow(LT,2)-pow(d,2))/(2*LT*LF)) * (180/M_PI);
+  return AngleCoo(gamma, alpha, beta);
+}
+
 
 void calculateOffset(){
   AngleCoo target = ConvertPointToAngle(100,70,42);
@@ -210,56 +227,6 @@ void setPLS(int indexLeg, AngleCoo coo){
   RP2040_ISR_Servos.setPosition(servo[3][2].servoIndex,160);
 }
 
-AngleCoo ConvertPointToAngle(float x, float y, float z){
-  z -= 27;
-  float gamma = atan(y/x)*(180/M_PI);
-  float hypo = sqrt(pow(x,2)+pow(y,2));
-  float v = hypo - LH;
-  float d = sqrt(pow(v,2)+pow(z,2));
-  float alphaOne = atan(z / v) * (180/M_PI);
-  float alphaTwo = acos((pow(d,2) + pow(LF,2) - pow(LT,2))/(2*LF*d)) * (180/M_PI);
-  float alpha = alphaOne+alphaTwo;
-  float beta = acos((pow(LF,2)+pow(LT,2)-pow(d,2))/(2*LT*LF)) * (180/M_PI);
-  return AngleCoo(gamma, alpha, beta);
-}
-
-void move(int indexLeg, AngleCoo coo)
-{
-  coo.Gamma+offset[indexLeg][0];
-  coo.Alpha+offset[indexLeg][1];
-  coo.Beta+offset[indexLeg][2];
-  switch (indexLeg)
-  {
-    case R2:
-      coo.Gamma = 90 + coo.Gamma;
-      coo.Alpha = 95 - coo.Alpha;
-      break;
-    case R1:
-      coo.Gamma = 90 - coo.Gamma;
-      coo.Alpha = 90 + coo.Alpha;
-      coo.Beta = 180 - coo.Beta;
-      break;
-    case L1:
-      coo.Gamma = 90 - coo.Gamma;
-      coo.Alpha = 90 + coo.Alpha;
-      coo.Beta = 190 - coo.Beta;
-      break;
-    case L2:
-      coo.Gamma = 90 + coo.Gamma;
-      coo.Alpha = 90 - coo.Alpha;
-      break;
-    default:
-      break;
-  }
-
-  if(checkAngle(indexLeg, coo)){
-    RP2040_ISR_Servos.setPosition(servo[indexLeg][0].servoIndex, coo.Gamma);
-    RP2040_ISR_Servos.setPosition(servo[indexLeg][1].servoIndex, coo.Alpha);
-    RP2040_ISR_Servos.setPosition(servo[indexLeg][2].servoIndex, coo.Beta);
-  }else{
-    setPLS(indexLeg, coo);
-  }
-}
 
 bool checkAngle(int indexLeg, AngleCoo coo){
   if(indexLeg == R2 || indexLeg == L2){
@@ -301,6 +268,44 @@ bool checkAngle(int indexLeg, AngleCoo coo){
   }
 
   return true;
+}
+
+void move(int indexLeg, AngleCoo coo)
+{
+  coo.Gamma+offset[indexLeg][0];
+  coo.Alpha+offset[indexLeg][1];
+  coo.Beta+offset[indexLeg][2];
+  switch (indexLeg)
+  {
+    case R2:
+      coo.Gamma = 90 + coo.Gamma;
+      coo.Alpha = 95 - coo.Alpha;
+      break;
+    case R1:
+      coo.Gamma = 90 - coo.Gamma;
+      coo.Alpha = 90 + coo.Alpha;
+      coo.Beta = 180 - coo.Beta;
+      break;
+    case L1:
+      coo.Gamma = 90 - coo.Gamma;
+      coo.Alpha = 90 + coo.Alpha;
+      coo.Beta = 190 - coo.Beta;
+      break;
+    case L2:
+      coo.Gamma = 90 + coo.Gamma;
+      coo.Alpha = 90 - coo.Alpha;
+      break;
+    default:
+      break;
+  }
+
+  if(checkAngle(indexLeg, coo)){
+    RP2040_ISR_Servos.setPosition(servo[indexLeg][0].servoIndex, coo.Gamma);
+    RP2040_ISR_Servos.setPosition(servo[indexLeg][1].servoIndex, coo.Alpha);
+    RP2040_ISR_Servos.setPosition(servo[indexLeg][2].servoIndex, coo.Beta);
+  }else{
+    setPLS(indexLeg, coo);
+  }
 }
 
 void moveTriangleR2(){
@@ -416,6 +421,16 @@ void Calibrage(){
   }
   
 }
+const int neutral = 90;
+
+void montage(){
+  for (int i = 0; i < 4; i++) { // Loop on each leg
+    for (int j = 0; j < 3; j++) { // Loop on segment in one leg
+      RP2040_ISR_Servos.setPosition(servo[i][j].servoIndex, neutral); // Set neutral position
+      delay(15); // Gives time to the servo to reach the target
+    }
+  }
+}
 
 void initServo(){
   for (int i = 0; i < NUMBER_LEG; i++)
@@ -434,7 +449,7 @@ void initServo(){
         Serial.print(F("Setup OK Servo index = "));
         Serial.println(servo[i][y].servoIndex);
 
-        RP2040_ISR_Servos.setPosition(servo[i][y].servoIndex, 0);
+        RP2040_ISR_Servos.setPosition(servo[i][y].servoIndex, 90);
       }
       else
       {
@@ -445,19 +460,73 @@ void initServo(){
   }
 }
 
+void subscription_callback(const void * msgin)
+{  
+  Serial.println("Order receive");
+  const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
+  stand();
+  if(msg->data == 0){
+    Walk(1);
+  }else if(msg->data == 1){
+    TurnLeft(1);
+  }else if(msg->data == 2){
+    Calibrage();
+  }else if(msg->data == 3){
+    sit();
+  }
+  Serial.println(msg->data);
+  
+  //digitalWrite(LED_PIN, (msg->data == 0) ? LOW : HIGH);  
+}
+
+
+#define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
+
+void error_loop(){
+  while(1){
+    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+    delay(100);
+  }
+}
+
 void setup() {
   Serial.begin(9600);
-  initServo();
-  Serial.println("fin du setup");
+  
+  set_microros_wifi_transports("FREEBOX_CLAIRE", "issemus-diore5545-ibebat66-egati9", "192.168.0.30", 8888);
+
+
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, HIGH);  
+  
+  delay(2000);
+
+  allocator = rcl_get_default_allocator();
+
+  //create init_options
+  RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
+
+  // create node
+  RCCHECK(rclc_node_init_default(&node, "spider_move_node", "", &support));
+
+  // create subscriber
+  RCCHECK(rclc_subscription_init_default(
+    &subscriber,
+    &node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+    "spider_move_order"));
+
+  // create executor
+  RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &msg, &subscription_callback, ON_NEW_DATA));
+
+initServo();
+  
   calculateOffset();
+  Serial.println("fin du setup");
 }
 
 void loop() {
-  Calibrage();
   delay(100);
-  /*stand();
-  delay(1000);
-  TurnLeft(10);
-  sit();
-  delay(1000);*/
+  rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
+  //Calibrage(); //Femure L1 à l'aire HS sur le calibrage
 }
