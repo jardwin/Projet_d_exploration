@@ -1,0 +1,109 @@
+	%-----------------------
+	\chapter{Introduction}
+	%-----------------------
+
+Introduction du document - 	Nous avons qu'une personne a installé Micro ROS sur une Arduino Portenta et une carte Arduino RP2040 (\url{https://www.youtube.com/watch?v=mq1uFGsYqeU}).
+Nous avons aussi pensé à utiliser une carte ESP qui transmette les commandes à la carte Arduino fournie mais l'alimentation ne serait probablement pas suffisante.
+
+// mettre le schéma de la carte
+https://docs.arduino.cc/static/56034f29d9e2bd28f4fd3c90268d0557/ABX00053-datasheet.pdf
+
+Nous avons téléchargé ROS pour prendre en main le framework.
+Malheureusement, il y avait des soucis de compatibilté sur différents OS :
+
+\begin{itemize}
+	\item[$\bullet$] sur Mac, il y avait un problème de dépendance python (graphviz) bien que la dépendance était installée
+	\item[$\bullet$]sur Ubuntu 18.04, le framework ne fonctionnait pas (problème pour afficher une fenêtre graphique)
+\end{itemize}
+
+Il existe plusieurs versions de ROS, chacune étant destinée pour une version Linux spécifique.
+La dernière est la version humble et qui est compatible avec la version 22.04 d'Ubuntu.
+On retrouvera la documentation à cette adresse : \url{https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html}
+
+On peut également utiliser une image Docker pour ROS 2.\linebreak
+
+Nous avons utilisé l'IDE PlatformIO qui est une extension de VSCode. Il est compatible Windows, Mac et Linux.
+
+L'étape suivante était de générer l'agent Micro ROS et le lancer. On peut retrouver à cet effet un tutoriel à cette adresse :
+\url{https://gist.github.com/Redstone-RM/0ca459c32ec5ead8700284ff56a136f7}\linebreak
+
+Nous avons testé la connection wifi entre l'agent sur l'ordinateur et la carte en utilisant le code example de la librarie micro ROS :
+\url{https://github.com/micro-ROS/micro_ros_arduino/blob/galactic/examples/micro-ros_publisher_wifi/micro-ros_publisher_wifi.ino}
+L'exemple initie la connexion wifi et envoie un message à la carte.
+Lorsque la connexion wifi échoue, la diode sur la carte se met à clignoter de manière intempestive.\linebreak
+
+Nous avons testé ensuite le code de l'araignée SEALK pour tester les mouvements mais le code fourni ne marchait pas sur la carte.
+En effet, nous avions le problème de compilation suivant :
+\begin{lstlisting}
+src/armcontroller.h:52:13: error: there are no arguments to 'sei' 
+that depend on a template parameter, so a declaration of 'sei' 
+must be available [-fpermissive]
+sei();
+\end{lstlisting}
+Cette interruption permet d'activer les interruptions de timer.
+
+Nous avons utilisé le code que nous avons fait en cours et celui-ci marchait.
+Pour reset la mémoire de la carte, il faut soit tambouriner le bouton, soit appuyer longtemps.
+
+Exemple tableau \& table : 
+
+\begin{tabular}{|l|c|r|}
+	\hline \textbf{case 00} & \textbf{case 01} & \textbf{case 03} \\
+	\hline case 10 & case 11 & case 13 \\ 
+	case 20 & case 21 & case 23 \\ 
+	case 20 & case 21 & case 33 \\ 
+	\hline
+\end{tabular}
+
+\begin{table}
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline case 00 & case 01 \\
+		\hline case 10 & case 11 \\ 
+		\hline 
+	\end{tabular}
+	\caption{Légende du tableau}
+\end{center}
+\end{table}
+
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+
+Test des listes : 
+
+\begin{itemize}
+	\item Item 1
+	\item Item 2
+	\item Item 3
+	\item ...
+\end{itemize}
+
+
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+\begin{itemize}
+	\item[$\Rightarrow$] Item 1
+	\item[$\bullet$] Item 2
+	\item[$\circ$] Item 3
+	\item[$\times$] Item 4
+	\item[$\surd$] ...
+\end{itemize}
+
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. 
+
+\begin{enumerate}
+	\item Item 1
+	\item Item 2
+	\item ...
+\end{enumerate}
+
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
+
+\begin{enumerate}[a)]
+	\item Item 1
+	\item Item 2
+	\item ...
+\end{enumerate}
+
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+

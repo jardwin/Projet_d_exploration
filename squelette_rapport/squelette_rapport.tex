@@ -1,0 +1,171 @@
+\documentclass[12pt, a4paper]{report}
+
+%---- GENERAL ---%
+\usepackage[utf8x]{inputenc} % Encodage du fichier
+\usepackage[T1]{fontenc}  % Encodage des polices du document
+\usepackage[english, francais]{babel} % Langages utilisés
+\usepackage{lmodern} % Police pour rendre le texte sélectionable
+
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry} % Marges PDF
+
+%---- TABLE DES MATIERES - PRESENTATION ---%
+\usepackage[titles]{tocloft} % Package pour paramtérer la table des matières
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % Mets des points pour les chapitre et les sections
+\usepackage[colorlinks=true,urlcolor=blue,pdfstartview=FitH,linkcolor=blue,hyperfootnotes=true]{hyperref} % Liens
+
+%---- GLOSSAIRE ---%
+\usepackage{glossaries}
+\makeglossaries
+
+%---- STRUCTURES DE DONNEES & MISE EN FORME ---%
+\usepackage{enumerate} % Listes
+\usepackage{graphicx} % Figures
+\usepackage{color} % Couleur
+\definecolor{darkblue}{RGB}{0,0,190}
+\definecolor{lightgray}{gray}{0.70}
+\definecolor{darkgreen}{RGB}{0,150,50}
+
+%---- HEADERS & FOOTERS ---%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancyhf{}
+
+\fancyhead[RE]{\chaptername{} \thechapter{} - \nouppercase{\rightmark}} % Even page - Right side
+\fancyhead[LE]{\thepage} % Even page - Left side
+\fancyhead[RO]{\thepage}% Odd page - Rigth side
+\fancyhead[LO]{\chaptername{} \thechapter{} - \nouppercase{\rightmark}} % Odd page - Left side
+\fancyfoot[C]{footer} % Footer - Center
+
+\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}} % Supprime les en-têtes et pieds de page des pages vides (type book)
+
+%---- CHAPTERS ---%
+\usepackage[Lenny]{fncychap}
+
+%---- CODES SOURCES & ALGORITHMES ---%
+\usepackage{listings} % Codes sources
+
+% [style = sourceC] for the C codes
+\lstdefinestyle{sourceC}{language=C, basicstyle=\small\color{black}\ttfamily, classoffset=0, keywordstyle=\color{blue}\bfseries, classoffset=1, morekeywords={NULL}, keywordstyle=\color{magenta}\bfseries, commentstyle=\color{brightblue}\itshape, stringstyle=\color{darkgreen}, showstringspaces=false, tabsize=3, framexleftmargin=2mm, frame=shadowbox, rulesepcolor=\color{lightgray}, breaklines=true, emph={main, printf, scanf, FILE, fopen, fscanf, fprintf, fclose, rand}, emphstyle=\color{darkblue}\bfseries,columns=
+fullflexible, flexiblecolumns=true, upquote=true, keepspaces=true}
+
+% [style = inlineSourceC] for C expression into text
+\lstdefinestyle{inlineSourceC}{language=C, basicstyle=\footnotesize\color{black}\ttfamily, classoffset=0, keywordstyle=\color{blue}\bfseries, classoffset=1, morekeywords={NULL}, keywordstyle=\color{magenta}\bfseries, commentstyle=\color{brightblue}\itshape, stringstyle=\color{darkgreen}, showstringspaces=false, tabsize=3, breaklines=true, emph={main, printf, scanf, FILE, fopen, fscanf, fprintf, fclose, rand}, emphstyle=\color{darkblue}\bfseries,columns=fullflexible, keepspaces=true,upquote=true}
+
+% [style = sourceJava] for the Java codes
+\lstdefinestyle{sourceJava}{language=Java, basicstyle=\small\color{black}\ttfamily, classoffset=0, keywordstyle=\color{darkgreen}\bfseries, commentstyle=\color{brightblue}\itshape, stringstyle=\color{darkgreen}, showstringspaces=false, tabsize=3, framexleftmargin=2mm, frame=shadowbox, rulesepcolor=\color{lightgray}, breaklines=true, emph={main, printf, FILE, fopen, fscanf, fprintf, fclose,new,return,this,super,null,break,continue,if,else,switch,case,default,do,while,for,break,new,return}, emphstyle=\color{darkred}\bfseries,columns=fullflexible,upquote=true}
+
+% [style = sourceJava] for the Java codes
+\lstdefinestyle{inlineSourceJava}{style=sourceJava, basicstyle=\normalsize\color{black}\ttfamily}
+
+% [style = msgTerminal] for shell codes on black background
+\lstdefinestyle{msgTerminal}{language=sh, basicstyle=\small\color{white}\ttfamily, keywordstyle=\color{white}, commentstyle=\color{white}\itshape, stringstyle=\color{white}, showstringspaces=false, framexleftmargin=3mm, xleftmargin=3mm, frame=none, tabsize=3, backgroundcolor=\color{black}, rulecolor=\color{black}, breaklines=true,columns=fullflexible,upquote=true}
+
+% [style = msgTerminalW] for shell codes on white background
+\lstdefinestyle{msgTerminalW}{language=sh, basicstyle=\small\color{black}\ttfamily, keywordstyle=\color{black}, commentstyle=\color{black}\itshape, stringstyle=\color{black}, showstringspaces=false, framexleftmargin=3mm, xleftmargin=3mm, frame=none, tabsize=3, backgroundcolor=\color{white}, rulecolor=\color{white}, breaklines=true,columns=fullflexible,upquote=true}
+
+% [style = inlineTerminal] for shell expression into text
+\lstdefinestyle{inlineTerminal}{language=sh, basicstyle=\footnotesize\color{black}\ttfamily\bfseries, keywordstyle=\color{black}, commentstyle=\color{black}\itshape, stringstyle=\color{black}\itshape, showstringspaces=false, tabsize=3, breaklines=true,upquote=true}
+
+
+\usepackage[french]{algorithm2e} % Algorithmes 
+\newenvironment{algo}[0]{\vrule~\vrule\itshape \begin{algorithm}[H] }{\normalfont\end{algorithm}}
+\newcommand{\var}[1]{\textnormal{\texttt{#1}}}
+\RestyleAlgo{plain}
+\SetKwSwitch{Selon}{Cas}{Autre}{selon}{faire}{cas où}{autres cas}{fin}{fin} %Si la compilation bloque à algorithm2e, tenter la ligne du dessous à la place de celle-là
+%\SetKwSwitch{Selon}{Cas}{Autre}{selon}{faire}{cas où}{autres cas}{fin}
+\SetKwRepeat{Repeter}{r\'ep\'eter}{tant que}
+\SetKwFor{uTq}{tant que}{faire}{} % Tant que sans fin (équivaut a uSi)
+\SetKwFor{oTq}{}{}{fin} % Tant que déjà ouvert, donc sans balise de depart
+\SetKwIF{oSi}{}{}{}{}{}{}{fin}
+\SetKwIF{oFn}{}{}{fonction}{}{}{}{fin}
+\SetKwFunction{KwFn}{Fn}
+
+
+%---- DOCUMENT ---%
+% COMPILATION : 
+% pdflatex squelette_rapport.tex
+% bibtex squelette_rapport
+% makeindex squelette_rapport
+% pdflatex squelette_rapport.tex
+% pdflatex squelette_rapport.tex
+
+\title{\textbf{Portage architecture Arduino vers ESP32} \\ \Large{--- Épita --- \\ \textit{Équipe Robotique d'Exploration}} \\ \vspace{1,5cm} \includegraphics[width=0.3\textwidth]{./img/logo_epita} \includegraphics[width=0.2\textwidth]{./img/logo_equipe_robotique_exploration} \vspace{1,5cm}}
+\date{\today}
+\author{Tony BERNIS \and Valentin DUMOUSSET \and Julien LE QUANG \and Merlin VOTAT}
+
+\begin{document}
+	\maketitle
+	
+	
+
+	%-----------------------
+	\chapter*{Résumé}
+	\addcontentsline{toc}{chapter}{Résumé}
+	%-----------------------	
+
+Micro ROS (Robot Operating System) est un framework pour faciliter le développement robotique et qui sert d'interface entre les micro controleurs.
+Il permet ainsi l'abstraction du matériel, la transmission de message etc.
+Micro ROS n'est pas disponible sur toutes les cartes Arduino. Dans notre projet, nous avons choisi une carte Nano RP2040.
+L'objectif de notre projet est dans un premier temps de faire bouger l'arraignée et dans un second temps travailler sur la synchronisation entre une autre arraignée.
+
+Exemple gras et italique~:
+
+Sed ut \textbf{perspiciatis} unde omnis iste \textbf{natus} error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore \textit{veritatis} et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non \textit{numquam eius modi tempora incidunt ut} labore et dolore magnam aliquam quaerat voluptatem. \textbf{Ut enim ad minima veniam, \textit{quis nostrum} exercitationem ullam corporis} suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
+
+Exemple texte centré~:
+
+\begin{center}
+	Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+\end{center}
+
+Ut enim ad minim veniam, \color{green} quis nostrud exercitation ullamco \color{black} laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \color{darkblue} proident, sunt in culpa \color{black} qui officia deserunt mollit anim id est laborum.
+	
+	%-----------------------
+	% TABLE DES MATIERES %
+	\tableofcontents
+	%-----------------------
+
+	%-----------------------%
+	%     INTRODUCTION      %
+	%-----------------------%
+	
+\input{chapitres/introduction}
+
+	%-----------------------%
+	%    ETAT DE L'ART      %
+	%-----------------------%
+
+\input{chapitres/etat_art}
+			
+	%-----------------------%
+	% ETUDE DE FAISABILITE  %
+	%-----------------------%
+
+\input{chapitres/etude_faisabilite}
+
+	%-----------------------%
+	%       CONCLUSION      %
+	%-----------------------%
+	
+\input{chapitres/conclusion}
+	
+
+	%-----------------------%
+	%      GLOSSAIRE        %
+	%-----------------------%
+
+\deftranslation{Glossary}{Glossaire}
+\addcontentsline{toc}{chapter}{Glossaire} % Rajoute la partie dans le sommaire
+\printglossaries
+	
+	%-----------------------%
+	%      BIBLIOGRAPHIE    %
+	%-----------------------%
+
+\addcontentsline{toc}{chapter}{Bibliographie} % Rajoute la partie dans le sommaire
+\bibliographystyle{alpha}
+\bibliography{biblio/bibliographie.bib}
+
+	
+\end{document}
