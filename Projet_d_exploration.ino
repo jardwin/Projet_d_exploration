@@ -7,6 +7,7 @@
 #include <rclc/executor.h>
 
 #include <std_msgs/msg/int32.h>
+#include <geometry_msgs/msg/point.h>
 
 #if ( defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_RASPBERRY_PI_PICO) || defined(ARDUINO_ADAFRUIT_FEATHER_RP2040) || \
       defined(ARDUINO_GENERIC_RP2040) ) && !defined(ARDUINO_ARCH_MBED)
@@ -80,13 +81,25 @@ ISR_servo_t servo[NUMBER_LEG][NUMBER_SERVOS_BY_LEG] = {
 };
 
 
-rcl_subscription_t subscriber;
-std_msgs__msg__Int32 msg;
+rcl_subscription_t subscriber_order;
+rcl_subscription_t subscriber_R2;
+rcl_subscription_t subscriber_R1;
+rcl_subscription_t subscriber_L2;
+rcl_subscription_t subscriber_L1;
+rcl_publisher_t publisher_R2;
+rcl_publisher_t publisher_R1;
+rcl_publisher_t publisher_L2;
+rcl_publisher_t publisher_L1;
+std_msgs__msg__Int32 msg_order;
+geometry_msgs__msg__Point msg_arm;
 rclc_executor_t executor;
 rclc_support_t support;
 rcl_allocator_t allocator;
-rcl_node_t node;
-rcl_timer_t timer;
+rcl_node_t main_node;
+/*rcl_node_t node_R2;
+rcl_node_t node_R1;
+rcl_node_t node_L2;
+rcl_node_t node_L1;*/
 
 #define LED_PIN 13
 
@@ -308,7 +321,7 @@ void move(int indexLeg, AngleCoo coo)
   }
 }
 
-void moveTriangleR2(){
+/*void moveTriangleR2(){
   AngleCoo firstStep = ConvertPointToAngle(90,10,0);
   AngleCoo calibration = ConvertPointToAngle(100,70,42);
   
@@ -325,92 +338,126 @@ void moveTriangleR2(){
   AngleCoo thirdStep = ConvertPointToAngle(80,90,0);
   move(R2, thirdStep);
   delay(1000);
-}
+}*/
 
 void sit(){
-  AngleCoo assis = ConvertPointToAngle(70,50,0);
-  move(R2, assis);
-  move(R1, assis);
-  move(L1, assis);
-  move(L2, assis);
+  geometry_msgs__msg__Point point;
+  point = {70,50,0};
+  rcl_publish(&publisher_R2, &point, NULL);
+  rcl_publish(&publisher_R1, &point, NULL);
+  rcl_publish(&publisher_L1, &point, NULL);
+  rcl_publish(&publisher_L2, &point, NULL);
 }
 
 void stand(){
-  AngleCoo debout = ConvertPointToAngle(70,50,-40);
-  move(R2, debout);
-  move(R1, debout);
-  move(L1, debout);
-  move(L2, debout);
+  geometry_msgs__msg__Point point;
+  point = {70,50,-40};
+  rcl_publish(&publisher_R2, &point, NULL);
+  rcl_publish(&publisher_R1, &point, NULL);
+  rcl_publish(&publisher_L1, &point, NULL);
+  rcl_publish(&publisher_L2, &point, NULL);
 }
 
 void Walk(int nbr = 1){
+  geometry_msgs__msg__Point point;
   for (int i = 0; i < nbr; i++)
   {
-    move(R2, ConvertPointToAngle(70, 100, -20));
+    point = {70, 100, -20};
+    rcl_publish(&publisher_R2, &point, NULL);
     delay(300);
-    move(R2, ConvertPointToAngle(70, 100, -40));
+    point = {70, 100, -40};
+    rcl_publish(&publisher_R2, &point, NULL);
     delay(300);
-    move(L1, ConvertPointToAngle(70, 0, -40));
-    move(L2, ConvertPointToAngle(70, 100, -40));
-    move(R1, ConvertPointToAngle(70, 100, -40));
-    move(R2, ConvertPointToAngle(70, 50, -40));
+    point = {70, 0, -40};
+    rcl_publish(&publisher_L1, &point, NULL);
+    point = {70, 100, -40};
+    rcl_publish(&publisher_L2, &point, NULL);
+    point = {70, 100, -40};
+    rcl_publish(&publisher_R1, &point, NULL);
+    point = {70, 50, -40};
+    rcl_publish(&publisher_R2, &point, NULL);
     delay(500);
-    move(R1, ConvertPointToAngle(70, 50, -20));
+    point = {70, 50, -20};
+    rcl_publish(&publisher_R1, &point, NULL);
     delay(300);
-    move(R1, ConvertPointToAngle(70, 50, -40));
+    point = {70, 50, -40};
+    rcl_publish(&publisher_R1, &point, NULL);
     delay(500);
-    move(L2, ConvertPointToAngle(70, 50, -20));
+    point = {70, 50, -20};
+    rcl_publish(&publisher_L2, &point, NULL);
     delay(300);
-    move(L2, ConvertPointToAngle(70, 50, -40));
+    point = {70, 50, -40};
+    rcl_publish(&publisher_L2, &point, NULL);
     delay(500);
-    move(L1, ConvertPointToAngle(70, 50, -20));
+    point = {70, 50, -20};
+    rcl_publish(&publisher_L1, &point, NULL);
     delay(300);
-    move(L1, ConvertPointToAngle(70, 50, -40));
+    point = {70, 50, -40};
+    rcl_publish(&publisher_L1, &point, NULL);
     delay(500);
   }  
 }
 
 
 void TurnLeft(int nbr = 1){
+  geometry_msgs__msg__Point point;
   for (int i = 0; i < nbr; i++)
   {
-    move(L1, ConvertPointToAngle(75, 25, -20));
+    point = {75,25,-20};
+    rcl_publish(&publisher_L1, &point, NULL);
     delay(300);
-    move(L1, ConvertPointToAngle(75, 25, -40));
+    point = {75, 25, -40};
+    rcl_publish(&publisher_L1, &point, NULL);
     delay(300);
-    move(L2, ConvertPointToAngle(33, 70, -20));
+    point = {33, 70, -20};
+    rcl_publish(&publisher_L2, &point, NULL);
     delay(300);
-    move(L2, ConvertPointToAngle(33, 70, -40));
+    point = {33, 70, -40};
+    rcl_publish(&publisher_L2, &point, NULL);
     delay(300);
-    move(R1, ConvertPointToAngle(73, 25, -20));
+    point = {73, 25, -20};
+    rcl_publish(&publisher_R1, &point, NULL);
     delay(300);
-    move(R1, ConvertPointToAngle(73, 25, -40));
+    point = {73, 25, -40};
+    rcl_publish(&publisher_R1, &point, NULL);
     delay(300);
-    move(R2, ConvertPointToAngle(33, 70, -20));
+    point = {33, 70, -20};
+    rcl_publish(&publisher_R2, &point, NULL);
     delay(300);
-    move(R2, ConvertPointToAngle(33, 70, -40));
+    point = {33, 70, -40};
+    rcl_publish(&publisher_R2, &point, NULL);
     delay(300);
-    move(L1, ConvertPointToAngle(33, 70, -40));
-    move(L2, ConvertPointToAngle(73, 25, -40));
-    move(R1, ConvertPointToAngle(33, 70, -40));
-    move(R2, ConvertPointToAngle(73, 25, -40));
+    point = {33, 70, -40};
+    rcl_publish(&publisher_L1, &point, NULL);
+    rcl_publish(&publisher_R1, &point, NULL);
+    point = {73, 25, -40};
+    rcl_publish(&publisher_L2, &point, NULL);
+    rcl_publish(&publisher_R2, &point, NULL);
     delay(500);
   }  
-    move(L1, ConvertPointToAngle(70, 50, -20));
+    point = {70, 50, -20};
+    rcl_publish(&publisher_L1, &point, NULL);
     delay(300);
-    move(L1, ConvertPointToAngle(70, 50, -40));
+    point = {70, 50, -40};
+    rcl_publish(&publisher_L1, &point, NULL);
     delay(300);
-    move(L2, ConvertPointToAngle(70, 50, -20));
+    point = {70, 50, -20};
+    rcl_publish(&publisher_L2, &point, NULL);
     delay(300);
-    move(L2, ConvertPointToAngle(70, 50, -40));
+    point = {70, 50, -40};
+    rcl_publish(&publisher_L2, &point, NULL);
     delay(300);
-    move(R1, ConvertPointToAngle(70, 50, -20));
+    point = {70, 50, -20};
+    rcl_publish(&publisher_R1, &point, NULL);
     delay(300);
-    move(R1, ConvertPointToAngle(70, 50, -40));
+    point = {70, 50, -40};
+    rcl_publish(&publisher_R1, &point, NULL);
     delay(300);
-    move(R2, ConvertPointToAngle(70, 50, -20));
+    point = {70, 50, -20};
+    rcl_publish(&publisher_R2, &point, NULL);
     delay(300);
-    move(R2, ConvertPointToAngle(70, 50, -40));
+    point = {70, 50, -40};
+    rcl_publish(&publisher_R2, &point, NULL);
     delay(300);
 }
 
@@ -460,7 +507,7 @@ void initServo(){
   }
 }
 
-void subscription_callback(const void * msgin)
+void subscription_callback_order(const void * msgin)
 {  
   Serial.println("Order receive");
   const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
@@ -475,11 +522,31 @@ void subscription_callback(const void * msgin)
     sit();
   }
   Serial.println(msg->data);
-  
-  //digitalWrite(LED_PIN, (msg->data == 0) ? LOW : HIGH);  
 }
 
+void subscription_callback_R2(const void * msgin)
+{  
+  const geometry_msgs__msg__Point * msg = (const geometry_msgs__msg__Point *)msgin;
+  move(R2, ConvertPointToAngle(msg->x, msg->y, msg->z));
+}
 
+void subscription_callback_R1(const void * msgin)
+{  
+  const geometry_msgs__msg__Point * msg = (const geometry_msgs__msg__Point *)msgin;
+  move(R1, ConvertPointToAngle(msg->x, msg->y, msg->z));
+}
+
+void subscription_callback_L2(const void * msgin)
+{  
+  const geometry_msgs__msg__Point * msg = (const geometry_msgs__msg__Point *)msgin;
+  move(L2, ConvertPointToAngle(msg->x, msg->y, msg->z));
+}
+
+void subscription_callback_L1(const void * msgin)
+{  
+  const geometry_msgs__msg__Point * msg = (const geometry_msgs__msg__Point *)msgin;
+  move(L1, ConvertPointToAngle(msg->x, msg->y, msg->z));
+}
 #define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
 
 void error_loop(){
@@ -502,24 +569,78 @@ void setup() {
 
   allocator = rcl_get_default_allocator();
 
+  Serial.println("Allocator init");
+
   //create init_options
   RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
 
+  Serial.println("Support init");
+
   // create node
-  RCCHECK(rclc_node_init_default(&node, "spider_move_node", "", &support));
+  RCCHECK(rclc_node_init_default(&main_node, "spider_node", "", &support));
+  /*RCCHECK(rclc_node_init_default(&node_R2, "spider_arm_R2", "", &support));
+  RCCHECK(rclc_node_init_default(&node_R1, "spider_arm_R1", "", &support));
+  RCCHECK(rclc_node_init_default(&node_L2, "spider_arm_L2", "", &support));
+  RCCHECK(rclc_node_init_default(&node_L1, "spider_arm_L1", "", &support));*/
+
+  Serial.println("Nodes init");
 
   // create subscriber
   RCCHECK(rclc_subscription_init_default(
-    &subscriber,
-    &node,
+    &subscriber_order,
+    &main_node,
     ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
     "spider_move_order"));
 
+    
   // create executor
   RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
-  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &msg, &subscription_callback, ON_NEW_DATA));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber_order, &msg_order, &subscription_callback_order, ON_NEW_DATA));
 
-initServo();
+  RCCHECK(rclc_subscription_init_default(
+    &subscriber_R2,
+    &main_node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Point),
+    "spider_move_arm_R2"));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber_R2, &msg_arm, &subscription_callback_R2, ON_NEW_DATA));
+
+  RCCHECK(rclc_subscription_init_default(
+    &subscriber_R1,
+    &main_node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Point),
+    "spider_move_arm_R1"));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber_R1, &msg_arm, &subscription_callback_R1, ON_NEW_DATA));
+
+  RCCHECK(rclc_subscription_init_default(
+    &subscriber_L2,
+    &main_node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Point),
+    "spider_move_arm_L2"));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber_L2, &msg_arm, &subscription_callback_L2, ON_NEW_DATA));
+
+  RCCHECK(rclc_subscription_init_default(
+    &subscriber_L1,
+    &main_node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Point),
+    "spider_move_arm_L1"));
+  RCCHECK(rclc_executor_add_subscription(&executor, &subscriber_L1, &msg_arm, &subscription_callback_L1, ON_NEW_DATA));
+
+
+  // Creates a reliable rcl publisher
+  rclc_publisher_init_default(
+    &publisher_R2, &main_node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Point), "spider_move_arm_R2");
+  rclc_publisher_init_default(
+    &publisher_R1, &main_node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Point), "spider_move_arm_R1");
+  rclc_publisher_init_default(
+    &publisher_L2, &main_node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Point), "spider_move_arm_L2");
+  rclc_publisher_init_default(
+    &publisher_L1, &main_node,
+    ROSIDL_GET_MSG_TYPE_SUPPORT(geometry_msgs, msg, Point), "spider_move_arm_L1");
+
+  initServo();
   
   calculateOffset();
   Serial.println("fin du setup");
