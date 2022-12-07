@@ -190,13 +190,9 @@ void move(int indexLeg, AngleCoo coo)
       break;
   }
 
-  if(checkAngle(indexLeg, coo)){
     servo[indexLeg][0].write(coo.Gamma);
     servo[indexLeg][1].write(coo.Alpha);
     servo[indexLeg][2].write(coo.Beta);
-  }else{
-    setPLS(indexLeg, coo);
-  }
 }
 
 bool checkAngle(int indexLeg, AngleCoo coo){
@@ -357,15 +353,19 @@ void setup() {
     }
   }
   Serial.println("fin du setup");
-  calculateOffset();
+  //calculateOffset();
 }
 
 void loop() {
-  sit();
+  //sit();
   delay(1000);
-  stand();
+move(R2, ConvertPointToAngle(70, 50, -40));  
+move(L2, ConvertPointToAngle(70, 50, -40));
+move(R1, ConvertPointToAngle(70, 50, -40));
+move(L1, ConvertPointToAngle(70, 50, -40));
+  /*stand();
   delay(1000);
   TurnLeft(10);
   sit();
-  delay(1000);
+  delay(1000);*/
 }
