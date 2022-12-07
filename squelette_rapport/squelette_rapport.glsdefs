@@ -1,0 +1,56 @@
+\glsdefs@newdocentry{word1}%
+{%
+name={mot en entier},%
+sort={mot en entier},%
+type={main},%
+first={mot en entier},%
+firstplural={mot en entiers},%
+text={mot en entier},%
+plural={mot en entiers},%
+description={Définition du mot},%
+descriptionplural={Définition du mot},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{word2}%
+{%
+name={anotherword},%
+sort={anotherword},%
+type={main},%
+first={anotherword},%
+firstplural={anotherwords},%
+text={anotherword},%
+plural={anotherwords},%
+description={Bla bla},%
+descriptionplural={Bla bla},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
