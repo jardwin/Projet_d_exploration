@@ -299,13 +299,13 @@ void move(int indexLeg, AngleCoo coo)
       break;
   }
 
-  if(checkAngle(indexLeg, coo)){
+  //if(checkAngle(indexLeg, coo)){
     RP2040_ISR_Servos.setPosition(servo[indexLeg][0].servoIndex, coo.Gamma);
     RP2040_ISR_Servos.setPosition(servo[indexLeg][1].servoIndex, coo.Alpha);
     RP2040_ISR_Servos.setPosition(servo[indexLeg][2].servoIndex, coo.Beta);
-  }else{
+  /*}else{
     setPLS(indexLeg, coo);
-  }
+  }*/
 }
 
 void moveTriangleR2(){
@@ -343,75 +343,459 @@ void stand(){
   move(L2, debout);
 }
 
-void Walk(int nbr = 1){
+void WalkForward(int nbr = 1){
   for (int i = 0; i < nbr; i++)
   {
     move(R2, ConvertPointToAngle(70, 100, -20));
-    delay(300);
+    delay(150);
     move(R2, ConvertPointToAngle(70, 100, -40));
-    delay(300);
+    delay(150);
     move(L1, ConvertPointToAngle(70, 0, -40));
     move(L2, ConvertPointToAngle(70, 100, -40));
     move(R1, ConvertPointToAngle(70, 100, -40));
     move(R2, ConvertPointToAngle(70, 50, -40));
-    delay(500);
+    delay(200);
     move(R1, ConvertPointToAngle(70, 50, -20));
-    delay(300);
+    delay(150);
     move(R1, ConvertPointToAngle(70, 50, -40));
-    delay(500);
+    delay(150);
     move(L2, ConvertPointToAngle(70, 50, -20));
-    delay(300);
+    delay(150);
     move(L2, ConvertPointToAngle(70, 50, -40));
-    delay(500);
+    delay(200);
     move(L1, ConvertPointToAngle(70, 50, -20));
-    delay(300);
+    delay(150);
     move(L1, ConvertPointToAngle(70, 50, -40));
-    delay(500);
+    delay(200);
   }  
 }
 
+void WalkBack(int nbr = 1){
+  for (int i = 0; i < nbr; i++)
+  {
+    move(L2, ConvertPointToAngle(70, 100, -20));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 100, -40));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 100, -40));
+    move(L2, ConvertPointToAngle(70, 50, -40));
+    move(R1, ConvertPointToAngle(70, 0, -40));
+    move(R2, ConvertPointToAngle(70, 100, -40));
+    delay(200);
+    move(L1, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -40));
+    delay(200);
+    move(R1, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -40));
+    delay(200);
+  }  
+}
+
+void WalkLeft(int nbr = 1){
+  for (int i = 0; i < nbr; i++)
+  {
+    move(L1, ConvertPointToAngle(120, 50, -20));
+    delay(150);
+    move(L1, ConvertPointToAngle(120, 50, -40));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 50, -40));
+    move(L2, ConvertPointToAngle(20, 50, -40));
+    move(R1, ConvertPointToAngle(120, 50, -40));
+    move(R2, ConvertPointToAngle(120, 50, -40));
+    delay(200);
+    move(L2, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -40));
+    delay(200);
+    move(R2, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -40));
+    delay(200);
+  }  
+}
+
+
+void WalkRight(int nbr = 1){
+  for (int i = 0; i < nbr; i++)
+  {
+    move(R2, ConvertPointToAngle(120, 50, -20));
+    delay(150);
+    move(R2, ConvertPointToAngle(120, 50, -40));
+    delay(150);
+    move(L1, ConvertPointToAngle(120, 50, -40));
+    move(L2, ConvertPointToAngle(120, 50, -40));
+    move(R1, ConvertPointToAngle(20, 50, -40));
+    move(R2, ConvertPointToAngle(70, 50, -40));
+    delay(200);
+    move(R1, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 50, -40));
+    delay(200);
+    move(L1, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 50, -40));
+    delay(200);
+  }  
+}
 
 void TurnLeft(int nbr = 1){
   for (int i = 0; i < nbr; i++)
   {
     move(L1, ConvertPointToAngle(75, 25, -20));
-    delay(300);
+    delay(150);
     move(L1, ConvertPointToAngle(75, 25, -40));
-    delay(300);
+    delay(150);
     move(L2, ConvertPointToAngle(33, 70, -20));
-    delay(300);
+    delay(150);
     move(L2, ConvertPointToAngle(33, 70, -40));
-    delay(300);
+    delay(150);
     move(R1, ConvertPointToAngle(73, 25, -20));
-    delay(300);
+    delay(150);
     move(R1, ConvertPointToAngle(73, 25, -40));
-    delay(300);
+    delay(150);
     move(R2, ConvertPointToAngle(33, 70, -20));
-    delay(300);
+    delay(150);
     move(R2, ConvertPointToAngle(33, 70, -40));
-    delay(300);
+    delay(150);
     move(L1, ConvertPointToAngle(33, 70, -40));
     move(L2, ConvertPointToAngle(73, 25, -40));
     move(R1, ConvertPointToAngle(33, 70, -40));
     move(R2, ConvertPointToAngle(73, 25, -40));
-    delay(500);
+    delay(200);
   }  
     move(L1, ConvertPointToAngle(70, 50, -20));
-    delay(300);
+    delay(150);
     move(L1, ConvertPointToAngle(70, 50, -40));
-    delay(300);
+    delay(150);
     move(L2, ConvertPointToAngle(70, 50, -20));
-    delay(300);
+    delay(150);
     move(L2, ConvertPointToAngle(70, 50, -40));
-    delay(300);
+    delay(150);
     move(R1, ConvertPointToAngle(70, 50, -20));
-    delay(300);
+    delay(150);
     move(R1, ConvertPointToAngle(70, 50, -40));
-    delay(300);
+    delay(150);
     move(R2, ConvertPointToAngle(70, 50, -20));
-    delay(300);
+    delay(150);
     move(R2, ConvertPointToAngle(70, 50, -40));
-    delay(300);
+    delay(150);
+}
+
+void TurnRight(int nbr = 1){
+  for (int i = 0; i < nbr; i++)
+  {
+    move(R2, ConvertPointToAngle(73, 25, -20));
+    delay(150);
+    move(R2, ConvertPointToAngle(73, 25, -40));
+    delay(150);
+    move(R1, ConvertPointToAngle(33, 70, -20));
+    delay(150);
+    move(R1, ConvertPointToAngle(33, 70, -40));
+    delay(150);
+    move(L2, ConvertPointToAngle(73, 25, -20));
+    delay(150);
+    move(L2, ConvertPointToAngle(73, 25, -40));
+    delay(150);
+    move(L1, ConvertPointToAngle(33, 70, -20));
+    delay(150);
+    move(L1, ConvertPointToAngle(33, 70, -40));
+    delay(150);
+    move(L1, ConvertPointToAngle(73, 25, -40));
+    move(L2, ConvertPointToAngle(33, 70, -40));
+    move(R1, ConvertPointToAngle(73, 25, -40));
+    move(R2, ConvertPointToAngle(33, 70, -40));
+    delay(200);
+  }  
+    move(L1, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -20));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+}
+
+void rave(){
+    move(R2, ConvertPointToAngle(70, 0, -20));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 0, -40));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 0, -20));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 0, -40));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 0, -20));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 0, -40));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 0, -40));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 0, -80));
+    move(R1, ConvertPointToAngle(70, 0, -80));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 0, -27));
+    move(L2, ConvertPointToAngle(70, 0, -27));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 0, -80));
+    move(L2, ConvertPointToAngle(70, 0, -80));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 0, -27));
+    move(R1, ConvertPointToAngle(70, 0, -27));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 0, -40));
+    move(R1, ConvertPointToAngle(70, 0, -40));
+    move(L1, ConvertPointToAngle(70, 0, -40));
+    move(L2, ConvertPointToAngle(70, 0, -40));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 50, -40));
+}
+
+void flex(){
+    move(R2, ConvertPointToAngle(70, 50, -27));
+    move(R1, ConvertPointToAngle(70, 50, -27));
+    move(L1, ConvertPointToAngle(70, 50, -27));
+    move(L2, ConvertPointToAngle(70, 50, -27));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -40));
+    move(R1, ConvertPointToAngle(70, 50, -40));
+    move(L1, ConvertPointToAngle(70, 50, -40));
+    move(L2, ConvertPointToAngle(70, 50, -40));
+}
+
+void hello(){
+    move(R2, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(R2, ConvertPointToAngle(15, 80, 60));
+    delay(150);
+    move(R2, ConvertPointToAngle(15, 80, 80));
+    delay(150);
+    move(R2, ConvertPointToAngle(15, 80, 60));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -40));
+}
+
+void applaud_sim(){
+    move(R2, ConvertPointToAngle(70, 50, -15));
+    move(L2, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -40));
+    move(L2, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -15));
+    move(L1, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -40));
+    move(L1, ConvertPointToAngle(70, 50, -40));
+}
+
+void applaud_wave(){
+    move(R2, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(R1, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(L2, ConvertPointToAngle(70, 50, -40));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(L1, ConvertPointToAngle(70, 50, -40));
+}
+
+void applaud(){
+    move(R2, ConvertPointToAngle(70, 50, -15));
+    delay(150);
+    move(R2, ConvertPointToAngle(70, 50, -40));
+}
+
+void sputnik(){
+  move(R2, ConvertPointToAngle(70, 50, -27));
+  move(R1, ConvertPointToAngle(70, 50, -27));
+  move(L1, ConvertPointToAngle(70, 50, -27));
+  move(L2, ConvertPointToAngle(70, 50, -27));
+  delay(150);
+  move(R2, ConvertPointToAngle(10, 10, 120));
+  move(R1, ConvertPointToAngle(10, 10, 120));
+  move(L1, ConvertPointToAngle(10, 10, 120));
+  move(L2, ConvertPointToAngle(10, 10, 120));
+  delay(150*3);
+  move(R2, ConvertPointToAngle(70, 40, -27));
+  move(R1, ConvertPointToAngle(70, 50, 40));
+  move(L1, ConvertPointToAngle(70, 50, 40));
+  move(L2, ConvertPointToAngle(70, 40, -27));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, -27));
+  move(R1, ConvertPointToAngle(70, 50, -27));
+  move(L1, ConvertPointToAngle(70, 50, -27));
+  move(L2, ConvertPointToAngle(70, 50, -27));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, -40));
+  move(R1, ConvertPointToAngle(70, 50, -40));
+  move(L1, ConvertPointToAngle(70, 50, -40));
+  move(L2, ConvertPointToAngle(70, 50, -40));
+}
+
+void cross(){
+  move(R2, ConvertPointToAngle(70, 50, -27));
+  move(R1, ConvertPointToAngle(70, 50, -27));
+  move(L1, ConvertPointToAngle(70, 50, -27));
+  move(L2, ConvertPointToAngle(70, 50, -27));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, 35));
+  move(R1, ConvertPointToAngle(70, 50, 35));
+  move(L1, ConvertPointToAngle(70, 50, 35));
+  move(L2, ConvertPointToAngle(70, 50, 35));
+  delay(150);
+  move(R2, ConvertPointToAngle(140, 80, 10));
+  move(R1, ConvertPointToAngle(140, 80, 10));
+  move(L1, ConvertPointToAngle(140, 80, 10));
+  move(L2, ConvertPointToAngle(140, 80, 10));
+  delay(150*3);
+  move(R2, ConvertPointToAngle(70, 50, 35));
+  move(R1, ConvertPointToAngle(70, 50, 35));
+  move(L1, ConvertPointToAngle(70, 50, 35));
+  move(L2, ConvertPointToAngle(70, 50, 35));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, -27));
+  move(R1, ConvertPointToAngle(70, 50, -27));
+  move(L1, ConvertPointToAngle(70, 50, -27));
+  move(L2, ConvertPointToAngle(70, 50, -27));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, -40));
+  move(R1, ConvertPointToAngle(70, 50, -40));
+  move(L1, ConvertPointToAngle(70, 50, -40));
+  move(L2, ConvertPointToAngle(70, 50, -40));
+}
+
+void pls(){
+  move(R2, ConvertPointToAngle(70, 50, -27));
+  move(R1, ConvertPointToAngle(70, 50, -27));
+  move(L1, ConvertPointToAngle(70, 50, -27));
+  move(L2, ConvertPointToAngle(70, 50, -27));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, 35));
+  move(R1, ConvertPointToAngle(70, 50, 35));
+  move(L1, ConvertPointToAngle(70, 50, 35));
+  move(L2, ConvertPointToAngle(70, 50, 35));
+  delay(150);
+  move(R2, ConvertPointToAngle(160, 0, 10));
+  move(R1, ConvertPointToAngle(160, 0, 10));
+  move(L1, ConvertPointToAngle(160, 0, 10));
+  move(L2, ConvertPointToAngle(160, 0, 10));
+  delay(150*3);
+  move(R2, ConvertPointToAngle(70, 50, 35));
+  move(R1, ConvertPointToAngle(70, 50, 35));
+  move(L1, ConvertPointToAngle(70, 50, 35));
+  move(L2, ConvertPointToAngle(70, 50, 35));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, -27));
+  move(R1, ConvertPointToAngle(70, 50, -27));
+  move(L1, ConvertPointToAngle(70, 50, -27));
+  move(L2, ConvertPointToAngle(70, 50, -27));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, -40));
+  move(R1, ConvertPointToAngle(70, 50, -40));
+  move(L1, ConvertPointToAngle(70, 50, -40));
+  move(L2, ConvertPointToAngle(70, 50, -40));
+}
+
+void bolting(){
+  move(R2, ConvertPointToAngle(70, 50, -15));
+  move(L2, ConvertPointToAngle(70, 50, -15));
+  delay(150);
+  move(R2, ConvertPointToAngle(0, 150, 35));
+  move(L2, ConvertPointToAngle(0, 150, 35));
+  delay(150*3);
+  move(R2, ConvertPointToAngle(70, 50, -15));
+  move(L2, ConvertPointToAngle(70, 50, -15));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, -40));
+  move(L2, ConvertPointToAngle(70, 50, -40));
+}
+
+void winx(){
+  move(R2, ConvertPointToAngle(70, 50, -27));
+  move(R1, ConvertPointToAngle(70, 50, -27));
+  move(L1, ConvertPointToAngle(70, 50, -27));
+  move(L2, ConvertPointToAngle(70, 50, -27));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, 35));
+  move(R1, ConvertPointToAngle(70, 50, 35));
+  move(L1, ConvertPointToAngle(70, 50, 35));
+  move(L2, ConvertPointToAngle(70, 50, 35));
+  delay(150);
+  move(R2, ConvertPointToAngle(140, 0, 0));
+  move(R1, ConvertPointToAngle(140, 0, 0));
+  move(L1, ConvertPointToAngle(140, 0, 0));
+  move(L2, ConvertPointToAngle(140, 0, 0));
+  delay(150);
+  move(R2, ConvertPointToAngle(140, 0, 70));
+  move(R1, ConvertPointToAngle(140, 0, 70));
+  move(L1, ConvertPointToAngle(140, 0, 70));
+  move(L2, ConvertPointToAngle(140, 0, 70));
+  delay(150);
+  move(R2, ConvertPointToAngle(140, 0, 0));
+  move(R1, ConvertPointToAngle(140, 0, 0));
+  move(L1, ConvertPointToAngle(140, 0, 0));
+  move(L2, ConvertPointToAngle(140, 0, 0));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, 35));
+  move(R1, ConvertPointToAngle(70, 50, 35));
+  move(L1, ConvertPointToAngle(70, 50, 35));
+  move(L2, ConvertPointToAngle(70, 50, 35));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, -27));
+  move(R1, ConvertPointToAngle(70, 50, -27));
+  move(L1, ConvertPointToAngle(70, 50, -27));
+  move(L2, ConvertPointToAngle(70, 50, -27));
+  delay(150);
+  move(R2, ConvertPointToAngle(70, 50, -40));
+  move(R1, ConvertPointToAngle(70, 50, -40));
+  move(L1, ConvertPointToAngle(70, 50, -40));
+  move(L2, ConvertPointToAngle(70, 50, -40));
 }
 
 void Calibrage(){
@@ -419,7 +803,6 @@ void Calibrage(){
   {
     move(i, ConvertPointToAngle(100,70,42));
   }
-  
 }
 const int neutral = 90;
 
@@ -464,19 +847,49 @@ void subscription_callback(const void * msgin)
 {  
   Serial.println("Order receive");
   const std_msgs__msg__Int32 * msg = (const std_msgs__msg__Int32 *)msgin;
+  digitalWrite(LED_PIN, (msg->data == 0) ? LOW : HIGH);
   stand();
   if(msg->data == 0){
-    Walk(1);
+    WalkForward(1);
   }else if(msg->data == 1){
-    TurnLeft(1);
+    WalkBack(1);
   }else if(msg->data == 2){
-    Calibrage();
+    WalkLeft(1);
   }else if(msg->data == 3){
+    WalkRight(1);
+  }else if(msg->data == 4){
+    TurnLeft(1);
+  }else if(msg->data == 5){
+    TurnRight(1);
+  }else if(msg->data == 6){
+    stand();
+  }else if(msg->data == 7){
     sit();
+  }else if(msg->data == 8){
+    rave();
+  }else if(msg->data == 9){
+    flex();
+  }else if(msg->data == 10){
+    hello();
+  }else if(msg->data == 11){
+    applaud_sim();
+  }else if(msg->data == 12){
+    applaud_wave();
+  }else if(msg->data == 13){
+    applaud();
+  }else if(msg->data == 14){
+    sputnik();
+  }else if(msg->data == 15){
+    cross();
+  }else if(msg->data == 16){
+    pls();
+  }else if(msg->data == 17){
+    bolting();
+  }else if(msg->data == 18){
+    winx();
+  }else if(msg->data == 99){
+    Calibrage();
   }
-  Serial.println(msg->data);
-  
-  //digitalWrite(LED_PIN, (msg->data == 0) ? LOW : HIGH);  
 }
 
 
@@ -492,8 +905,8 @@ void error_loop(){
 void setup() {
   Serial.begin(9600);
   
-  set_microros_wifi_transports("FREEBOX_CLAIRE", "issemus-diore5545-ibebat66-egati9", "192.168.0.30", 8888);
-
+  set_microros_wifi_transports("FREEBOX_CLAIRE", "issemus-diore5545-ibebat66-egati9", "192.168.0.31", 8888);
+  //set_microros_wifi_transports("Merlin", "merlin123", "192.168.155.157", 8888);
 
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, HIGH);  
@@ -519,7 +932,7 @@ void setup() {
   RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
   RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &msg, &subscription_callback, ON_NEW_DATA));
 
-initServo();
+  initServo();
   
   calculateOffset();
   Serial.println("fin du setup");
@@ -528,5 +941,4 @@ initServo();
 void loop() {
   delay(100);
   rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
-  //Calibrage(); //Femure L1 à l'aire HS sur le calibrage
 }

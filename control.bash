@@ -15,7 +15,8 @@ dialog --clear \
     2 "Tourner à gauche" \
     3 "Position de calibrage" \
     4 "Assis" \
-    5 "Quitter" 2> "${INPUT}"
+    5 "Montage" \
+    6 "Quitter" 2> "${INPUT}"
 
 menuitem=$(<"${INPUT}")
 
@@ -33,6 +34,9 @@ case $menuitem in
     ros2 topic pub /spider_move_order std_msgs/msg/Int32 "data: 3" --once
     ;;
 5)
+    ros2 topic pub /spider_move_order std_msgs/msg/Int32 "data: 4" --once
+    ;;
+6)
     break
     ;;
 esac
