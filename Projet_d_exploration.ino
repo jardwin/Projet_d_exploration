@@ -126,6 +126,8 @@ const float LH = 30.5;
 const float LF = 53;
 const float LT = 79.5;
 
+int moveDelay = 200;
+
 AngleCoo ConvertPointToAngle(float x, float y, float z){
   z -= 27;
   float gamma = atan(y/x)*(180/M_PI);
@@ -347,26 +349,26 @@ void WalkForward(int nbr = 1){
   for (int i = 0; i < nbr; i++)
   {
     move(R2, ConvertPointToAngle(70, 100, -20));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 100, -40));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 0, -40));
     move(L2, ConvertPointToAngle(70, 100, -40));
     move(R1, ConvertPointToAngle(70, 100, -40));
     move(R2, ConvertPointToAngle(70, 50, -40));
-    delay(200);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -40));
-    delay(200);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -40));
-    delay(200);
+    delay(moveDelay);
   }  
 }
 
@@ -374,26 +376,26 @@ void WalkBack(int nbr = 1){
   for (int i = 0; i < nbr; i++)
   {
     move(L2, ConvertPointToAngle(70, 100, -20));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 100, -40));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 100, -40));
     move(L2, ConvertPointToAngle(70, 50, -40));
     move(R1, ConvertPointToAngle(70, 0, -40));
     move(R2, ConvertPointToAngle(70, 100, -40));
-    delay(200);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -40));
-    delay(200);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -40));
-    delay(200);
+    delay(moveDelay);
   }  
 }
 
@@ -401,26 +403,26 @@ void WalkLeft(int nbr = 1){
   for (int i = 0; i < nbr; i++)
   {
     move(L1, ConvertPointToAngle(120, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(120, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -40));
     move(L2, ConvertPointToAngle(20, 50, -40));
     move(R1, ConvertPointToAngle(120, 50, -40));
     move(R2, ConvertPointToAngle(120, 50, -40));
-    delay(200);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -40));
-    delay(200);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -40));
-    delay(200);
+    delay(moveDelay);
   }  
 }
 
@@ -429,26 +431,26 @@ void WalkRight(int nbr = 1){
   for (int i = 0; i < nbr; i++)
   {
     move(R2, ConvertPointToAngle(120, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(120, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(120, 50, -40));
     move(L2, ConvertPointToAngle(120, 50, -40));
     move(R1, ConvertPointToAngle(20, 50, -40));
     move(R2, ConvertPointToAngle(70, 50, -40));
-    delay(200);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -40));
-    delay(200);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -40));
-    delay(200);
+    delay(moveDelay);
   }  
 }
 
@@ -456,134 +458,134 @@ void TurnLeft(int nbr = 1){
   for (int i = 0; i < nbr; i++)
   {
     move(L1, ConvertPointToAngle(75, 25, -20));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(75, 25, -40));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(33, 70, -20));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(33, 70, -40));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(73, 25, -20));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(73, 25, -40));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(33, 70, -20));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(33, 70, -40));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(33, 70, -40));
     move(L2, ConvertPointToAngle(73, 25, -40));
     move(R1, ConvertPointToAngle(33, 70, -40));
     move(R2, ConvertPointToAngle(73, 25, -40));
-    delay(200);
+    delay(moveDelay);
   }  
     move(L1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
 }
 
 void TurnRight(int nbr = 1){
   for (int i = 0; i < nbr; i++)
   {
     move(R2, ConvertPointToAngle(73, 25, -20));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(73, 25, -40));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(33, 70, -20));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(33, 70, -40));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(73, 25, -20));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(73, 25, -40));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(33, 70, -20));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(33, 70, -40));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(73, 25, -40));
     move(L2, ConvertPointToAngle(33, 70, -40));
     move(R1, ConvertPointToAngle(73, 25, -40));
     move(R2, ConvertPointToAngle(33, 70, -40));
-    delay(200);
+    delay(moveDelay);
   }  
     move(L1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -20));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
 }
 
 void rave(){
     move(R2, ConvertPointToAngle(70, 0, -20));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 0, -40));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 0, -20));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 0, -40));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 0, -20));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 0, -40));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 0, -40));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 0, -80));
     move(R1, ConvertPointToAngle(70, 0, -80));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 0, -27));
     move(L2, ConvertPointToAngle(70, 0, -27));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 0, -80));
     move(L2, ConvertPointToAngle(70, 0, -80));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 0, -27));
     move(R1, ConvertPointToAngle(70, 0, -27));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 0, -40));
     move(R1, ConvertPointToAngle(70, 0, -40));
     move(L1, ConvertPointToAngle(70, 0, -40));
     move(L2, ConvertPointToAngle(70, 0, -40));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -40));
 }
 
@@ -592,7 +594,7 @@ void flex(){
     move(R1, ConvertPointToAngle(70, 50, -27));
     move(L1, ConvertPointToAngle(70, 50, -27));
     move(L2, ConvertPointToAngle(70, 50, -27));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -40));
     move(R1, ConvertPointToAngle(70, 50, -40));
     move(L1, ConvertPointToAngle(70, 50, -40));
@@ -601,53 +603,53 @@ void flex(){
 
 void hello(){
     move(R2, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(15, 80, 60));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(15, 80, 80));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(15, 80, 60));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -40));
 }
 
 void applaud_sim(){
     move(R2, ConvertPointToAngle(70, 50, -15));
     move(L2, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -40));
     move(L2, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -15));
     move(L1, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -40));
     move(L1, ConvertPointToAngle(70, 50, -40));
 }
 
 void applaud_wave(){
     move(R2, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(R1, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(L2, ConvertPointToAngle(70, 50, -40));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(L1, ConvertPointToAngle(70, 50, -40));
 }
 
 void applaud(){
     move(R2, ConvertPointToAngle(70, 50, -15));
-    delay(150);
+    delay(moveDelay);
     move(R2, ConvertPointToAngle(70, 50, -40));
 }
 
@@ -656,22 +658,22 @@ void sputnik(){
   move(R1, ConvertPointToAngle(70, 50, -27));
   move(L1, ConvertPointToAngle(70, 50, -27));
   move(L2, ConvertPointToAngle(70, 50, -27));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(10, 10, 120));
   move(R1, ConvertPointToAngle(10, 10, 120));
   move(L1, ConvertPointToAngle(10, 10, 120));
   move(L2, ConvertPointToAngle(10, 10, 120));
-  delay(150*3);
+  delay(moveDelay*3);
   move(R2, ConvertPointToAngle(70, 40, -27));
   move(R1, ConvertPointToAngle(70, 50, 40));
   move(L1, ConvertPointToAngle(70, 50, 40));
   move(L2, ConvertPointToAngle(70, 40, -27));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, -27));
   move(R1, ConvertPointToAngle(70, 50, -27));
   move(L1, ConvertPointToAngle(70, 50, -27));
   move(L2, ConvertPointToAngle(70, 50, -27));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, -40));
   move(R1, ConvertPointToAngle(70, 50, -40));
   move(L1, ConvertPointToAngle(70, 50, -40));
@@ -683,27 +685,27 @@ void cross(){
   move(R1, ConvertPointToAngle(70, 50, -27));
   move(L1, ConvertPointToAngle(70, 50, -27));
   move(L2, ConvertPointToAngle(70, 50, -27));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, 35));
   move(R1, ConvertPointToAngle(70, 50, 35));
   move(L1, ConvertPointToAngle(70, 50, 35));
   move(L2, ConvertPointToAngle(70, 50, 35));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(140, 80, 10));
   move(R1, ConvertPointToAngle(140, 80, 10));
   move(L1, ConvertPointToAngle(140, 80, 10));
   move(L2, ConvertPointToAngle(140, 80, 10));
-  delay(150*3);
+  delay(moveDelay*3);
   move(R2, ConvertPointToAngle(70, 50, 35));
   move(R1, ConvertPointToAngle(70, 50, 35));
   move(L1, ConvertPointToAngle(70, 50, 35));
   move(L2, ConvertPointToAngle(70, 50, 35));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, -27));
   move(R1, ConvertPointToAngle(70, 50, -27));
   move(L1, ConvertPointToAngle(70, 50, -27));
   move(L2, ConvertPointToAngle(70, 50, -27));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, -40));
   move(R1, ConvertPointToAngle(70, 50, -40));
   move(L1, ConvertPointToAngle(70, 50, -40));
@@ -715,27 +717,27 @@ void pls(){
   move(R1, ConvertPointToAngle(70, 50, -27));
   move(L1, ConvertPointToAngle(70, 50, -27));
   move(L2, ConvertPointToAngle(70, 50, -27));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, 35));
   move(R1, ConvertPointToAngle(70, 50, 35));
   move(L1, ConvertPointToAngle(70, 50, 35));
   move(L2, ConvertPointToAngle(70, 50, 35));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(160, 0, 10));
   move(R1, ConvertPointToAngle(160, 0, 10));
   move(L1, ConvertPointToAngle(160, 0, 10));
   move(L2, ConvertPointToAngle(160, 0, 10));
-  delay(150*3);
+  delay(moveDelay*3);
   move(R2, ConvertPointToAngle(70, 50, 35));
   move(R1, ConvertPointToAngle(70, 50, 35));
   move(L1, ConvertPointToAngle(70, 50, 35));
   move(L2, ConvertPointToAngle(70, 50, 35));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, -27));
   move(R1, ConvertPointToAngle(70, 50, -27));
   move(L1, ConvertPointToAngle(70, 50, -27));
   move(L2, ConvertPointToAngle(70, 50, -27));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, -40));
   move(R1, ConvertPointToAngle(70, 50, -40));
   move(L1, ConvertPointToAngle(70, 50, -40));
@@ -745,13 +747,13 @@ void pls(){
 void bolting(){
   move(R2, ConvertPointToAngle(70, 50, -15));
   move(L2, ConvertPointToAngle(70, 50, -15));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(0, 150, 35));
   move(L2, ConvertPointToAngle(0, 150, 35));
-  delay(150*3);
+  delay(moveDelay*3);
   move(R2, ConvertPointToAngle(70, 50, -15));
   move(L2, ConvertPointToAngle(70, 50, -15));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, -40));
   move(L2, ConvertPointToAngle(70, 50, -40));
 }
@@ -761,37 +763,37 @@ void winx(){
   move(R1, ConvertPointToAngle(70, 50, -27));
   move(L1, ConvertPointToAngle(70, 50, -27));
   move(L2, ConvertPointToAngle(70, 50, -27));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, 35));
   move(R1, ConvertPointToAngle(70, 50, 35));
   move(L1, ConvertPointToAngle(70, 50, 35));
   move(L2, ConvertPointToAngle(70, 50, 35));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(140, 0, 0));
   move(R1, ConvertPointToAngle(140, 0, 0));
   move(L1, ConvertPointToAngle(140, 0, 0));
   move(L2, ConvertPointToAngle(140, 0, 0));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(140, 0, 70));
   move(R1, ConvertPointToAngle(140, 0, 70));
   move(L1, ConvertPointToAngle(140, 0, 70));
   move(L2, ConvertPointToAngle(140, 0, 70));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(140, 0, 0));
   move(R1, ConvertPointToAngle(140, 0, 0));
   move(L1, ConvertPointToAngle(140, 0, 0));
   move(L2, ConvertPointToAngle(140, 0, 0));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, 35));
   move(R1, ConvertPointToAngle(70, 50, 35));
   move(L1, ConvertPointToAngle(70, 50, 35));
   move(L2, ConvertPointToAngle(70, 50, 35));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, -27));
   move(R1, ConvertPointToAngle(70, 50, -27));
   move(L1, ConvertPointToAngle(70, 50, -27));
   move(L2, ConvertPointToAngle(70, 50, -27));
-  delay(150);
+  delay(moveDelay);
   move(R2, ConvertPointToAngle(70, 50, -40));
   move(R1, ConvertPointToAngle(70, 50, -40));
   move(L1, ConvertPointToAngle(70, 50, -40));
@@ -813,6 +815,14 @@ void montage(){
       delay(15); // Gives time to the servo to reach the target
     }
   }
+}
+
+void incressDelay(){
+  moveDelay += 20;
+}
+
+void decressDelay(){
+  moveDelay -= 20;
 }
 
 void initServo(){
@@ -887,6 +897,10 @@ void subscription_callback(const void * msgin)
     bolting();
   }else if(msg->data == 18){
     winx();
+  }else if(msg->data == 19){
+    incressDelay();
+  }else if(msg->data == 20){
+    decressDelay();
   }else if(msg->data == 99){
     Calibrage();
   }
@@ -905,7 +919,7 @@ void error_loop(){
 void setup() {
   Serial.begin(9600);
   
-  set_microros_wifi_transports("FREEBOX_CLAIRE", "issemus-diore5545-ibebat66-egati9", "192.168.0.31", 8888);
+  set_microros_wifi_transports("FREEBOX_CLAIRE", "issemus-diore5545-ibebat66-egati9", "192.168.0.30", 8888);
   //set_microros_wifi_transports("Merlin", "merlin123", "192.168.155.157", 8888);
 
   pinMode(LED_PIN, OUTPUT);
