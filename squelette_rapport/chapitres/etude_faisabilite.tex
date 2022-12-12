@@ -1,5 +1,5 @@
 	%-----------------------
-	\chapter{Étude de faisabilité}
+	\chapter{Implémentation}
 	%-----------------------
 
 Introduction de l'étude de faisabilité - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -7,29 +7,35 @@ Introduction de l'étude de faisabilité - Lorem ipsum dolor sit amet, consectet
 	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
 	
 		%-----------------------
-		\section{Première catégorie}
+		\section{Implémentation technique}
 		%-----------------------
 
-Introduction de la première catégorie - Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-		
-			%-----------------------
-			\subsection{Argumentation 1}
-			%-----------------------
+// A confirmer / compléter par notre expert Merlin
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Les ordres sont envoyées dans une queue et il y a un publisher et un récepteur.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-
+		%-----------------------
+		\section{Limites et problèmes rencontrés}
+		%-----------------------
 
 			%-----------------------
-			\subsection{Argumentation 2}
+			\subsection{Limites}
 			%-----------------------
 
+Alimentation : cartes besoin d'une batterie externe supplémentaire 
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Nous avons pensé à faire un support mais nous n'avons pas eu le temps (le support n'étant pas un élément essentiel).
 
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+			%-----------------------
+			\subsection{Problèmes rencontrés}
+			%-----------------------
+
+Servomoteur : on a besoin de la lib RP2040\_ISR\_Servo (\url{https://github.com/khoih-prog/RP2040_ISR_Servo}) car les mouvements envoient une instruction en dehors de la loop principale
+
+Impossible d'utiliser l'Arduino IDE (car il manque un time.h).
+
+Nous avons utilisé VSCode avec PlatformIO qui est une extension de VSCode. Il est compatible Windows, Mac et Linux.
+
+PlatformIO est designé pour faire marcher énormément de cartes et il faut donc spécifier la carte sur laquelle on travaille. Il se charge ensuite de récupèrer les libs.
 
 

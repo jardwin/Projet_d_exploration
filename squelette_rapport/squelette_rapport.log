@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.21)  28 NOV 2022 16:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.21)  12 DEC 2022 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,12 +844,12 @@ e
 (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<./img/logo_epita.png, id=50, 4302.0725pt x 2912.8825pt>
+<./img/logo_epita.png, id=58, 4302.0725pt x 2912.8825pt>
 File: ./img/logo_epita.png Graphic file (type png)
 <use ./img/logo_epita.png>
 Package pdftex.def Info: ./img/logo_epita.png  used on input line 99.
 (pdftex.def)             Requested size: 136.57462pt x 92.44965pt.
-<./img/logo_equipe_robotique_exploration.png, id=52, 2388.925pt x 2556.55125pt>
+<./img/logo_equipe_robotique_exploration.png, id=60, 2388.925pt x 2556.55125pt>
 
 File: ./img/logo_equipe_robotique_exploration.png Graphic file (type png)
 <use ./img/logo_equipe_robotique_exploration.png>
@@ -932,12 +932,6 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (0.55594pt too wide) in paragraph at lines 5--7
-\T1/lmr/m/n/12 tenta et une carte Ar-duino RP2040 ([][]$\T1/lmtt/m/n/12 https :
- / / www . youtube . com / watch ? v = mq1uFGsYqeU$[][]\T1/lmr/m/n/12 ).
- []
-
-
 Overfull \hbox (129.4036pt too wide) in paragraph at lines 8--10
 []\T1/lmr/m/n/12 // mettre le schéma de la carte https ://docs.arduino.cc/stati
 c/56034f29d9e2bd28f4fd3c90268d0557/ABX00053-
@@ -954,39 +948,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
 \T1/lmtt/m/n/12 0ca459c32ec5ead8700284ff56a136f7$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
  []
 
 
-Overfull \hbox (15.05612pt too wide) in paragraph at lines 30--34
+Overfull \hbox (15.05612pt too wide) in paragraph at lines 28--32
 \T1/lmtt/m/n/12 arduino / blob / galactic / examples / micro-[]ros _ publisher 
 _ wifi / micro-[]ros _ publisher _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--34
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
 
  []
 
 
-Overfull \hbox (3.00311pt too wide) in paragraph at lines 38--39
+Overfull \hbox (3.00311pt too wide) in paragraph at lines 36--37
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[3
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
+8.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [3
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
-0.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1007,27 +1000,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [5]
 Chapitre 2.
 
-LaTeX Warning: Citation `NOM00' on page 6 undefined on input line 8.
+LaTeX Warning: Citation `NOM00' on page 6 undefined on input line 9.
 
 
-LaTeX Warning: Citation `NOM05' on page 6 undefined on input line 18.
+LaTeX Warning: Citation `NOM05' on page 6 undefined on input line 51.
 
 
-LaTeX Warning: Citation `NOM12' on page 6 undefined on input line 18.
+LaTeX Warning: Citation `NOM12' on page 6 undefined on input line 51.
 
 
-LaTeX Warning: Citation `WEB13' on page 6 undefined on input line 18.
+LaTeX Warning: Citation `WEB13' on page 6 undefined on input line 51.
 
 
-LaTeX Warning: Citation `NOM09' on page 6 undefined on input line 18.
+LaTeX Warning: Citation `NOM09' on page 6 undefined on input line 51.
 
 
-LaTeX Warning: Citation `NOM07' on page 6 undefined on input line 18.
+LaTeX Warning: Citation `NOM07' on page 6 undefined on input line 51.
 
 File: ./img/logo_equipe_robotique_exploration.png Graphic file (type png)
 <use ./img/logo_equipe_robotique_exploration.png>
 Package pdftex.def Info: ./img/logo_equipe_robotique_exploration.png  used on i
-nput line 23.
+nput line 56.
 (pdftex.def)             Requested size: 136.57462pt x 146.13063pt.
 [6
 
@@ -1035,29 +1028,29 @@ nput line 23.
 File: ./img/logo_equipe_robotique_exploration.png Graphic file (type png)
 <use ./img/logo_equipe_robotique_exploration.png>
 Package pdftex.def Info: ./img/logo_equipe_robotique_exploration.png  used on i
-nput line 29.
+nput line 62.
 (pdftex.def)             Requested size: 136.57462pt x 146.13063pt.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 48.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[7]
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 85.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 66.
- (./src/helloWorld.c)
+nput line 103.
+
+(./src/helloWorld.c)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1066,9 +1059,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8]) (./chapitres/etude_faisabilite.tex
+[8]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9]) (./chapitres/etude_faisabilite.tex
 Chapitre 3.
-[9
+
+Overfull \hbox (33.93436pt too wide) in paragraph at lines 33--34
+[]\T1/lmr/m/n/12 Servomoteur : on a be-soin de la lib RP2040_ISR_Servo ([][]$\T
+1/lmtt/m/n/12 https : / / github . com / khoih-[]prog /
+ []
+
+[10
 
 
 ]) (./chapitres/conclusion.tex
@@ -1080,7 +1088,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
+[11]
 Chapitre 4.
 \@gls@deffile=\write7
 \openout7 = `squelette_rapport.glsdefs'.
@@ -1088,20 +1096,20 @@ Chapitre 4.
 )
 No file squelette_rapport.gls.
 No file squelette_rapport.bbl.
-[11
+[12
 
 ] (./squelette_rapport.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `squelette_rapport.out' has not changed.
-(rerunfilecheck)             Checksum: DD99742BF7756693CE484B1B45A54B3F;1396.
+(rerunfilecheck)             Checksum: 1B70648EB4A3F2E8B93F7AED592C6424;1911.
  ) 
 Here is how much of TeX's memory you used:
- 22884 strings out of 478268
- 387545 string characters out of 5846346
- 958314 words of memory out of 5000000
- 40635 multiletter control sequences out of 15000+600000
+ 22889 strings out of 478268
+ 387603 string characters out of 5846346
+ 980121 words of memory out of 5000000
+ 40637 multiletter control sequences out of 15000+600000
  545448 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  91i,12n,101p,1141b,1769s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1133,10 +1141,10 @@ s/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
 blic/lm/lmtt12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvetic
 /uhvr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b>
-Output written on squelette_rapport.pdf (12 pages, 872064 bytes).
+Output written on squelette_rapport.pdf (13 pages, 872096 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 213 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
