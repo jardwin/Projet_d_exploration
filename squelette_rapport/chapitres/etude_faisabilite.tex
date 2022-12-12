@@ -12,7 +12,29 @@ Introduction de l'étude de faisabilité - Lorem ipsum dolor sit amet, consectet
 
 // A confirmer / compléter par notre expert Merlin
 
-Les ordres sont envoyées dans une queue et il y a un publisher et un récepteur.
+			%-----------------------
+			\subsection{Les différences entre ROS et ROS2}
+			%-----------------------
+
+Une des principales différences entre ROS et ROS2 est leur architecture. ROS est basé sur une architecture monolithique, 
+dans laquelle tous les composants logiciels sont intégrés dans un seul et même système d'exploitation. 
+ROS2, en revanche, est basé sur une architecture modulaire, dans laquelle chaque composant logiciel peut être exécuté 
+indépendamment des autres dans un système d'exploitation distribué. Cette architecture modulaire permet une meilleure flexibilité, 
+une meilleure évolutivité et une meilleure tolérance aux pannes que l'architecture monolithique de ROS. 
+\linebreak
+
+Une autre différence importante entre ROS et ROS2 est leur modèle de communication. ROS utilise un modèle de communication basé 
+sur le publisheur-abonné, dans lequel les composants logiciels peuvent envoyer et recevoir des données en utilisant des "topics" définis. 
+ROS2, en revanche, utilise un modèle de communication basé sur les services et les requêtes, dans lequel les composants logiciels peuvent 
+interagir en invoquant des services et en envoyant des requêtes. Ce modèle de communication permet une meilleure gestion des données et 
+une meilleure flexibilité pour les applications de robotique. 
+\linebreak
+
+Enfin, ROS et ROS2 diffèrent également en termes de langages de programmation et de plateformes de développement. 
+ROS prend en charge principalement le langage de programmation C++, bien qu'il soit également possible de l'utiliser avec d'autres 
+langages tels que Python. ROS2 prend en charge plusieurs langages de programmation, tels que C++, Python, Java, et bien d'autres. 
+De plus, ROS utilise principalement le système de build Catkin pour la compilation et l'intégration de logiciels, alors que 
+ROS2 utilise l'outil de buildmentament Colcon. 
 
 		%-----------------------
 		\section{Limites et problèmes rencontrés}
@@ -25,6 +47,33 @@ Les ordres sont envoyées dans une queue et il y a un publisher et un récepteur
 Alimentation : cartes besoin d'une batterie externe supplémentaire 
 
 Nous avons pensé à faire un support mais nous n'avons pas eu le temps (le support n'étant pas un élément essentiel).
+
+Soucis de compatibilité sur différents OS :  
+\begin{itemize}
+	\item[$\bullet$] sur Mac, il y avait un problème de dépendance python (graphviz) bien que la dépendance était installée
+	\item[$\bullet$]sur Ubuntu 18.04, le framework ne fonctionnait pas (problème pour afficher une fenêtre graphique)
+\end{itemize}
+
+Il existe plusieurs versions de ROS, chacune étant destinée pour une version Linux spécifique. 
+La dernière est la version humble et qui est compatible avec la version 22.04 d’Ubuntu.  
+On retrouvera la documentation à cette adresse : \url{https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html}
+On peut également utiliser une image Docker pour ROS 2. 
+\linebreak
+Nous avons utilisé l’IDE Platform IO qui est une extension de VS Code. 
+Il est compatible Windows, Mac et Linux. L’étape suivante était de générer l’agent Micro-ROS et le lancer.  
+Nous avons testé la connexion wifi entre l’agent sur l’ordinateur et la carte en utilisant le code exemple de la libraire micro-ROS : 
+(\url{https://github.com/micro-ROS/micro_ros_arduino/blob/galactic/examples/micro-ros_publisher_wifi/micro-ros_publisher_wifi.ino}) 
+L’exemple initie la connexion wifi et envoie un message à la carte. Lorsque la connexion wifi échoue, la diode sur la carte se 
+met à clignoter de manière intempestive. Nous avons testé ensuite le code de l’araignée SEALK pour tester les mouvements mais le code 
+fourni ne marchait pas sur la carte. En effet, nous avions le problème de compilation suivant :  
+
+\begin{lstlisting}
+src/armcontroller.h:52:13: error: there are no arguments to 'sei' 
+that depend on a template parameter, so a declaration of 'sei' 
+must be available [-fpermissive]
+sei();
+\end{lstlisting}
+Cette interruption permet d'activer les interruptions de timer.
 
 			%-----------------------
 			\subsection{Problèmes rencontrés}

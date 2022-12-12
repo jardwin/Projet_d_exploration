@@ -2,25 +2,50 @@
 	\chapter{Introduction}
 	%-----------------------
 
-Introduction du document - 	Nous avons qu'une personne a installé Micro ROS sur une Arduino Portenta et une carte Arduino RP2040 (\url{https://www.youtube.com/watch?v=mq1uFGsYqeU}).
+Introduction du document - 	
+ROS2 (Robot Operating System) est un système d'exploitation open source pour les robots. 
+Il est conçu pour faciliter le développement de logiciels pour les robots en offrant des bibliothèques, 
+des outils et des standards communs pour la robotique. ROS2 offre une infrastructure logicielle pour la programmation de robots, 
+y compris des fonctionnalités telles que la communication entre les composants logiciels, la gestion des données, 
+la planification et l'exécution de tâches, la visualisation de données, et bien plus encore. 
+ROS2 est utilisé dans de nombreux types de robots, des petits robots de service aux grands robots industriels. 
+\linebreak
+
+Micro-ROS est une version légère de ROS2 (Robot Operating System) conçue pour fonctionner sur des systèmes embarqués avec 
+des ressources limitées en termes de calcul et de mémoire. Micro-ROS offre une infrastructure logicielle pour la programmation 
+de robots embarqués, y compris des fonctionnalités similaires à celles de ROS2, telles que la communication entre les composants 
+logiciels, la gestion des données, la planification et l'exécution de tâches, et bien plus encore. 
+Micro-ROS est conçu pour être facile à utiliser et à intégrer dans des projets de robotique embarquée, en offrant une grande 
+flexibilité et une grande efficacité en termes de ressources. 
+\linebreak
+
+Le but de notre projet était d’explorer les différentes options qui nous permettraient d’adapter le code des araignées 
+mécanique sur l’architecture micro-Ros. 
+\linebreak
+
+Il y a plusieurs avantages à utiliser Micro-ROS pour programmer une araignée mécanique. 
+Tout d'abord, Micro-ROS est conçu pour fonctionner sur des systèmes embarqués avec des ressources limitées en termes 
+de calcul et de mémoire, ce qui est idéal pour une araignée mécanique qui a des contraintes en termes de taille et de poids. 
+En outre, Micro-ROS offre une infrastructure logicielle pour la programmation de robots, y compris des fonctionnalités telles 
+que la communication entre les composants logiciels, la gestion des données, la planification et l'exécution de tâches, 
+et bien plus encore. Cela peut faciliter le développement de logiciels pour la robotique en offrant des bibliothèques, des outils 
+et des standards communs pour la robotique. 
+Enfin, Micro-ROS est une version légère de ROS2, ce qui signifie qu'il est moins gourmand en ressources que ROS2 tout en offrant 
+les mêmes fonctionnalités de base. Cela peut améliorer les performances de l'araignée mécanique en utilisant moins de ressources 
+pour exécuter le logiciel. 
+\linebreak
+
+Dans ce rapport, nous allons présenter toutes les recherches que nous avons effectué pendant ce projet, les différentes 
+solutions que nous avons conceptualisées ainsi que la solution que nous avons choisie et sa mise en œuvre. 
+\linebreak
+
+----
+
+Nous avons qu'une personne a installé Micro ROS sur une Arduino Portenta et une carte Arduino RP2040 (\url{https://www.youtube.com/watch?v=mq1uFGsYqeU}).
 Nous avons aussi pensé à utiliser une carte ESP qui transmette les commandes à la carte Arduino fournie mais l'alimentation ne serait probablement pas suffisante.
 
 // mettre le schéma de la carte
 https://docs.arduino.cc/static/56034f29d9e2bd28f4fd3c90268d0557/ABX00053-datasheet.pdf
-
-Nous avons téléchargé ROS pour prendre en main le framework.
-Malheureusement, il y avait des soucis de compatibilté sur différents OS :
-
-\begin{itemize}
-	\item[$\bullet$] sur Mac, il y avait un problème de dépendance python (graphviz) bien que la dépendance était installée
-	\item[$\bullet$]sur Ubuntu 18.04, le framework ne fonctionnait pas (problème pour afficher une fenêtre graphique)
-\end{itemize}
-
-Il existe plusieurs versions de ROS, chacune étant destinée pour une version Linux spécifique.
-La dernière est la version humble et qui est compatible avec la version 22.04 d'Ubuntu.
-On retrouvera la documentation à cette adresse : \url{https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html}
-
-On peut également utiliser une image Docker pour ROS 2.\linebreak
 
 L'étape suivante était de générer l'agent Micro ROS et le lancer. On peut retrouver à cet effet un tutoriel à cette adresse :
 \url{https://gist.github.com/Redstone-RM/0ca459c32ec5ead8700284ff56a136f7}\linebreak
@@ -30,17 +55,6 @@ Nous avons testé la connection wifi entre l'agent sur l'ordinateur et la carte 
 L'exemple initie la connexion wifi et envoie un message à la carte.
 Lorsque la connexion wifi échoue, la diode sur la carte se met à clignoter de manière intempestive.\linebreak
 
-Nous avons testé ensuite le code de l'araignée SEALK pour tester les mouvements mais le code fourni ne marchait pas sur la carte.
-En effet, nous avions le problème de compilation suivant :
-\begin{lstlisting}
-src/armcontroller.h:52:13: error: there are no arguments to 'sei' 
-that depend on a template parameter, so a declaration of 'sei' 
-must be available [-fpermissive]
-sei();
-\end{lstlisting}
-Cette interruption permet d'activer les interruptions de timer.
-
-Nous avons utilisé le code que nous avons fait en cours et celui-ci marchait.
 Pour reset la mémoire de la carte, il faut soit tambouriner le bouton, soit appuyer longtemps. (à confirmer)
 
 Exemple tableau \& table : 
