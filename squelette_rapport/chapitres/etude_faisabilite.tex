@@ -1,5 +1,5 @@
 	%-----------------------
-	\chapter{Implémentation}
+	\chapter{Étude de faisabilité}
 	%-----------------------
 
 Introduction de l'étude de faisabilité - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -7,84 +7,29 @@ Introduction de l'étude de faisabilité - Lorem ipsum dolor sit amet, consectet
 	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
 	
 		%-----------------------
-		\section{Implémentation technique}
+		\section{Première catégorie}
 		%-----------------------
 
-// A confirmer / compléter par notre expert Merlin
-
+Introduction de la première catégorie - Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+		
 			%-----------------------
-			\subsection{Les différences entre ROS et ROS2}
-			%-----------------------
-
-Une des principales différences entre ROS et ROS2 est leur architecture. ROS est basé sur une architecture monolithique, 
-dans laquelle tous les composants logiciels sont intégrés dans un seul et même système d'exploitation. 
-ROS2, en revanche, est basé sur une architecture modulaire, dans laquelle chaque composant logiciel peut être exécuté 
-indépendamment des autres dans un système d'exploitation distribué. Cette architecture modulaire permet une meilleure flexibilité, 
-une meilleure évolutivité et une meilleure tolérance aux pannes que l'architecture monolithique de ROS. 
-\linebreak
-
-Une autre différence importante entre ROS et ROS2 est leur modèle de communication. ROS utilise un modèle de communication basé 
-sur le publisheur-abonné, dans lequel les composants logiciels peuvent envoyer et recevoir des données en utilisant des "topics" définis. 
-ROS2, en revanche, utilise un modèle de communication basé sur les services et les requêtes, dans lequel les composants logiciels peuvent 
-interagir en invoquant des services et en envoyant des requêtes. Ce modèle de communication permet une meilleure gestion des données et 
-une meilleure flexibilité pour les applications de robotique. 
-\linebreak
-
-Enfin, ROS et ROS2 diffèrent également en termes de langages de programmation et de plateformes de développement. 
-ROS prend en charge principalement le langage de programmation C++, bien qu'il soit également possible de l'utiliser avec d'autres 
-langages tels que Python. ROS2 prend en charge plusieurs langages de programmation, tels que C++, Python, Java, et bien d'autres. 
-De plus, ROS utilise principalement le système de build Catkin pour la compilation et l'intégration de logiciels, alors que 
-ROS2 utilise l'outil de buildmentament Colcon. 
-
-		%-----------------------
-		\section{Limites et problèmes rencontrés}
-		%-----------------------
-
-			%-----------------------
-			\subsection{Limites}
+			\subsection{Argumentation 1}
 			%-----------------------
 
-Alimentation : cartes besoin d'une batterie externe supplémentaire 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Nous avons pensé à faire un support mais nous n'avons pas eu le temps (le support n'étant pas un élément essentiel).
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
-Soucis de compatibilité sur différents OS :  
-\begin{itemize}
-	\item[$\bullet$] sur Mac, il y avait un problème de dépendance python (graphviz) bien que la dépendance était installée
-	\item[$\bullet$]sur Ubuntu 18.04, le framework ne fonctionnait pas (problème pour afficher une fenêtre graphique)
-\end{itemize}
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 
-Il existe plusieurs versions de ROS, chacune étant destinée pour une version Linux spécifique. 
-La dernière est la version humble et qui est compatible avec la version 22.04 d’Ubuntu.  
-On retrouvera la documentation à cette adresse : \url{https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html}
-On peut également utiliser une image Docker pour ROS 2. 
-\linebreak
-Nous avons utilisé l’IDE Platform IO qui est une extension de VS Code. 
-Il est compatible Windows, Mac et Linux. L’étape suivante était de générer l’agent Micro-ROS et le lancer.  
-Nous avons testé la connexion wifi entre l’agent sur l’ordinateur et la carte en utilisant le code exemple de la libraire micro-ROS : 
-(\url{https://github.com/micro-ROS/micro_ros_arduino/blob/galactic/examples/micro-ros_publisher_wifi/micro-ros_publisher_wifi.ino}) 
-L’exemple initie la connexion wifi et envoie un message à la carte. Lorsque la connexion wifi échoue, la diode sur la carte se 
-met à clignoter de manière intempestive. Nous avons testé ensuite le code de l’araignée SEALK pour tester les mouvements mais le code 
-fourni ne marchait pas sur la carte. En effet, nous avions le problème de compilation suivant :  
-
-\begin{lstlisting}
-src/armcontroller.h:52:13: error: there are no arguments to 'sei' 
-that depend on a template parameter, so a declaration of 'sei' 
-must be available [-fpermissive]
-sei();
-\end{lstlisting}
-Cette interruption permet d'activer les interruptions de timer.
 
 			%-----------------------
-			\subsection{Problèmes rencontrés}
+			\subsection{Argumentation 2}
 			%-----------------------
 
-Servomoteur : on a besoin de la lib RP2040\_ISR\_Servo (\url{https://github.com/khoih-prog/RP2040_ISR_Servo}) car les mouvements envoient une instruction en dehors de la loop principale
 
-Impossible d'utiliser l'Arduino IDE (car il manque un time.h).
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
-Nous avons utilisé VSCode avec PlatformIO qui est une extension de VSCode. Il est compatible Windows, Mac et Linux.
-
-PlatformIO est designé pour faire marcher énormément de cartes et il faut donc spécifier la carte sur laquelle on travaille. Il se charge ensuite de récupèrer les libs.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 
 

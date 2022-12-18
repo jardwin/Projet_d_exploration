@@ -90,9 +90,9 @@ fullflexible, flexiblecolumns=true, upquote=true, keepspaces=true}
 % pdflatex squelette_rapport.tex
 % pdflatex squelette_rapport.tex
 
-\title{\textbf{Portage architecture Arduino vers ESP32} \\ \Large{--- Épita --- \\ \textit{Équipe Robotique d'Exploration}} \\ \vspace{1,5cm} \includegraphics[width=0.3\textwidth]{./img/logo_epita} \includegraphics[width=0.2\textwidth]{./img/logo_equipe_robotique_exploration} \vspace{1,5cm}}
+\title{\textbf{Titre du rapport} \\ \Large{--- Épita --- \\ \textit{Équipe Robotique d'Exploration}} \\ \vspace{1,5cm} \includegraphics[width=0.3\textwidth]{./img/logo_epita} \includegraphics[width=0.2\textwidth]{./img/logo_equipe_robotique_exploration} \vspace{1,5cm}}
 \date{\today}
-\author{Tony BERNIS \and Valentin DUMOUSSET \and Julien LE QUANG \and Merlin VOTAT}
+\author{Tony Berny \and Valentin Dumousset \and Julien Truang \and Merlin Votat}
 
 \begin{document}
 	\maketitle
@@ -104,23 +104,11 @@ fullflexible, flexiblecolumns=true, upquote=true, keepspaces=true}
 	\addcontentsline{toc}{chapter}{Résumé}
 	%-----------------------	
 
-Micro ROS (Robot Operating System) est un framework pour faciliter le développement robotique et qui sert d'interface entre les micro controleurs.
-Il permet ainsi l'abstraction du matériel, la transmission de message etc.
-Micro ROS n'est pas disponible sur toutes les cartes Arduino. Dans notre projet, nous avons choisi une carte Nano RP2040.
-L'objectif de notre projet est dans un premier temps de faire bouger l'arraignée et dans un second temps travailler sur la synchronisation entre une autre arraignée.
+Dans ce rapport, nous allons aborder et expliquer comment utiliser le \textbf{framework de robotique ROS2} pour implémenter le code de l'araignée SEALK 4 pattes et 3 articulations par pattes.
 
-Exemple gras et italique~:
+Ce sujet nous à donc poussé à devoir faire de la recherche sur \textbf{ROS2} pour déjà comprendre ce que c'est, à qu'elle niveau \textbf{ROS2} interviens dans le devellopment du robot et qu'elles features ce framework met à la disposition du devellopeur pour améliorer l'efficaciter du robot. ce seras le premier chapitre de ce rapport et probablement le plus important.
 
-Sed ut \textbf{perspiciatis} unde omnis iste \textbf{natus} error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore \textit{veritatis} et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non \textit{numquam eius modi tempora incidunt ut} labore et dolore magnam aliquam quaerat voluptatem. \textbf{Ut enim ad minima veniam, \textit{quis nostrum} exercitationem ullam corporis} suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-
-Exemple texte centré~:
-
-\begin{center}
-	Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-\end{center}
-
-Ut enim ad minim veniam, \color{green} quis nostrud exercitation ullamco \color{black} laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \color{darkblue} proident, sunt in culpa \color{black} qui officia deserunt mollit anim id est laborum.
-	
+Un autre sujet important de ce rapport serras l'exploration de differentes cartes de prototypage. En effet, vous le decouvrirer plus tard dans le rapport, mais pour utiliser \textbf{ROS2} sur une carte au ressource limité, il faut choisir une carte compatible ce qui nous à ammenez à explorer plusieur piste sur des carte de type arduino ou non.
 	%-----------------------
 	% TABLE DES MATIERES %
 	\tableofcontents
