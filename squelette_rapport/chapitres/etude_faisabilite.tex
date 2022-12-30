@@ -36,16 +36,16 @@ langages tels que Python. ROS2 prend en charge plusieurs langages de programmati
 De plus, ROS utilise principalement le système de build Catkin pour la compilation et l'intégration de logiciels, alors que 
 ROS2 utilise l'outil de buildmentament Colcon. 
 
-		%-----------------------
-		\section{Les mouvements de l'araignée}
-		\label{les_mouvements}
-		%-----------------------
+			%-----------------------
+			\subsection{Les mouvements de l'araignée}
+			\label{les_mouvements}
+			%-----------------------
 
 Nous avons implémenté les mouvements de l'arraignée pédagogique SEALK dont le code nous a été fourni. Voici la liste des différents mouvements :	
 
 sit : fait asseoir l'arraignée
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{./img/sit}
 		\caption{Sit}
@@ -54,7 +54,7 @@ sit : fait asseoir l'arraignée
 
 stand : met debout l'arraignée
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{./img/stand}
 		\caption{Stand}
@@ -63,18 +63,13 @@ stand : met debout l'arraignée
 
 walk forward, walk back, walk left, walk right : bouge l'arraignée dans les quatre directions
 
-\textit{pas d'image :(}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=0.3\textwidth]{./img/walk}
-		\caption{Stand}
-	\end{center}
-\end{figure}
+\begin{center}
+	\textit{pas d'image :(}
+\end{center}
 
 turn left, turn right : tourne l'araignée à gauche et à droite
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{./img/turn_left_1}
 		\includegraphics[width=0.8\textwidth]{./img/turn_left_2}
@@ -84,7 +79,7 @@ turn left, turn right : tourne l'araignée à gauche et à droite
 
 rave : mouvement de divagation
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{./img/rave_1}
 		\includegraphics[width=0.8\textwidth]{./img/rave_2}
@@ -95,7 +90,7 @@ rave : mouvement de divagation
 
 flex : fait un mouvement de "flex" au sol
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.6\textwidth]{./img/flex}
 		\caption{Flex}
@@ -104,7 +99,7 @@ flex : fait un mouvement de "flex" au sol
 
 hello : fait un salut
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.6\textwidth]{./img/hello}
 		\caption{Hello}
@@ -113,7 +108,7 @@ hello : fait un salut
 
 applaud sym : l'araignée simule un applaudissement en levant lève d'abord deux pattes en diagonale et les repose puis lève et repose les deux autres
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.6\textwidth]{./img/applaud_sym}
 		\caption{Applaud sym}
@@ -122,7 +117,7 @@ applaud sym : l'araignée simule un applaudissement en levant lève d'abord deux
 
 applaud wave : similaire au mouvement précédent mais lève une seule patte à la fois
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{./img/applaud_wave_1}
 		\includegraphics[width=0.8\textwidth]{./img/applaud_wave_2}
@@ -132,7 +127,7 @@ applaud wave : similaire au mouvement précédent mais lève une seule patte à 
 
 applaud : tape une patte sur le sol
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{./img/applaud}
 		\caption{Applaud}
@@ -141,7 +136,7 @@ applaud : tape une patte sur le sol
 
 sputnik : lève les pattes en l'air
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{./img/sputnik}
 		\caption{Sputnik}
@@ -150,7 +145,7 @@ sputnik : lève les pattes en l'air
 
 cross : étale les pattes sur le sol (en forme de croix)
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{./img/cross_1}
 		\includegraphics[width=0.8\textwidth]{./img/cross_2}
@@ -160,7 +155,7 @@ cross : étale les pattes sur le sol (en forme de croix)
 
 bolting : inspiré de la pose d'Usain Bolt : lève et étire deux pattes en diagonale
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{./img/bolting}
 		\caption{Bolting}
@@ -169,7 +164,7 @@ bolting : inspiré de la pose d'Usain Bolt : lève et étire deux pattes en diag
 
 winx : simule un battement d'aile
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.6\textwidth]{./img/winx_1}
 		\includegraphics[width=0.6\textwidth]{./img/winx_2}
@@ -180,7 +175,7 @@ winx : simule un battement d'aile
 
 pls : position par défaut, araignée écrasée
 
-\begin{figure}
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.6\textwidth]{./img/pls_1}
 		\includegraphics[width=0.6\textwidth]{./img/pls_2}
@@ -189,44 +184,52 @@ pls : position par défaut, araignée écrasée
 \end{figure}
 
 		%-----------------------
-		\subsection{Construction de la coque}
+		\section{Construction de la coque}
 		%-----------------------
 
-Pour modéliser notre coque nous avons utilisé OpenSCAD qui est un logiciel de modélisation 3D de type "constructif". Cela signifie que les modèles 3D sont créés en utilisant une syntaxe de script plutôt que par une interface graphique. OpenSCAD permet de créer des modèles 3D précis en combinant des primitives géométriques de base (par exemple, des cubes, des cylindres, des sphères) et en les modifiant à l'aide de transformations géométriques (par exemple, la rotation, la translation, l'échelle).  
+Pour modéliser notre coque nous avons utilisé OpenSCAD qui est un logiciel de modélisation 3D de type "constructif". 
+Cela signifie que les modèles 3D sont créés en utilisant une syntaxe de script plutôt que par une interface graphique. 
+OpenSCAD permet de créer des modèles 3D précis en combinant des primitives géométriques de base (par exemple, des cubes, des cylindres, 
+des sphères) et en les modifiant à l'aide de transformations géométriques (par exemple, la rotation, la translation, l'échelle).  
 \linebreak
 
-Nous avions plusieurs idées de personnalisation de cette coque. La première idée était de faire un mini échiquier avec des petites pièces qui viendrait s’insérer par-dessus.  
-La deuxième idée était plus pratique. En effet La carte Arduino que nous utilisons à besoin d’une source d’alimentions en plus de celle déjà disponible sur l’araignée. Nous avons donc dû utiliser une batterie externe. L’idée était donc d’ajouter un socle qui pourrait tenir notre batterie sur l’araignée. 
+Nous avions plusieurs idées de personnalisation de cette coque. La première idée était de faire un mini échiquier avec des petites 
+pièces qui viendrait s’insérer par-dessus.  
+La deuxième idée était d'ordre plus pratique. En effet, la carte Arduino que nous utilisons a besoin d’une source d’alimention 
+en plus de celle déjà disponible sur l’araignée. Nous avons donc dû utiliser une batterie externe. 
+L’idée était donc d’ajouter un socle qui pourrait tenir notre batterie sur l’araignée. 
 \linebreak
 
-Malheureusement, par manque de temps, nous avons dû nous contenter d’une coque plus basique qui nous permet cependant de faire tenir la batterie grâce à un élastique. 
+Malheureusement, par manque de temps, nous avons dû nous contenter d’une coque plus basique qui nous permet cependant de 
+faire tenir la batterie grâce à un élastique. 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{./img/coque}
+		\caption{Modèle 3D de la coque}
+	\end{center}
+\end{figure}
 
 
 		%-----------------------
 		\section{Limites et problèmes rencontrés}
 		%-----------------------
 
-			%-----------------------
-			\subsection{Limites}
-			%-----------------------
-
-Alimentation : cartes besoin d'une batterie externe supplémentaire 
-
-Nous avons pensé à faire un support mais nous n'avons pas eu le temps (le support n'étant pas un élément essentiel).
-
-Soucis de compatibilité sur différents OS :  
+Nous avons eu des soucis de compatibilité pour l'installation de ROS :  
 \begin{itemize}
 	\item[$\bullet$] sur Mac, il y avait un problème de dépendance python (graphviz) bien que la dépendance était installée
 	\item[$\bullet$]sur Ubuntu 18.04, le framework ne fonctionnait pas (problème pour afficher une fenêtre graphique)
 \end{itemize}
 
-Il existe plusieurs versions de ROS, chacune étant destinée pour une version Linux spécifique. 
-La dernière est la version humble et qui est compatible avec la version 22.04 d’Ubuntu.  
-On retrouvera la documentation à cette adresse : \url{https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html}
-On peut également utiliser une image Docker pour ROS 2. 
+Pourtant d'après la documentation de ROS, le framework est censé pouvoir marcher sur ces OS et être cross-platform.
+On notera que l'on peut également utiliser une image Docker pour ROS 2. 
 \linebreak
-Nous avons utilisé l’IDE Platform IO qui est une extension de VS Code. 
-Il est compatible Windows, Mac et Linux. L’étape suivante était de générer l’agent Micro-ROS et le lancer.  
+
+Nous avons également dû utiliser l’IDE Platform IO (compatible Windows, Mac et Linux), une extension de VS Code, 
+car impossible d'utiliser l'Arduino IDE car il manquait un time.h.
+PlatformIO est designé pour faire marcher énormément de cartes et il faut donc spécifier la carte sur laquelle on travaille. 
+Il se charge ensuite de récupèrer les libraries.
+L’étape suivante était de générer l’agent Micro-ROS et le lancer.  
 Nous avons testé la connexion wifi entre l’agent sur l’ordinateur et la carte en utilisant le code exemple de la libraire micro-ROS : 
 (\url{https://github.com/micro-ROS/micro_ros_arduino/blob/galactic/examples/micro-ros_publisher_wifi/micro-ros_publisher_wifi.ino}) 
 L’exemple initie la connexion wifi et envoie un message à la carte. Lorsque la connexion wifi échoue, la diode sur la carte se 
@@ -240,17 +243,9 @@ must be available [-fpermissive]
 sei();
 \end{lstlisting}
 Cette interruption permet d'activer les interruptions de timer.
+\linebreak
 
-			%-----------------------
-			\subsection{Problèmes rencontrés}
-			%-----------------------
-
-Servomoteur : on a besoin de la lib RP2040\_ISR\_Servo (\url{https://github.com/khoih-prog/RP2040_ISR_Servo}) car les mouvements envoient une instruction en dehors de la loop principale
-
-Impossible d'utiliser l'Arduino IDE (car il manque un time.h).
-
-Nous avons utilisé VSCode avec PlatformIO qui est une extension de VSCode. Il est compatible Windows, Mac et Linux.
-
-PlatformIO est designé pour faire marcher énormément de cartes et il faut donc spécifier la carte sur laquelle on travaille. Il se charge ensuite de récupèrer les libs.
+Nous avons également dû utiliser la librarie suivante pour faire marcher correctement les servomoteurs : RP2040\_ISR\_Servo (\url{https://github.com/khoih-prog/RP2040_ISR_Servo}) 
+En effet, les mouvements envoient une instruction en dehors de la loop principale.
 
 

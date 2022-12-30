@@ -21,6 +21,7 @@
 \usepackage{enumerate} % Listes
 \usepackage{graphicx} % Figures
 \usepackage{color} % Couleur
+\usepackage{float} % Utilisation de l'option [H] pour forcer l'insertion d'une image après le texte
 \definecolor{darkblue}{RGB}{0,0,190}
 \definecolor{lightgray}{gray}{0.70}
 \definecolor{darkgreen}{RGB}{0,150,50}
@@ -149,13 +150,16 @@ Ut enim ad minim veniam, \color{green} quis nostrud exercitation ullamco \color{
 	%-----------------------%
 	
 \input{chapitres/conclusion}
-	
+
+% -------------------------------------------------------------------------------------------------
+% l'intégration du glossaire et de la bibliographie est K.O dans le squelette qui nous a été fourni
+% nous avons donc inséré un chapitre "customisé"
 
 	%-----------------------%
 	%      GLOSSAIRE        %
 	%-----------------------%
 \input{chapitres/glossary}
-% K.O?
+
 %\deftranslation{Glossary}{Glossaire}
 %\addcontentsline{toc}{chapter}{Glossaire} % Rajoute la partie dans le sommaire
 %\printglossaries
@@ -164,9 +168,10 @@ Ut enim ad minim veniam, \color{green} quis nostrud exercitation ullamco \color{
 	%      BIBLIOGRAPHIE    %
 	%-----------------------%
 
-\addcontentsline{toc}{chapter}{Bibliographie} % Rajoute la partie dans le sommaire
-\bibliographystyle{alpha}
-\bibliography{biblio/bibliographie.bib}
+\input{chapitres/bibliography}
+%\addcontentsline{toc}{chapter}{Bibliographie} % Rajoute la partie dans le sommaire
+%\bibliographystyle{alpha}
+%\bibliography{biblio/bibliographie.bib}
 
 	
 \end{document}

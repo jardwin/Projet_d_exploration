@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.21)  30 DEC 2022 17:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.21)  30 DEC 2022 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -612,6 +612,14 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 )
+(/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count325
+\float@exts=\toks41
+\float@box=\box58
+\@float@everytoks=\toks42
+\@floatcapt=\box59
+)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
@@ -627,11 +635,11 @@ rs
 )
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 34.
+less on input line 35.
 
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 35.
+less on input line 36.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fncychap/fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
@@ -644,24 +652,24 @@ Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \pxx=\skip115
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count325
-\lst@gtempboxa=\box58
-\lst@token=\toks41
-\lst@length=\count326
+\lst@mode=\count326
+\lst@gtempboxa=\box60
+\lst@token=\toks43
+\lst@length=\count327
 \lst@currlwidth=\dimen182
-\lst@column=\count327
-\lst@pos=\count328
+\lst@column=\count328
+\lst@pos=\count329
 \lst@lostspace=\dimen183
 \lst@width=\dimen184
-\lst@newlines=\count329
-\lst@lineno=\count330
+\lst@newlines=\count330
+\lst@lineno=\count331
 \lst@maxwidth=\dimen185
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count331
-\lst@skipnumbers=\count332
-\lst@framebox=\box59
+\c@lstnumber=\count332
+\lst@skipnumbers=\count333
+\lst@framebox=\box61
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -670,12 +678,12 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count333
+\c@AlgoLine=\count334
 \algocf@hangindent=\skip116
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count334
+\c@checkoddpage=\count335
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -698,28 +706,28 @@ Package: relsize 2013/03/29 ver 4.1
 \interspacealgoruled=\dimen190
 \interspacetitleboxruled=\dimen191
 \algocf@ruledwidth=\skip125
-\algocf@inoutbox=\box60
-\algocf@inputbox=\box61
+\algocf@inoutbox=\box62
+\algocf@inputbox=\box63
 \AlCapSkip=\skip126
 \AlCapHSkip=\skip127
 \algoskipindent=\skip128
-\algocf@nlbox=\box62
-\algocf@hangingbox=\box63
-\algocf@untilbox=\box64
+\algocf@nlbox=\box64
+\algocf@hangingbox=\box65
+\algocf@untilbox=\box66
 \algocf@skipuntil=\skip129
-\algocf@capbox=\box65
+\algocf@capbox=\box67
 \algocf@lcaptionbox=\skip130
 \algoheightruledefault=\skip131
 \algoheightrule=\skip132
 \algotitleheightruledefault=\skip133
 \algotitleheightrule=\skip134
-\c@algocfline=\count335
-\c@algocfproc=\count336
-\c@algocf=\count337
-\algocf@algoframe=\box66
-\algocf@algobox=\box67
+\c@algocfline=\count336
+\c@algocfproc=\count337
+\c@algocf=\count338
+\algocf@algoframe=\box68
+\algocf@algobox=\box69
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 97
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 98
 .
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
@@ -727,39 +735,39 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count338
-\l__pdf_internal_box=\box68
+\l__color_backend_stack_int=\count339
+\l__pdf_internal_box=\box70
 )
 (./squelette_rapport.aux)
 \openout1 = `squelette_rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \degres on input line 97.
+LaTeX Info: Redefining \degres on input line 98.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumerate package,
-(french.ldf)             reported on input line 97.
-LaTeX Info: Redefining \up on input line 97.
+(french.ldf)             reported on input line 98.
+LaTeX Info: Redefining \up on input line 98.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -795,7 +803,7 @@ LaTeX Info: Redefining \up on input line 97.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 97.
+Package hyperref Info: Link coloring ON on input line 98.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -806,11 +814,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count339
+\c@section@level=\count340
 )
-LaTeX Info: Redefining \ref on input line 97.
-LaTeX Info: Redefining \pageref on input line 97.
-LaTeX Info: Redefining \nameref on input line 97.
+LaTeX Info: Redefining \ref on input line 98.
+LaTeX Info: Redefining \pageref on input line 98.
+LaTeX Info: Redefining \nameref on input line 98.
  (./squelette_rapport.out) (./squelette_rapport.out)
 \@outlinefile=\write5
 \openout5 = `squelette_rapport.out'.
@@ -819,17 +827,17 @@ LaTeX Info: Redefining \nameref on input line 97.
 (./squelette_rapport.glsdefs)
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count340
+\scratchcounter=\count341
 \scratchdimen=\dimen192
-\scratchbox=\box69
-\nofMPsegments=\count341
-\nofMParguments=\count342
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count343
+\scratchbox=\box71
+\nofMPsegments=\count342
+\nofMParguments=\count343
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count344
 \MPscratchDim=\dimen193
-\MPnumerator=\count344
-\makeMPintoPDFobject=\count345
-\everyMPtoPDFconversion=\toks43
+\MPnumerator=\count345
+\makeMPintoPDFobject=\count346
+\everyMPtoPDFconversion=\toks45
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -839,53 +847,53 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count346
+\c@lstlisting=\count347
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<./img/logo_epita.png, id=83, 4302.0725pt x 2912.8825pt>
+<./img/logo_epita.png, id=68, 4302.0725pt x 2912.8825pt>
 File: ./img/logo_epita.png Graphic file (type png)
 <use ./img/logo_epita.png>
-Package pdftex.def Info: ./img/logo_epita.png  used on input line 99.
+Package pdftex.def Info: ./img/logo_epita.png  used on input line 100.
 (pdftex.def)             Requested size: 136.57462pt x 92.44965pt.
-<./img/logo_equipe_robotique_exploration.png, id=85, 2388.925pt x 2556.55125pt>
+<./img/logo_equipe_robotique_exploration.png, id=70, 2388.925pt x 2556.55125pt>
 
 File: ./img/logo_equipe_robotique_exploration.png Graphic file (type png)
 <use ./img/logo_equipe_robotique_exploration.png>
 Package pdftex.def Info: ./img/logo_equipe_robotique_exploration.png  used on i
-nput line 99.
+nput line 100.
 (pdftex.def)             Requested size: 91.04742pt x 97.40741pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
-9.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+00.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-9.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+00.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-99.
+100.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-99.
+100.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 99.
+(Font)              <14.4> on input line 100.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 99.
+(Font)              <10> on input line 100.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 99.
+(Font)              <7> on input line 100.
  [1
 
 \openout3 = `squelette_rapport.ist'.
@@ -896,7 +904,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.126 	\tableofcontents
+l.127 	\tableofcontents
                         [1
 
 ] (./squelette_rapport.toc
@@ -1017,7 +1025,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4]) (./chapitres/etat_art.tex
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.97 	\item[$\Rightarrow$]
+                           Item 1]) (./chapitres/etat_art.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1175,7 +1189,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9])
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.4 	
+     printf("Hello World!\n");])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1205,208 +1225,273 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--32
 
 
 ]
-<./img/sit.png, id=222, 194.7275pt x 142.5325pt>
+<./img/sit.png, id=203, 194.7275pt x 142.5325pt>
 File: ./img/sit.png Graphic file (type png)
 <use ./img/sit.png>
 Package pdftex.def Info: ./img/sit.png  used on input line 50.
 (pdftex.def)             Requested size: 136.57462pt x 99.96997pt.
-<./img/stand.png, id=223, 194.7275pt x 143.53625pt>
+<./img/stand.png, id=204, 194.7275pt x 143.53625pt>
 File: ./img/stand.png Graphic file (type png)
 <use ./img/stand.png>
 Package pdftex.def Info: ./img/stand.png  used on input line 59.
 (pdftex.def)             Requested size: 136.57462pt x 100.67398pt.
-
-
-! LaTeX Error: File `./img/walk' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 ...egraphics[width=0.3\textwidth]{./img/walk}
-                                                  
-? 
-<./img/turn_left_1.png, id=224, 787.94376pt x 114.4275pt>
+<./img/turn_left_1.png, id=205, 787.94376pt x 114.4275pt>
 File: ./img/turn_left_1.png Graphic file (type png)
 <use ./img/turn_left_1.png>
-Package pdftex.def Info: ./img/turn_left_1.png  used on input line 79.
+Package pdftex.def Info: ./img/turn_left_1.png  used on input line 74.
 (pdftex.def)             Requested size: 364.19667pt x 52.8887pt.
-<./img/turn_left_2.png, id=225, 655.44875pt x 115.43124pt>
+<./img/turn_left_2.png, id=206, 655.44875pt x 115.43124pt>
 File: ./img/turn_left_2.png Graphic file (type png)
 <use ./img/turn_left_2.png>
-Package pdftex.def Info: ./img/turn_left_2.png  used on input line 80.
+Package pdftex.def Info: ./img/turn_left_2.png  used on input line 75.
 (pdftex.def)             Requested size: 364.19667pt x 64.13907pt.
-<./img/rave_1.png, id=226, 631.35875pt x 110.4125pt>
+<./img/rave_1.png, id=207, 631.35875pt x 110.4125pt>
 File: ./img/rave_1.png Graphic file (type png)
 <use ./img/rave_1.png>
-Package pdftex.def Info: ./img/rave_1.png  used on input line 89.
+Package pdftex.def Info: ./img/rave_1.png  used on input line 84.
 (pdftex.def)             Requested size: 364.19667pt x 63.69221pt.
-<./img/rave_2.png, id=227, 635.37375pt x 114.4275pt>
+<./img/rave_2.png, id=208, 635.37375pt x 114.4275pt>
 File: ./img/rave_2.png Graphic file (type png)
 <use ./img/rave_2.png>
-Package pdftex.def Info: ./img/rave_2.png  used on input line 90.
+Package pdftex.def Info: ./img/rave_2.png  used on input line 85.
 (pdftex.def)             Requested size: 364.19667pt x 65.59276pt.
-<./img/rave_3.png, id=228, 791.95876pt x 113.42375pt>
+<./img/rave_3.png, id=209, 791.95876pt x 113.42375pt>
 File: ./img/rave_3.png Graphic file (type png)
 <use ./img/rave_3.png>
-Package pdftex.def Info: ./img/rave_3.png  used on input line 91.
+Package pdftex.def Info: ./img/rave_3.png  used on input line 86.
 (pdftex.def)             Requested size: 364.19667pt x 52.15997pt.
-<./img/flex.png, id=229, 313.17pt x 113.42375pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.90 
+     
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.90 
+     
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.90 
+      <./img/sit.png> <./img/stand.png> <./img/turn_left_1.png> <./img/turn_lef
+t_2.png>]
+<./img/flex.png, id=222, 313.17pt x 113.42375pt>
 File: ./img/flex.png Graphic file (type png)
 <use ./img/flex.png>
-Package pdftex.def Info: ./img/flex.png  used on input line 100.
+Package pdftex.def Info: ./img/flex.png  used on input line 95.
 (pdftex.def)             Requested size: 273.14923pt x 98.93227pt.
-<./img/hello.png, id=230, 473.77pt x 112.42pt>
+<./img/hello.png, id=223, 473.77pt x 112.42pt>
 File: ./img/hello.png Graphic file (type png)
 <use ./img/hello.png>
-Package pdftex.def Info: ./img/hello.png  used on input line 109.
+Package pdftex.def Info: ./img/hello.png  used on input line 104.
 (pdftex.def)             Requested size: 273.14923pt x 64.81596pt.
-<./img/applaud_sym.png, id=231, 633.36626pt x 111.41624pt>
+<./img/applaud_sym.png, id=224, 633.36626pt x 111.41624pt>
 File: ./img/applaud_sym.png Graphic file (type png)
 <use ./img/applaud_sym.png>
-Package pdftex.def Info: ./img/applaud_sym.png  used on input line 118.
+Package pdftex.def Info: ./img/applaud_sym.png  used on input line 113.
 (pdftex.def)             Requested size: 273.14923pt x 48.05084pt.
-<./img/applaud_wave_1.png, id=232, 633.36626pt x 113.42375pt>
+<./img/applaud_wave_1.png, id=225, 633.36626pt x 113.42375pt>
 File: ./img/applaud_wave_1.png Graphic file (type png)
 <use ./img/applaud_wave_1.png>
-Package pdftex.def Info: ./img/applaud_wave_1.png  used on input line 127.
+Package pdftex.def Info: ./img/applaud_wave_1.png  used on input line 122.
 (pdftex.def)             Requested size: 364.19667pt x 65.2216pt.
-<./img/applaud_wave_2.png, id=233, 632.3625pt x 114.4275pt>
+<./img/applaud_wave_2.png, id=226, 632.3625pt x 114.4275pt>
 File: ./img/applaud_wave_2.png Graphic file (type png)
 <use ./img/applaud_wave_2.png>
-Package pdftex.def Info: ./img/applaud_wave_2.png  used on input line 128.
+Package pdftex.def Info: ./img/applaud_wave_2.png  used on input line 123.
 (pdftex.def)             Requested size: 364.19667pt x 65.90355pt.
-<./img/applaud.png, id=234, 315.1775pt x 115.43124pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.127 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.127 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.127 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.127 
+       <./img/rave_1.png> <./img/rave_2.png> <./img/rave_3.png> <./img/flex.png
+> <./img/hello.png> <./img/applaud_sym.png>]
+<./img/applaud.png, id=241, 315.1775pt x 115.43124pt>
 File: ./img/applaud.png Graphic file (type png)
 <use ./img/applaud.png>
-Package pdftex.def Info: ./img/applaud.png  used on input line 137.
+Package pdftex.def Info: ./img/applaud.png  used on input line 132.
 (pdftex.def)             Requested size: 136.57462pt x 50.01843pt.
-<./img/sputnik.png, id=235, 791.95876pt x 109.40875pt>
+<./img/sputnik.png, id=242, 791.95876pt x 109.40875pt>
 File: ./img/sputnik.png Graphic file (type png)
 <use ./img/sputnik.png>
-Package pdftex.def Info: ./img/sputnik.png  used on input line 146.
+Package pdftex.def Info: ./img/sputnik.png  used on input line 141.
 (pdftex.def)             Requested size: 364.19667pt x 50.3136pt.
-<./img/cross_1.png, id=236, 472.76625pt x 112.42pt>
+<./img/cross_1.png, id=243, 472.76625pt x 112.42pt>
 File: ./img/cross_1.png Graphic file (type png)
 <use ./img/cross_1.png>
-Package pdftex.def Info: ./img/cross_1.png  used on input line 155.
+Package pdftex.def Info: ./img/cross_1.png  used on input line 150.
 (pdftex.def)             Requested size: 364.19667pt x 86.60483pt.
-<./img/cross_2.png, id=237, 472.76625pt x 112.42pt>
+<./img/cross_2.png, id=244, 472.76625pt x 112.42pt>
 File: ./img/cross_2.png Graphic file (type png)
 <use ./img/cross_2.png>
-Package pdftex.def Info: ./img/cross_2.png  used on input line 156.
+Package pdftex.def Info: ./img/cross_2.png  used on input line 151.
 (pdftex.def)             Requested size: 364.19667pt x 86.60483pt.
-<./img/bolting.png, id=238, 658.46pt x 115.43124pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.155 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.155 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.155 
+       <./img/applaud_wave_1.png> <./img/applaud_wave_2.png> <./img/applaud.png
+> <./img/sputnik.png>]
+<./img/bolting.png, id=256, 658.46pt x 115.43124pt>
 File: ./img/bolting.png Graphic file (type png)
 <use ./img/bolting.png>
-Package pdftex.def Info: ./img/bolting.png  used on input line 165.
+Package pdftex.def Info: ./img/bolting.png  used on input line 160.
 (pdftex.def)             Requested size: 364.19667pt x 63.84668pt.
-<./img/winx_1.png, id=239, 473.77pt x 114.4275pt>
+<./img/winx_1.png, id=257, 473.77pt x 114.4275pt>
 File: ./img/winx_1.png Graphic file (type png)
 <use ./img/winx_1.png>
-Package pdftex.def Info: ./img/winx_1.png  used on input line 174.
+Package pdftex.def Info: ./img/winx_1.png  used on input line 169.
 (pdftex.def)             Requested size: 273.14923pt x 65.97339pt.
-<./img/winx_2.png, id=240, 314.17375pt x 113.42375pt>
+<./img/winx_2.png, id=258, 314.17375pt x 113.42375pt>
 File: ./img/winx_2.png Graphic file (type png)
 <use ./img/winx_2.png>
-Package pdftex.def Info: ./img/winx_2.png  used on input line 175.
+Package pdftex.def Info: ./img/winx_2.png  used on input line 170.
 (pdftex.def)             Requested size: 273.14923pt x 98.61728pt.
-<./img/winx_3.png, id=241, 473.77pt x 114.4275pt>
+<./img/winx_3.png, id=259, 473.77pt x 114.4275pt>
 File: ./img/winx_3.png Graphic file (type png)
 <use ./img/winx_3.png>
-Package pdftex.def Info: ./img/winx_3.png  used on input line 176.
+Package pdftex.def Info: ./img/winx_3.png  used on input line 171.
 (pdftex.def)             Requested size: 273.14923pt x 65.97339pt.
-<./img/pls_1.png, id=242, 475.7775pt x 115.43124pt>
+<./img/pls_1.png, id=260, 475.7775pt x 115.43124pt>
 File: ./img/pls_1.png Graphic file (type png)
 <use ./img/pls_1.png>
-Package pdftex.def Info: ./img/pls_1.png  used on input line 185.
+Package pdftex.def Info: ./img/pls_1.png  used on input line 180.
 (pdftex.def)             Requested size: 273.14923pt x 66.2738pt.
-<./img/pls_2.png, id=243, 474.77374pt x 114.4275pt>
+<./img/pls_2.png, id=261, 474.77374pt x 114.4275pt>
 File: ./img/pls_2.png Graphic file (type png)
 <use ./img/pls_2.png>
-Package pdftex.def Info: ./img/pls_2.png  used on input line 186.
+Package pdftex.def Info: ./img/pls_2.png  used on input line 181.
 (pdftex.def)             Requested size: 273.14923pt x 65.83545pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.185 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.185 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.13})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.185 
+       <./img/cross_1.png> <./img/cross_2.png> <./img/bolting.png> <./img/winx_
+1.png> <./img/winx_2.png> <./img/winx_3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 190--195
 \T1/lmr/m/n/12 triques (par exemple, la ro-ta-tion, la trans-la-tion, l'échelle
 ).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
+Underfull \hbox (badness 10000) in paragraph at lines 190--195
 
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12 <./img/sit.png> <./img/stand.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13 <./img/turn_left_1.png> <./img/turn_left_2.png> <./img/rave_1.png> <./img/r
-ave_2.png> <./img/rave_3.png> <./img/flex.png> <./img/hello.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14 <./img/applaud_sym.png> <./img/applaud_wave_1.png> <./img/applaud_wave_2.pn
-g> <./img/applaud.png> <./img/sputnik.png> <./img/cross_1.png> <./img/cross_2.p
-ng>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15 <./img/bolting.png> <./img/winx_1.png> <./img/winx_2.png> <./img/winx_3.png
-> <./img/pls_1.png> <./img/pls_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 198--201
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
 \T1/lmr/m/n/12 notre bat-te-rie sur l'arai-gnée.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--201
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
 
  []
 
+<./img/coque.png, id=275, 333.245pt x 157.58875pt>
+File: ./img/coque.png Graphic file (type png)
+<use ./img/coque.png>
+Package pdftex.def Info: ./img/coque.png  used on input line 208.
+(pdftex.def)             Requested size: 136.57462pt x 64.58534pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--235
-\T1/lmr/m/n/12 image Do-cker pour ROS 2.
+Underfull \hbox (badness 10000) in paragraph at lines 224--227
+\T1/lmr/m/n/12 cker pour ROS 2.
  []
 
 
-Overfull \hbox (15.05612pt too wide) in paragraph at lines 223--235
-\T1/lmtt/m/n/12 arduino / blob / galactic / examples / micro-[]ros _ publisher 
-_ wifi / micro-[]ros _ publisher _
+Underfull \hbox (badness 10000) in paragraph at lines 224--227
+
  []
 
-
-Overfull \hbox (3.00311pt too wide) in paragraph at lines 237--238
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-39.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1415,10 +1500,48 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16]
-Overfull \hbox (33.93436pt too wide) in paragraph at lines 248--249
-[]\T1/lmr/m/n/12 Servomoteur : on a be-soin de la lib RP2040_ISR_Servo ([][]$\T
-1/lmtt/m/n/12 https : / / github . com / khoih-[]prog /
+[16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.14})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.227 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.15})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.227 
+       <./img/pls_1.png> <./img/pls_2.png> <./img/coque.png>]
+Overfull \hbox (43.41846pt too wide) in paragraph at lines 228--238
+\T1/lmtt/m/n/12 galactic / examples / micro-[]ros _ publisher _ wifi / micro-[]
+ros _ publisher _ wifi . ino$[][]\T1/lmr/m/n/12 ) L'exemple
+ []
+
+
+Overfull \hbox (3.00311pt too wide) in paragraph at lines 240--241
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+42.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 245--247
+\T1/lmr/m/n/12 Cette in-ter-rup-tion per-met d'ac-ti-ver les in-ter-rup-tions d
+e ti-mer.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--247
+
+ []
+
+
+Overfull \hbox (2.44038pt too wide) in paragraph at lines 248--250
+\T1/lmr/m/n/12 les ser-vo-mo-teurs : RP2040_ISR_Servo ([][]$\T1/lmtt/m/n/12 htt
+ps : / / github . com / khoih-[]prog / RP2040 _ ISR _
  []
 
 ) (./chapitres/conclusion.tex
@@ -1432,77 +1555,206 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17]
 Chapitre 4.
-\@gls@deffile=\write7
-\openout7 = `squelette_rapport.glsdefs'.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--17
+\T1/lmr/m/n/12 do-maine pas-sion-nant.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--17
+
+ []
 
 ) (./chapitres/glossary.tex [18
 
-])
-No file squelette_rapport.bbl.
+]) (./chapitres/bibliography.tex [19
+
+]
+Overfull \hbox (59.38095pt too wide) in paragraph at lines 6--8
+[][][]$\T1/lmtt/m/n/12 https : / / learn . sunfounder . com / category / quadru
+ped-[]crawling-[]robot-[]v2-[]0-[]for-[]arduino/$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+[][][]$\T1/lmtt/m/n/12 https : / / micro . ros . org/$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+[][][]$\T1/lmtt/m/n/12 https : / / github . com / micro-[]ROS / micro _ ros _ a
+rduino$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+[][][]$\T1/lmtt/m/n/12 https : / / github . com / micro-[]ROS / micro _ ros _ e
+spidf _ component$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+[][][]$\T1/lmtt/m/n/12 https : / / docs . arduino . cc / hardware / nano-[]rp20
+40-[]connect$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
+[][][]$\T1/lmtt/m/n/12 https : / / store . arduino . cc / products / portenta-[
+]h7$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--26
+[][][]$\T1/lmtt/m/n/12 https : / / micro . ros . org / blog / 2020 / 08 / 27 / 
+esp32/$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
+[][][]$\T1/lmtt/m/n/12 https : / / husarnet . com / blog / esp32-[]microros$[][
+]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+[][][]$\T1/lmtt/m/n/12 https : / / www . hadabot . com / setup-[]esp32-[]to-[]w
+ork-[]with-[]ros2 . html$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+
+ []
+
+
+Overfull \hbox (1.80592pt too wide) in paragraph at lines 33--35
+[][][]$\T1/lmtt/m/n/12 https : / / docs . ros . org / en / humble / Installatio
+n / Ubuntu-[]Install-[]Debians . html$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+[][][]$\T1/lmtt/m/n/12 https : / / gist . github . com / Redstone-[]RM/$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+)
+Overfull \hbox (57.38095pt too wide) in paragraph at lines 39--175
+[][][]$\T1/lmtt/m/n/12 https : / / github . com / micro-[]ROS / micro _ ros _ a
+rduino / blob / galactic / examples / micro-[]ros _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--175
+\T1/lmtt/m/n/12 publisher _ wifi / micro-[]ros _ publisher _ wifi . ino$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--175
+
+ []
+
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[19
+[20
 
 ] (./squelette_rapport.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `squelette_rapport.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `squelette_rapport.out':
-(rerunfilecheck)             Before: 281012991BFA93FE26B35E7658E4C977;2933
-(rerunfilecheck)             After:  FC75E5F62C4DF986E224BC92343813AB;2844.
+Package rerunfilecheck Info: File `squelette_rapport.out' has not changed.
+(rerunfilecheck)             Checksum: 79F2C219B7F0BF49E569FF510BB843EB;2467.
  ) 
 Here is how much of TeX's memory you used:
- 24125 strings out of 478268
- 403421 string characters out of 5846346
- 968789 words of memory out of 5000000
- 41802 multiletter control sequences out of 15000+600000
+ 24158 strings out of 478268
+ 404120 string characters out of 5846346
+ 971277 words of memory out of 5000000
+ 41846 multiletter control sequences out of 15000+600000
  545448 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  91i,12n,101p,1141b,2207s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{glo:word2} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:word1} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
-replaced by a fixed one
-
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/t
-exlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/te
-xmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/f
-onts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/d
-vips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mat
-hsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2022/t
-exmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2022/texmf-dist
-/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
-e1/public/lm/lmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
-lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pf
-b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf
--dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2022/texmf-dist/font
-s/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
-blic/lm/lmtt12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvetic
-/uhvr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pf
-b>
-Output written on squelette_rapport.pdf (20 pages, 10538901 bytes).
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
+/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/
+texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist
+/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc
+/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-m
+athsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2022/texmf-di
+st/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
+ype1/public/lm/lmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
+c/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.
+pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/tex
+mf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2022/texmf-dist/fo
+nts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
+public/lm/lmtt12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvet
+ic/uhvr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb>
+Output written on squelette_rapport.pdf (21 pages, 10554891 bytes).
 PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
- 84 named destinations out of 1000 (max. 500000)
- 281 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 419 PDF objects out of 1000 (max. 8388607)
+ 312 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 254 words of extra memory for PDF output out of 10000 (max. 10000000)
 
