@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.21)  12 DEC 2022 16:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.21)  30 DEC 2022 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,12 +844,12 @@ e
 (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<./img/logo_epita.png, id=74, 4302.0725pt x 2912.8825pt>
+<./img/logo_epita.png, id=83, 4302.0725pt x 2912.8825pt>
 File: ./img/logo_epita.png Graphic file (type png)
 <use ./img/logo_epita.png>
 Package pdftex.def Info: ./img/logo_epita.png  used on input line 99.
 (pdftex.def)             Requested size: 136.57462pt x 92.44965pt.
-<./img/logo_equipe_robotique_exploration.png, id=76, 2388.925pt x 2556.55125pt>
+<./img/logo_equipe_robotique_exploration.png, id=85, 2388.925pt x 2556.55125pt>
 
 File: ./img/logo_equipe_robotique_exploration.png Graphic file (type png)
 <use ./img/logo_equipe_robotique_exploration.png>
@@ -1074,25 +1074,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--60
  []
 
 
-LaTeX Warning: Citation `NOM05' on page 7 undefined on input line 100.
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
+\T1/lmr/m/n/12 dows.
+ []
 
 
-LaTeX Warning: Citation `NOM12' on page 7 undefined on input line 100.
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
+
+ []
 
 
-LaTeX Warning: Citation `WEB13' on page 7 undefined on input line 100.
+Overfull \hbox (16.2496pt too wide) in paragraph at lines 72--75
+[]\T1/lmr/m/n/12 Suivre la do-cu-men-ta-tion sui-vante : [][]$\T1/lmtt/m/n/12 h
+ttps : / / docs . ros . org / en / rolling / Installation /
+ []
 
 
-LaTeX Warning: Citation `NOM09' on page 7 undefined on input line 100.
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
+\T1/lmtt/m/n/12 Ubuntu-[]Install-[]Debians . html$[][]
+ []
 
 
-LaTeX Warning: Citation `NOM07' on page 7 undefined on input line 100.
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
-File: ./img/logo_equipe_robotique_exploration.png Graphic file (type png)
-<use ./img/logo_equipe_robotique_exploration.png>
-Package pdftex.def Info: ./img/logo_equipe_robotique_exploration.png  used on i
-nput line 105.
-(pdftex.def)             Requested size: 136.57462pt x 146.13063pt.
+ []
+
+
+Overfull \hbox (58.02116pt too wide) in paragraph at lines 85--86
+\T1/lmr/m/n/12 tions du site Web de ROS ([][]$\T1/lmtt/m/n/12 https : / / index
+ . ros . org / doc / ros2 / Installation / Windows-[]Support/$[][]\T1/lmr/m/n/1
+2 ).
+ []
+
+
+Overfull \hbox (117.48917pt too wide) in paragraph at lines 87--88
+\T1/lmr/m/n/12 du site Web de ROS ([][]$\T1/lmtt/m/n/12 https : / / index . ros
+ . org / doc / ros2 / Installation / Windows-[]Environment-[]Variables/$[][]\T1
+/lmr/m/n/12 ).
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1102,12 +1122,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
+
+LaTeX Warning: Citation `NOM05' on page 8 undefined on input line 94.
+
+
+LaTeX Warning: Citation `NOM12' on page 8 undefined on input line 94.
+
+
+LaTeX Warning: Citation `WEB13' on page 8 undefined on input line 94.
+
+
+LaTeX Warning: Citation `NOM09' on page 8 undefined on input line 94.
+
+
+LaTeX Warning: Citation `NOM07' on page 8 undefined on input line 94.
+
 File: ./img/logo_equipe_robotique_exploration.png Graphic file (type png)
 <use ./img/logo_equipe_robotique_exploration.png>
 Package pdftex.def Info: ./img/logo_equipe_robotique_exploration.png  used on i
-nput line 111.
+nput line 99.
 (pdftex.def)             Requested size: 136.57462pt x 146.13063pt.
-
+File: ./img/logo_equipe_robotique_exploration.png Graphic file (type png)
+<use ./img/logo_equipe_robotique_exploration.png>
+Package pdftex.def Info: ./img/logo_equipe_robotique_exploration.png  used on i
+nput line 105.
+(pdftex.def)             Requested size: 136.57462pt x 146.13063pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1123,11 +1162,11 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 134.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 127.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 152.
+nput line 145.
 
-(./src/helloWorld.c)
+(./src/helloWorld.c
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1136,7 +1175,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9]
+[9])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1166,31 +1205,223 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--32
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 57--69
+<./img/sit.png, id=222, 194.7275pt x 142.5325pt>
+File: ./img/sit.png Graphic file (type png)
+<use ./img/sit.png>
+Package pdftex.def Info: ./img/sit.png  used on input line 50.
+(pdftex.def)             Requested size: 136.57462pt x 99.96997pt.
+<./img/stand.png, id=223, 194.7275pt x 143.53625pt>
+File: ./img/stand.png Graphic file (type png)
+<use ./img/stand.png>
+Package pdftex.def Info: ./img/stand.png  used on input line 59.
+(pdftex.def)             Requested size: 136.57462pt x 100.67398pt.
+
+
+! LaTeX Error: File `./img/walk' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 ...egraphics[width=0.3\textwidth]{./img/walk}
+                                                  
+? 
+<./img/turn_left_1.png, id=224, 787.94376pt x 114.4275pt>
+File: ./img/turn_left_1.png Graphic file (type png)
+<use ./img/turn_left_1.png>
+Package pdftex.def Info: ./img/turn_left_1.png  used on input line 79.
+(pdftex.def)             Requested size: 364.19667pt x 52.8887pt.
+<./img/turn_left_2.png, id=225, 655.44875pt x 115.43124pt>
+File: ./img/turn_left_2.png Graphic file (type png)
+<use ./img/turn_left_2.png>
+Package pdftex.def Info: ./img/turn_left_2.png  used on input line 80.
+(pdftex.def)             Requested size: 364.19667pt x 64.13907pt.
+<./img/rave_1.png, id=226, 631.35875pt x 110.4125pt>
+File: ./img/rave_1.png Graphic file (type png)
+<use ./img/rave_1.png>
+Package pdftex.def Info: ./img/rave_1.png  used on input line 89.
+(pdftex.def)             Requested size: 364.19667pt x 63.69221pt.
+<./img/rave_2.png, id=227, 635.37375pt x 114.4275pt>
+File: ./img/rave_2.png Graphic file (type png)
+<use ./img/rave_2.png>
+Package pdftex.def Info: ./img/rave_2.png  used on input line 90.
+(pdftex.def)             Requested size: 364.19667pt x 65.59276pt.
+<./img/rave_3.png, id=228, 791.95876pt x 113.42375pt>
+File: ./img/rave_3.png Graphic file (type png)
+<use ./img/rave_3.png>
+Package pdftex.def Info: ./img/rave_3.png  used on input line 91.
+(pdftex.def)             Requested size: 364.19667pt x 52.15997pt.
+<./img/flex.png, id=229, 313.17pt x 113.42375pt>
+File: ./img/flex.png Graphic file (type png)
+<use ./img/flex.png>
+Package pdftex.def Info: ./img/flex.png  used on input line 100.
+(pdftex.def)             Requested size: 273.14923pt x 98.93227pt.
+<./img/hello.png, id=230, 473.77pt x 112.42pt>
+File: ./img/hello.png Graphic file (type png)
+<use ./img/hello.png>
+Package pdftex.def Info: ./img/hello.png  used on input line 109.
+(pdftex.def)             Requested size: 273.14923pt x 64.81596pt.
+<./img/applaud_sym.png, id=231, 633.36626pt x 111.41624pt>
+File: ./img/applaud_sym.png Graphic file (type png)
+<use ./img/applaud_sym.png>
+Package pdftex.def Info: ./img/applaud_sym.png  used on input line 118.
+(pdftex.def)             Requested size: 273.14923pt x 48.05084pt.
+<./img/applaud_wave_1.png, id=232, 633.36626pt x 113.42375pt>
+File: ./img/applaud_wave_1.png Graphic file (type png)
+<use ./img/applaud_wave_1.png>
+Package pdftex.def Info: ./img/applaud_wave_1.png  used on input line 127.
+(pdftex.def)             Requested size: 364.19667pt x 65.2216pt.
+<./img/applaud_wave_2.png, id=233, 632.3625pt x 114.4275pt>
+File: ./img/applaud_wave_2.png Graphic file (type png)
+<use ./img/applaud_wave_2.png>
+Package pdftex.def Info: ./img/applaud_wave_2.png  used on input line 128.
+(pdftex.def)             Requested size: 364.19667pt x 65.90355pt.
+<./img/applaud.png, id=234, 315.1775pt x 115.43124pt>
+File: ./img/applaud.png Graphic file (type png)
+<use ./img/applaud.png>
+Package pdftex.def Info: ./img/applaud.png  used on input line 137.
+(pdftex.def)             Requested size: 136.57462pt x 50.01843pt.
+<./img/sputnik.png, id=235, 791.95876pt x 109.40875pt>
+File: ./img/sputnik.png Graphic file (type png)
+<use ./img/sputnik.png>
+Package pdftex.def Info: ./img/sputnik.png  used on input line 146.
+(pdftex.def)             Requested size: 364.19667pt x 50.3136pt.
+<./img/cross_1.png, id=236, 472.76625pt x 112.42pt>
+File: ./img/cross_1.png Graphic file (type png)
+<use ./img/cross_1.png>
+Package pdftex.def Info: ./img/cross_1.png  used on input line 155.
+(pdftex.def)             Requested size: 364.19667pt x 86.60483pt.
+<./img/cross_2.png, id=237, 472.76625pt x 112.42pt>
+File: ./img/cross_2.png Graphic file (type png)
+<use ./img/cross_2.png>
+Package pdftex.def Info: ./img/cross_2.png  used on input line 156.
+(pdftex.def)             Requested size: 364.19667pt x 86.60483pt.
+<./img/bolting.png, id=238, 658.46pt x 115.43124pt>
+File: ./img/bolting.png Graphic file (type png)
+<use ./img/bolting.png>
+Package pdftex.def Info: ./img/bolting.png  used on input line 165.
+(pdftex.def)             Requested size: 364.19667pt x 63.84668pt.
+<./img/winx_1.png, id=239, 473.77pt x 114.4275pt>
+File: ./img/winx_1.png Graphic file (type png)
+<use ./img/winx_1.png>
+Package pdftex.def Info: ./img/winx_1.png  used on input line 174.
+(pdftex.def)             Requested size: 273.14923pt x 65.97339pt.
+<./img/winx_2.png, id=240, 314.17375pt x 113.42375pt>
+File: ./img/winx_2.png Graphic file (type png)
+<use ./img/winx_2.png>
+Package pdftex.def Info: ./img/winx_2.png  used on input line 175.
+(pdftex.def)             Requested size: 273.14923pt x 98.61728pt.
+<./img/winx_3.png, id=241, 473.77pt x 114.4275pt>
+File: ./img/winx_3.png Graphic file (type png)
+<use ./img/winx_3.png>
+Package pdftex.def Info: ./img/winx_3.png  used on input line 176.
+(pdftex.def)             Requested size: 273.14923pt x 65.97339pt.
+<./img/pls_1.png, id=242, 475.7775pt x 115.43124pt>
+File: ./img/pls_1.png Graphic file (type png)
+<use ./img/pls_1.png>
+Package pdftex.def Info: ./img/pls_1.png  used on input line 185.
+(pdftex.def)             Requested size: 273.14923pt x 66.2738pt.
+<./img/pls_2.png, id=243, 474.77374pt x 114.4275pt>
+File: ./img/pls_2.png Graphic file (type png)
+<use ./img/pls_2.png>
+Package pdftex.def Info: ./img/pls_2.png  used on input line 186.
+(pdftex.def)             Requested size: 273.14923pt x 65.83545pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
+\T1/lmr/m/n/12 triques (par exemple, la ro-ta-tion, la trans-la-tion, l'échelle
+).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12 <./img/sit.png> <./img/stand.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13 <./img/turn_left_1.png> <./img/turn_left_2.png> <./img/rave_1.png> <./img/r
+ave_2.png> <./img/rave_3.png> <./img/flex.png> <./img/hello.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14 <./img/applaud_sym.png> <./img/applaud_wave_1.png> <./img/applaud_wave_2.pn
+g> <./img/applaud.png> <./img/sputnik.png> <./img/cross_1.png> <./img/cross_2.p
+ng>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15 <./img/bolting.png> <./img/winx_1.png> <./img/winx_2.png> <./img/winx_3.png
+> <./img/pls_1.png> <./img/pls_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
+\T1/lmr/m/n/12 notre bat-te-rie sur l'arai-gnée.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--235
 \T1/lmr/m/n/12 image Do-cker pour ROS 2.
  []
 
 
-Overfull \hbox (15.05612pt too wide) in paragraph at lines 57--69
+Overfull \hbox (15.05612pt too wide) in paragraph at lines 223--235
 \T1/lmtt/m/n/12 arduino / blob / galactic / examples / micro-[]ros _ publisher 
 _ wifi / micro-[]ros _ publisher _
  []
 
 
-Overfull \hbox (3.00311pt too wide) in paragraph at lines 71--72
+Overfull \hbox (3.00311pt too wide) in paragraph at lines 237--238
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
-3.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+39.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (33.93436pt too wide) in paragraph at lines 82--83
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
+Overfull \hbox (33.93436pt too wide) in paragraph at lines 248--249
 []\T1/lmr/m/n/12 Servomoteur : on a be-soin de la lib RP2040_ISR_Servo ([][]$\T
 1/lmtt/m/n/12 https : / / github . com / khoih-[]prog /
  []
 
+) (./chapitres/conclusion.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1199,46 +1430,53 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]) (./chapitres/conclusion.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13]
+[17]
 Chapitre 4.
 \@gls@deffile=\write7
 \openout7 = `squelette_rapport.glsdefs'.
 
-)
-No file squelette_rapport.gls.
+) (./chapitres/glossary.tex [18
+
+])
 No file squelette_rapport.bbl.
-[14
+
+Package glossaries Warning: No \printglossary or \printglossaries found. 
+(Remove \makeglossaries if you don't want any glossaries.) 
+This document will not have a glossary.
+
+[19
 
 ] (./squelette_rapport.aux)
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `squelette_rapport.out' has not changed.
-(rerunfilecheck)             Checksum: D8EF5994BC62BC39E690FA76121A23C8;2509.
+
+Package rerunfilecheck Warning: File `squelette_rapport.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `squelette_rapport.out':
+(rerunfilecheck)             Before: 281012991BFA93FE26B35E7658E4C977;2933
+(rerunfilecheck)             After:  FC75E5F62C4DF986E224BC92343813AB;2844.
  ) 
 Here is how much of TeX's memory you used:
- 23813 strings out of 478268
- 397366 string characters out of 5846346
- 986317 words of memory out of 5000000
- 41549 multiletter control sequences out of 15000+600000
+ 24125 strings out of 478268
+ 403421 string characters out of 5846346
+ 968789 words of memory out of 5000000
+ 41802 multiletter control sequences out of 15000+600000
  545448 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,12n,101p,1141b,1460s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,12n,101p,1141b,2207s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:word2} has been referenced but does not exist, 
 replaced by a fixed one
 
 
 pdfTeX warning (dest): name{glo:word1} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
 replaced by a fixed one
 
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/t
@@ -1261,10 +1499,10 @@ s/type1/public/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
 blic/lm/lmtt12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvetic
 /uhvr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b>
-Output written on squelette_rapport.pdf (15 pages, 882560 bytes).
+Output written on squelette_rapport.pdf (20 pages, 10538901 bytes).
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 

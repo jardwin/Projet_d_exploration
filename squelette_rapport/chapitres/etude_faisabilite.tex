@@ -1,10 +1,10 @@
 	%-----------------------
-	\chapter{Implémentation}
+	\chapter{Réalisation}
 	%-----------------------
 
-Introduction de l'étude de faisabilité - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Introduction de l'étude de faisabilité - Nous avons accompli notre objectif qui était de synchroniser les mouvements de plusieurs araignées entre elle grâce à Micro-ROS.
+Une démo peut être consultée à cette adresse : \url{https://www.youtube.com/watch?v=Oyxngs2QC1o}
 
-	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
 	
 		%-----------------------
 		\section{Implémentation technique}
@@ -35,6 +35,172 @@ ROS prend en charge principalement le langage de programmation C++, bien qu'il s
 langages tels que Python. ROS2 prend en charge plusieurs langages de programmation, tels que C++, Python, Java, et bien d'autres. 
 De plus, ROS utilise principalement le système de build Catkin pour la compilation et l'intégration de logiciels, alors que 
 ROS2 utilise l'outil de buildmentament Colcon. 
+
+		%-----------------------
+		\section{Les mouvements de l'araignée}
+		\label{les_mouvements}
+		%-----------------------
+
+Nous avons implémenté les mouvements de l'arraignée pédagogique SEALK dont le code nous a été fourni. Voici la liste des différents mouvements :	
+
+sit : fait asseoir l'arraignée
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{./img/sit}
+		\caption{Sit}
+	\end{center}
+\end{figure}
+
+stand : met debout l'arraignée
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{./img/stand}
+		\caption{Stand}
+	\end{center}
+\end{figure}
+
+walk forward, walk back, walk left, walk right : bouge l'arraignée dans les quatre directions
+
+\textit{pas d'image :(}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{./img/walk}
+		\caption{Stand}
+	\end{center}
+\end{figure}
+
+turn left, turn right : tourne l'araignée à gauche et à droite
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{./img/turn_left_1}
+		\includegraphics[width=0.8\textwidth]{./img/turn_left_2}
+		\caption{Turn left}
+	\end{center}
+\end{figure}
+
+rave : mouvement de divagation
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{./img/rave_1}
+		\includegraphics[width=0.8\textwidth]{./img/rave_2}
+		\includegraphics[width=0.8\textwidth]{./img/rave_3}
+		\caption{Rave}
+	\end{center}
+\end{figure}
+
+flex : fait un mouvement de "flex" au sol
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{./img/flex}
+		\caption{Flex}
+	\end{center}
+\end{figure}
+
+hello : fait un salut
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{./img/hello}
+		\caption{Hello}
+	\end{center}
+\end{figure}
+
+applaud sym : l'araignée simule un applaudissement en levant lève d'abord deux pattes en diagonale et les repose puis lève et repose les deux autres
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{./img/applaud_sym}
+		\caption{Applaud sym}
+	\end{center}
+\end{figure}
+
+applaud wave : similaire au mouvement précédent mais lève une seule patte à la fois
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{./img/applaud_wave_1}
+		\includegraphics[width=0.8\textwidth]{./img/applaud_wave_2}
+		\caption{Applaud sym}
+	\end{center}
+\end{figure}
+
+applaud : tape une patte sur le sol
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{./img/applaud}
+		\caption{Applaud}
+	\end{center}
+\end{figure}
+
+sputnik : lève les pattes en l'air
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{./img/sputnik}
+		\caption{Sputnik}
+	\end{center}
+\end{figure}
+
+cross : étale les pattes sur le sol (en forme de croix)
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{./img/cross_1}
+		\includegraphics[width=0.8\textwidth]{./img/cross_2}
+		\caption{Cross}
+	\end{center}
+\end{figure}
+
+bolting : inspiré de la pose d'Usain Bolt : lève et étire deux pattes en diagonale
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{./img/bolting}
+		\caption{Bolting}
+	\end{center}
+\end{figure}
+
+winx : simule un battement d'aile
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{./img/winx_1}
+		\includegraphics[width=0.6\textwidth]{./img/winx_2}
+		\includegraphics[width=0.6\textwidth]{./img/winx_3}
+		\caption{Winx}
+	\end{center}
+\end{figure}
+
+pls : position par défaut, araignée écrasée
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{./img/pls_1}
+		\includegraphics[width=0.6\textwidth]{./img/pls_2}
+		\caption{PLS}
+	\end{center}
+\end{figure}
+
+		%-----------------------
+		\subsection{Construction de la coque}
+		%-----------------------
+
+Pour modéliser notre coque nous avons utilisé OpenSCAD qui est un logiciel de modélisation 3D de type "constructif". Cela signifie que les modèles 3D sont créés en utilisant une syntaxe de script plutôt que par une interface graphique. OpenSCAD permet de créer des modèles 3D précis en combinant des primitives géométriques de base (par exemple, des cubes, des cylindres, des sphères) et en les modifiant à l'aide de transformations géométriques (par exemple, la rotation, la translation, l'échelle).  
+\linebreak
+
+Nous avions plusieurs idées de personnalisation de cette coque. La première idée était de faire un mini échiquier avec des petites pièces qui viendrait s’insérer par-dessus.  
+La deuxième idée était plus pratique. En effet La carte Arduino que nous utilisons à besoin d’une source d’alimentions en plus de celle déjà disponible sur l’araignée. Nous avons donc dû utiliser une batterie externe. L’idée était donc d’ajouter un socle qui pourrait tenir notre batterie sur l’araignée. 
+\linebreak
+
+Malheureusement, par manque de temps, nous avons dû nous contenter d’une coque plus basique qui nous permet cependant de faire tenir la batterie grâce à un élastique. 
+
 
 		%-----------------------
 		\section{Limites et problèmes rencontrés}

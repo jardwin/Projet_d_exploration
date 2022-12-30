@@ -61,41 +61,35 @@ Ainsi qu’un manque d’alimentions, l’alimentations actuelle du robot ne ser
 (Parler des exo ROS2) 
 
 		%-----------------------
-		\section{Les mouvements}
-		\label{les_mouvements}
+		\section{Installation de ROS 2}
 		%-----------------------
 
-// Mettre une photo pour chaque mvt		
+Nous allons détailler dans cette section comment installer ROS 2 sur Linux et Windows.
+\linebreak
 
-sit : faire asseoir l'arraignée
+\underline{Sur Linux (Recommandé) :}
+ 
+Suivre la documentation suivante :
+\url{https://docs.ros.org/en/rolling/Installation/Ubuntu-Install-Debians.html}
+ \linebreak
 
-stand : met debout l'arraignée
-
-walk forward, walk back, walk left, walk right : bouge l'arraignée dans les 4 directions
-
-turn left, turn right : tourne l'araignée à gauche et à droite
-
-rave (vague)
-
-flex
-
-hello
-
-applaud sim
-
-applaud wave
-
-applaud
-
-spoutnik
-
-cross
-
-pls : position par défaut
-
-bolting
-
-wink
+ \underline{Sur Windows :}
+ 
+ 
+Téléchargez la dernière version de ROS2 depuis le site Web officiel de ROS (\url{https://index.ros.org/doc/ros2/}). Sélectionnez la version de ROS2 qui convient à votre version de Windows (32 bits ou 64 bits). 
+ 
+Installez les outils de build Colcon en suivant les instructions du site Web de ROS (\url{https://index.ros.org/doc/ros2/Installation/Colcon/}). Colcon est un outil de build utilisé pour compiler et intégrer les logiciels ROS2. 
+ 
+Créez un environnement de développement ROS2 en utilisant l'outil "ament" (\url{https://index.ros.org/doc/ros2/Installation/Ament/}). Ament est un outil qui permet de gérer les dépendances et les environnements de développement pour les projets ROS2. 
+ 
+Installez les bibliothèques de support de Windows pour ROS2 en suivant les instructions du site Web de ROS (\url{https://index.ros.org/doc/ros2/Installation/Windows-Support/}). Ces bibliothèques sont nécessaires pour exécuter ROS2 sur Windows. 
+ 
+Ajoutez les variables d'environnement ROS2 à votre système en suivant les instructions du site Web de ROS (\url{https://index.ros.org/doc/ros2/Installation/Windows-Environment-Variables/}). Ces variables d'environnement sont nécessaires pour exécuter les commandes ROS2 et accéder aux outils et aux bibliothèques ROS2 depuis n'importe quel emplacement de votre système. 
+ 
+Vérifiez que ROS2 est correctement installé en exécutant la commande "ros2 run demo\_nodes\_cpp talker" depuis une invite de commandes. Cette commande devrait exécuter un noeud "talker" de démonstration qui envoie des messages de test à un noeud "listener" de démonstration. Si la commande s'exécute correctement, cela signifie que ROS2 est correctement installé et configuré sur votre système. 
+ 
+Vous pouvez maintenant commencer à développer vos propres applications ROS2 en suivant les tutoriels et les exemples disponibles sur le site Web de ROS (\url{https://index.ros.org/doc/ros2/}). N'oubliez pas de configurer votre environnement de développement et de compiler vos logiciels avec Colcon avant de les exécuter. 
+ 
 
 Utilisation d'une autre référénce~\cite{NOM05}. Et encore une autre~\cite{NOM12}. Ou bien plusieurs~\cite{WEB13, NOM09, NOM07}.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -113,7 +107,6 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 	\label{fig:image1}
 \end{center}
 \end{figure}
-
 
 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
 
