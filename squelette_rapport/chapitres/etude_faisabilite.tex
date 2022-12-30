@@ -2,10 +2,13 @@
 	\chapter{Réalisation}
 	%-----------------------
 
-Introduction de l'étude de faisabilité - Nous avons accompli notre objectif qui était de synchroniser les mouvements de plusieurs araignées entre elle grâce à Micro-ROS.
-Une démo peut être consultée à cette adresse : \url{https://www.youtube.com/watch?v=Oyxngs2QC1o}
+Nous avons accompli notre objectif qui était de synchroniser les mouvements de plusieurs araignées 
+entre elle grâce à Micro-ROS.
+Une démo peut être consultée à cette adresse : \url{https://www.youtube.com/watch?v=Oyxngs2QC1o}.
+\linebreak
+L'araignée est contrôlée par une manette Xbox et il est possible d'augmenter ou diminuer la vitesse des mouvements en appuyant sur 
+les joysticks.
 
-	
 		%-----------------------
 		\section{Implémentation technique}
 		%-----------------------
@@ -182,6 +185,12 @@ pls : position par défaut, araignée écrasée
 		\caption{PLS}
 	\end{center}
 \end{figure}
+
+		%-----------------------
+		\section{Synchronisation arraignées}
+		%-----------------------
+
+Les arraignées sont synchros. Elles sont connectés par wifi à l'ordinateur qui envoient les messages en UDP.
 
 		%-----------------------
 		\section{Construction de la coque}

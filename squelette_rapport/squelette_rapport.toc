@@ -6,12 +6,11 @@
 \contentsline {subsection}{\numberline {2.1.1}Solution 1}{6}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Solution 2}{6}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Installation de ROS 2}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Augmentation vitesse mouvements}{9}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Synchronisation arraign\IeC {\'e}es}{10}{section.2.4}%
 \contentsline {chapter}{\numberline {3}R\IeC {\'e}alisation}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Impl\IeC {\'e}mentation technique}{11}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Les diff\IeC {\'e}rences entre ROS et ROS2}{11}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Les mouvements de l'araign\IeC {\'e}e}{12}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Construction de la coque}{16}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Limites et probl\IeC {\`e}mes rencontr\IeC {\'e}s}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.2}Synchronisation arraign\IeC {\'e}es}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Construction de la coque}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Limites et probl\IeC {\`e}mes rencontr\IeC {\'e}s}{17}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Conclusion}{18}{chapter.4}%
