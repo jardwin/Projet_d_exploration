@@ -1,16 +1,16 @@
 \babel@toc {french}{}\relax 
 \contentsline {chapter}{R\IeC {\'e}sum\IeC {\'e}}{1}{Doc-Start}%
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {2}\IeC {\'E}tat de l'Art}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Les solutions}{6}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Solution 1}{6}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {2}\IeC {\'E}tat de l'Art}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Les solutions}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Solution 1}{4}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Solution 2}{6}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Installation de ROS 2}{7}{section.2.2}%
-\contentsline {chapter}{\numberline {3}R\IeC {\'e}alisation}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Impl\IeC {\'e}mentation technique}{11}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Les diff\IeC {\'e}rences entre ROS et ROS2}{11}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Les mouvements de l'araign\IeC {\'e}e}{12}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Synchronisation arraign\IeC {\'e}es}{16}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Construction de la coque}{16}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Limites et probl\IeC {\`e}mes rencontr\IeC {\'e}s}{17}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Conclusion}{18}{chapter.4}%
+\contentsline {section}{\numberline {2.2}Installation de ROS 2}{6}{section.2.2}%
+\contentsline {chapter}{\numberline {3}R\IeC {\'e}alisation}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Impl\IeC {\'e}mentation technique}{8}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Les diff\IeC {\'e}rences entre ROS et ROS2}{8}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Les mouvements de l'araign\IeC {\'e}e}{9}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Synchronisation arraign\IeC {\'e}es}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Construction de la coque}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Limites et probl\IeC {\`e}mes rencontr\IeC {\'e}s}{14}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Conclusion}{15}{chapter.4}%

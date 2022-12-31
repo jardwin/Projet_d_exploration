@@ -13,8 +13,11 @@
 
 A l’heure actuelle, Micro-ros n’est supporté que par 2 modèles de cartes Arduino, Arduino Portenta H7 M7 Core
 \url{https://store.arduino.cc/portenta-h7} et Arduino Nano RP2040 Connect \url{https://docs.arduino.cc/hardware/nano-rp2040-connect}. 
-Il est probablement possible d’adapter Micro-ROS à la carte Arduino que nous avons à notre disposition mais cela risque de nous 
-prendre plus de temps que nous n’avons à disposition.  
+
+Nous avons d'ailleurs vu qu'une personne a installé Micro ROS sur ces cartes : \url{https://www.youtube.com/watch?v=mq1uFGsYqeU}.
+
+Il était probablement possible d’adapter Micro-ROS à la carte Arduino que nous avions à notre disposition mais cela risquait de nous 
+prendre plus de temps que nous n’avions à disposition.  
 \linebreak
 	
 L'Arduino Nano RP2040 Connect est une carte de développement basée sur le processeur ARM Cortex-M0+ RP2040 conçue par Raspberry Pi. 
@@ -23,16 +26,26 @@ L'Arduino Nano RP2040 Connect est équipée de 20 broches de E/S numériques, de
 d'un port USB-C pour l'alimentation et la communication, d'un connecteur de batterie, d'un connecteur de microphone, 
 d'un connecteur de haut-parleur et d'un connecteur de bouton-poussoir. La carte est également compatible avec les bibliothèques Arduino 
 pour faciliter le développement de logiciels pour les projets de robotique et d'IoT. 
-Après nos différentes recherches, nous avons conclu que ce serait la carte idéale pour mettre en place le projet. 
+Après nos différentes recherches, nous avons conclu que ce serait la carte idéale pour mettre en place le projet.
 \linebreak 
 
-IMAGES DU WORD A REMETTRE
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{./img/schema_carte_1}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{./img/schema_carte_2}
+\end{center}
+\end{figure}
 
 			%-----------------------
 			\subsection{Solution 2}
 			%-----------------------
 
-Nous avons cependant pensé à une solution alternative. Nous pouvons utiliser une carte ESP32 qui est déjà compatible 
+Nous avons cependant pensé à une solution alternative. Nous pouvons aussi utiliser une carte ESP32 qui est déjà compatible 
 avec l’architecture Micro-ROS ( \url{https://micro.ros.org/blog/2020/08/27/esp32} ).  
 \linebreak
 
@@ -46,14 +59,12 @@ En raison de ses performances et de ses fonctionnalités avancées, la puce ESP3
 robotique et d'IoT.
 \linebreak
 	
-On peut installer cette carte sur notre robot et la brancher directement en SPI (Port Radio ?) avec la carte Arduino nano pour 
+On peut installer cette carte sur notre robot et la brancher directement en SPI (Serial Peripheral Interface) avec la carte Arduino Nano pour 
 ne pas avoir à la connecter en radio ou en wifi.  
-L’ESP32 s’occupera de faire tous les contrôles et enverra des ordres a la carte Arduino qui se contentera de les exécuter 
-Les problèmes que l’on pourrait rencontrer avec cette méthode sont le manque de place sur le robot, et un poids peut être trop importants. 
-Ainsi qu’un manque d’alimentions, l’alimentations actuelle du robot ne sera peut-être pas suffisante pour alimenter les deux cartes. 
+L’ESP32 s’occupera de faire tous les contrôles et enverra des ordres à la carte Arduino qui se contentera de les exécuter; 
+Les problèmes que l’on pourrait rencontrer avec cette méthode sont le manque de place sur le robot, un poids peut-être trop important, ainsi 
+qu’un manque d’alimention, l’alimentation actuelle du robot ne sera peut-être pas suffisante pour alimenter les deux cartes. 
 \linebreak
-	
-(Parler des exo ROS2) 
 
 		%-----------------------
 		\section{Installation de ROS 2}
@@ -70,90 +81,40 @@ Suivre la documentation suivante :
 
  \underline{Sur Windows :}
  
- 
-Téléchargez la dernière version de ROS2 depuis le site Web officiel de ROS (\url{https://index.ros.org/doc/ros2/}). Sélectionnez la version de ROS2 qui convient à votre version de Windows (32 bits ou 64 bits). 
- 
-Installez les outils de build Colcon en suivant les instructions du site Web de ROS (\url{https://index.ros.org/doc/ros2/Installation/Colcon/}). Colcon est un outil de build utilisé pour compiler et intégrer les logiciels ROS2. 
- 
-Créez un environnement de développement ROS2 en utilisant l'outil "ament" (\url{https://index.ros.org/doc/ros2/Installation/Ament/}). Ament est un outil qui permet de gérer les dépendances et les environnements de développement pour les projets ROS2. 
- 
-Installez les bibliothèques de support de Windows pour ROS2 en suivant les instructions du site Web de ROS (\url{https://index.ros.org/doc/ros2/Installation/Windows-Support/}). Ces bibliothèques sont nécessaires pour exécuter ROS2 sur Windows. 
- 
-Ajoutez les variables d'environnement ROS2 à votre système en suivant les instructions du site Web de ROS (\url{https://index.ros.org/doc/ros2/Installation/Windows-Environment-Variables/}). Ces variables d'environnement sont nécessaires pour exécuter les commandes ROS2 et accéder aux outils et aux bibliothèques ROS2 depuis n'importe quel emplacement de votre système. 
- 
-Vérifiez que ROS2 est correctement installé en exécutant la commande "ros2 run demo\_nodes\_cpp talker" depuis une invite de commandes. Cette commande devrait exécuter un noeud "talker" de démonstration qui envoie des messages de test à un noeud "listener" de démonstration. Si la commande s'exécute correctement, cela signifie que ROS2 est correctement installé et configuré sur votre système. 
- 
-Vous pouvez maintenant commencer à développer vos propres applications ROS2 en suivant les tutoriels et les exemples disponibles sur le site Web de ROS (\url{https://index.ros.org/doc/ros2/}). N'oubliez pas de configurer votre environnement de développement et de compiler vos logiciels avec Colcon avant de les exécuter. 
- 
+ \begin{enumerate}
+	\item Téléchargez la dernière version de ROS2 depuis le site Web officiel de ROS (\url{https://index.ros.org/doc/ros2/}). 
+	Sélectionnez la version de ROS2 qui convient à votre version de Windows (32 bits ou 64 bits). 
 
-Utilisation d'une autre référénce~\cite{NOM05}. Et encore une autre~\cite{NOM12}. Ou bien plusieurs~\cite{WEB13, NOM09, NOM07}.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	\item Installez les outils de build Colcon en suivant les instructions du site Web de ROS 
+	(\url{https://index.ros.org/doc/ros2/Installation/Colcon/}).
+	Colcon est un outil de build utilisé pour compiler et intégrer les logiciels ROS2. 
 
-Figure~:
+	\item Créez un environnement de développement ROS2 en utilisant l'outil "ament" 
+	(\url{https://index.ros.org/doc/ros2/Installation/Ament/}).
+	Ament est un outil qui permet de gérer les dépendances et les environnements de développement pour les projets ROS2. 
 
-\includegraphics[width=0.3\textwidth]{./img/logo_equipe_robotique_exploration}
+	\item Installez les bibliothèques de support de Windows pour ROS2 en suivant les instructions du site Web de ROS 
+	(\url{https://index.ros.org/doc/ros2/Installation/Windows-Support/}).
+	Ces bibliothèques sont nécessaires pour exécuter ROS2 sur Windows. 
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+	\item Ajoutez les variables d'environnement ROS2 à votre système en suivant les instructions du site Web de ROS 
+	(\url{https://index.ros.org/doc/ros2/Installation/Windows-Environment-Variables/}).
+	Ces variables d'environnement sont nécessaires pour exécuter les commandes ROS2 et accéder aux outils et aux bibliothèques ROS2 
+	depuis n'importe quel emplacement de votre système. 
 
-\begin{figure}
-\begin{center}
-	\includegraphics[width=0.3\textwidth]{./img/logo_equipe_robotique_exploration}
-	\caption{Légende de l'image}
-	\label{fig:image1}
-\end{center}
-\end{figure}
+	\item Vérifiez que ROS2 est correctement installé en exécutant la commande "ros2 run demo\_nodes\_cpp talker" depuis une 
+	invite de commandes.
+	Cette commande devrait exécuter un noeud "talker" de démonstration qui envoie des messages de test à un noeud "listener" de démonstration.
+	Si la commande s'exécute correctement, cela signifie que ROS2 est correctement installé et configuré sur votre système.
 
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+	\item Vous pouvez maintenant commencer à développer vos propres applications ROS2 en suivant les tutoriels et les exemples disponibles 
+	sur le site Web de ROS (\url{https://index.ros.org/doc/ros2/}).
+	N'oubliez pas de configurer votre environnement de développement et de compiler vos logiciels avec Colcon avant de les exécuter.
+\end{enumerate}
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-		
-Référence interne, voir la section \ref{les_mouvements} page~\pageref{les_mouvements}. % fait référence à l'endroit où on a posé le label correspondant au nom (\label{les_mouvements})
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-\begin{lstlisting}[style=sourceC]
-#include <stdio.h>
-
-int main(void) {
-	printf("Hello World!\n");
-	return 0;
-}
-\end{lstlisting}		
-
- 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-
-Code \lstinline[style=sourceC]!#include <stdio.h>! en ligne.
-
-
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-
-Code en provenance d'un fichier~:
-
-\lstinputlisting[style=sourceC]{src/helloWorld.c} 
-
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
-
-\begin{algorithm}[H]	
-	Une instruction \\
-	\Tq{La condition est vraie}{
-		\eSi{Une autre condition est vraie}{
-			Une instruction
-		}{
-			Une autre instruction
-		}
-	}
-	\Si{Une condition est vraie}{
-		Une instruction \\
-		Une autre instruction \\	
-	}
-	\Repeter{La condition est vraie}{
-		Une instruction
-	}
-	
-\end{algorithm}
-
-
-Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+L'étape suivante est de générer l'agent Micro ROS et le lancer. On peut retrouver à cet effet un tutoriel à cette adresse :
+\url{https://gist.github.com/Redstone-RM/0ca459c32ec5ead8700284ff56a136f7}
+\linebreak
 
 \clearemptydoublepage
 

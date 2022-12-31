@@ -36,7 +36,7 @@
 \fancyhead[LE]{\thepage} % Even page - Left side
 \fancyhead[RO]{\thepage}% Odd page - Rigth side
 \fancyhead[LO]{\chaptername{} \thechapter{} - \nouppercase{\rightmark}} % Odd page - Left side
-\fancyfoot[C]{footer} % Footer - Center
+%\fancyfoot[C]{footer} % Footer - Center
 
 \newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}} % Supprime les en-têtes et pieds de page des pages vides (type book)
 
@@ -105,23 +105,13 @@ fullflexible, flexiblecolumns=true, upquote=true, keepspaces=true}
 	\addcontentsline{toc}{chapter}{Résumé}
 	%-----------------------	
 
-Micro ROS (Robot Operating System) est un framework pour faciliter le développement robotique et qui sert d'interface entre les micro controleurs.
-Il permet ainsi l'abstraction du matériel, la transmission de message etc.
-Micro ROS n'est pas disponible sur toutes les cartes Arduino. Dans notre projet, nous avons choisi une carte Nano RP2040.
-L'objectif de notre projet est dans un premier temps de faire bouger l'arraignée et dans un second temps travailler sur la synchronisation entre une autre arraignée.
+Micro ROS (Robot Operating System) est un framework pour faciliter le développement robotique et qui sert d'interface entre 
+les microcontrôleurs.
+Il permet ainsi l'abstraction du matériel, la transmission de messages etc.
+Micro ROS n'est pas disponible sur toutes les cartes Arduino. Dans notre projet, nous avons choisi une carte Arduino Nano RP2040.
+L'objectif de notre projet était dans un premier temps de faire bouger l'arraignée et dans un second temps travailler sur 
+la synchronisation avec une autre arraignée.
 
-Exemple gras et italique~:
-
-Sed ut \textbf{perspiciatis} unde omnis iste \textbf{natus} error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore \textit{veritatis} et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non \textit{numquam eius modi tempora incidunt ut} labore et dolore magnam aliquam quaerat voluptatem. \textbf{Ut enim ad minima veniam, \textit{quis nostrum} exercitationem ullam corporis} suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-
-Exemple texte centré~:
-
-\begin{center}
-	Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-\end{center}
-
-Ut enim ad minim veniam, \color{green} quis nostrud exercitation ullamco \color{black} laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non \color{darkblue} proident, sunt in culpa \color{black} qui officia deserunt mollit anim id est laborum.
-	
 	%-----------------------
 	% TABLE DES MATIERES %
 	\tableofcontents

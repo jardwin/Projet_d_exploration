@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.21)  30 DEC 2022 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.21)  31 DEC 2022 14:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -904,7 +904,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.127 	\tableofcontents
+l.117 	\tableofcontents
                         [1
 
 ] (./squelette_rapport.toc
@@ -934,104 +934,97 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 5--13
-\T1/lmr/m/n/12 ser-vice aux grands ro-bots in-dus-triels.
+Underfull \hbox (badness 10000) in paragraph at lines 5--12
+\T1/lmr/m/n/12 dus-triels.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--13
+Underfull \hbox (badness 10000) in paragraph at lines 5--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--21
-\T1/lmr/m/n/12 grande ef-fi-ca-cité en termes de res-sources.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--21
+Underfull \hbox (badness 10000) in paragraph at lines 13--20
 
  []
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 22--25
-\T1/lmr/m/n/12 d'adap-ter le code des arai-gnées mé-ca-nique sur l'ar-chi-tec-t
-ure micro-Ros.
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
+\T1/lmr/m/n/12 d'adap-ter le code des arai-gnées mé-ca-niques sur l'ar-chi-tec-
+ture Micro-Ros.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--25
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--37
+Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-)
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+))
+Underfull \hbox (badness 10000) in paragraph at lines 34--125
 \T1/lmr/m/n/12 tion que nous avons choi-sie et sa mise en ÷uvre.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+Underfull \hbox (badness 10000) in paragraph at lines 34--125
 
  []
 
-[3
+(./chapitres/etat_art.tex [3
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-4.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
+Chapitre 2.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+5.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (129.4036pt too wide) in paragraph at lines 47--49
-[]\T1/lmr/m/n/12 // mettre le schéma de la carte https ://docs.arduino.cc/stati
-c/56034f29d9e2bd28f4fd3c90268d0557/ABX00053-
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+\T1/lmr/m/n/12 dis-po-si-tion.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--52
-\T1/lmtt/m/n/12 0ca459c32ec5ead8700284ff56a136f7$[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--52
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
  []
 
 
-Overfull \hbox (15.05612pt too wide) in paragraph at lines 53--57
-\T1/lmtt/m/n/12 arduino / blob / galactic / examples / micro-[]ros _ publisher 
-_ wifi / micro-[]ros _ publisher _
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--57
+Underfull \hbox (badness 10000) in paragraph at lines 23--31
 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
+<./img/schema_carte_1.png, id=107, 450.68375pt x 446.66875pt>
+File: ./img/schema_carte_1.png Graphic file (type png)
+<use ./img/schema_carte_1.png>
+Package pdftex.def Info: ./img/schema_carte_1.png  used on input line 34.
+(pdftex.def)             Requested size: 318.66948pt x 315.84888pt.
 [4
-pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.97 	\item[$\Rightarrow$]
-                           Item 1]) (./chapitres/etat_art.tex
+
+]
+<./img/schema_carte_2.png, id=114, 498.86375pt x 456.70625pt>
+File: ./img/schema_carte_2.png Graphic file (type png)
+<use ./img/schema_carte_2.png>
+Package pdftex.def Info: ./img/schema_carte_2.png  used on input line 40.
+(pdftex.def)             Requested size: 318.66948pt x 291.74744pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--51
+\T1/lmtt/m/n/12 ros . org / blog / 2020 / 08 / 27 / esp32$[][] \T1/lmr/m/n/12 )
+.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--51
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1040,88 +1033,56 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5]
-Chapitre 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--19
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--38
-\T1/lmtt/m/n/12 blog / 2020 / 08 / 27 / esp32$[][] \T1/lmr/m/n/12 ).
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--48
+[5 <./img/schema_carte_1.png> <./img/schema_carte_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 52--61
 \T1/lmr/m/n/12 tique et d'IoT.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--48
-
- []
-
-[6
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 49--55
-\T1/lmr/m/n/12 sante pour ali-men-ter les deux cartes.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--55
+Underfull \hbox (badness 10000) in paragraph at lines 52--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 62--68
+\T1/lmr/m/n/12 suf-fi-sante pour ali-men-ter les deux cartes.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 \T1/lmr/m/n/12 dows.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
 
-Overfull \hbox (16.2496pt too wide) in paragraph at lines 67--70
+Overfull \hbox (16.2496pt too wide) in paragraph at lines 78--81
 []\T1/lmr/m/n/12 Suivre la do-cu-men-ta-tion sui-vante : [][]$\T1/lmtt/m/n/12 h
 ttps : / / docs . ros . org / en / rolling / Installation /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--70
+Underfull \hbox (badness 10000) in paragraph at lines 78--81
 \T1/lmtt/m/n/12 Ubuntu-[]Install-[]Debians . html$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--70
+Underfull \hbox (badness 10000) in paragraph at lines 78--81
 
  []
 
 
-Overfull \hbox (58.02116pt too wide) in paragraph at lines 80--81
-\T1/lmr/m/n/12 tions du site Web de ROS ([][]$\T1/lmtt/m/n/12 https : / / index
- . ros . org / doc / ros2 / Installation / Windows-[]Support/$[][]\T1/lmr/m/n/1
-2 ).
- []
-
-
-Overfull \hbox (117.48917pt too wide) in paragraph at lines 82--83
-\T1/lmr/m/n/12 du site Web de ROS ([][]$\T1/lmtt/m/n/12 https : / / index . ros
- . org / doc / ros2 / Installation / Windows-[]Environment-[]Variables/$[][]\T1
-/lmr/m/n/12 ).
+Overfull \hbox (1.22198pt too wide) in paragraph at lines 92--95
+[]\T1/lmr/m/n/12 Créez un en-vi-ron-ne-ment de dé-ve-lop-pe-ment ROS2 en uti-li
+-sant l'ou-til "ament" ([][]$\T1/lmtt/m/n/12 https :
  []
 
 
@@ -1132,32 +1093,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7]
-
-LaTeX Warning: Citation `NOM05' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation `NOM12' on page 8 undefined on input line 89.
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 115--118
+\T1/lmtt/m/n/12 0ca459c32ec5ead8700284ff56a136f7$[][]
+ []
 
 
-LaTeX Warning: Citation `WEB13' on page 8 undefined on input line 89.
+Underfull \hbox (badness 10000) in paragraph at lines 115--118
 
+ []
 
-LaTeX Warning: Citation `NOM09' on page 8 undefined on input line 89.
-
-
-LaTeX Warning: Citation `NOM07' on page 8 undefined on input line 89.
-
-File: ./img/logo_equipe_robotique_exploration.png Graphic file (type png)
-<use ./img/logo_equipe_robotique_exploration.png>
-Package pdftex.def Info: ./img/logo_equipe_robotique_exploration.png  used on i
-nput line 94.
-(pdftex.def)             Requested size: 136.57462pt x 146.13063pt.
-File: ./img/logo_equipe_robotique_exploration.png Graphic file (type png)
-<use ./img/logo_equipe_robotique_exploration.png>
-Package pdftex.def Info: ./img/logo_equipe_robotique_exploration.png  used on i
-nput line 100.
-(pdftex.def)             Requested size: 136.57462pt x 146.13063pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1166,43 +1111,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.108 A
-       t vero eos et accusamus et iusto odio dignissimos ducimus qui blandit...
-] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-)
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 114.
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 132.
-
-(./src/helloWorld.c)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[9]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[10]) (./chapitres/etude_faisabilite.tex
+[7]) (./chapitres/etude_faisabilite.tex
 Chapitre 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--11
@@ -1211,58 +1120,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--11
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--28
+Underfull \hbox (badness 10000) in paragraph at lines 20--26
 \T1/lmr/m/n/12 pannes que l'ar-chi-tec-ture mo-no-li-thique de ROS.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--28
+Underfull \hbox (badness 10000) in paragraph at lines 20--26
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--35
+Underfull \hbox (badness 10000) in paragraph at lines 27--33
 
  []
 
-[11
+[8
 
 
 ]
-<./img/sit.png, id=191, 194.7275pt x 142.5325pt>
+<./img/sit.png, id=160, 194.7275pt x 142.5325pt>
 File: ./img/sit.png Graphic file (type png)
 <use ./img/sit.png>
-Package pdftex.def Info: ./img/sit.png  used on input line 53.
+Package pdftex.def Info: ./img/sit.png  used on input line 51.
 (pdftex.def)             Requested size: 136.57462pt x 99.96997pt.
-<./img/stand.png, id=192, 194.7275pt x 143.53625pt>
+<./img/stand.png, id=161, 194.7275pt x 143.53625pt>
 File: ./img/stand.png Graphic file (type png)
 <use ./img/stand.png>
-Package pdftex.def Info: ./img/stand.png  used on input line 62.
+Package pdftex.def Info: ./img/stand.png  used on input line 60.
 (pdftex.def)             Requested size: 136.57462pt x 100.67398pt.
-<./img/turn_left_1.png, id=193, 787.94376pt x 114.4275pt>
+<./img/turn_left_1.png, id=162, 787.94376pt x 114.4275pt>
 File: ./img/turn_left_1.png Graphic file (type png)
 <use ./img/turn_left_1.png>
-Package pdftex.def Info: ./img/turn_left_1.png  used on input line 77.
+Package pdftex.def Info: ./img/turn_left_1.png  used on input line 75.
 (pdftex.def)             Requested size: 364.19667pt x 52.8887pt.
-<./img/turn_left_2.png, id=194, 655.44875pt x 115.43124pt>
+<./img/turn_left_2.png, id=163, 655.44875pt x 115.43124pt>
 File: ./img/turn_left_2.png Graphic file (type png)
 <use ./img/turn_left_2.png>
-Package pdftex.def Info: ./img/turn_left_2.png  used on input line 78.
+Package pdftex.def Info: ./img/turn_left_2.png  used on input line 76.
 (pdftex.def)             Requested size: 364.19667pt x 64.13907pt.
-<./img/rave_1.png, id=195, 631.35875pt x 110.4125pt>
+<./img/rave_1.png, id=164, 631.35875pt x 110.4125pt>
 File: ./img/rave_1.png Graphic file (type png)
 <use ./img/rave_1.png>
-Package pdftex.def Info: ./img/rave_1.png  used on input line 87.
+Package pdftex.def Info: ./img/rave_1.png  used on input line 85.
 (pdftex.def)             Requested size: 364.19667pt x 63.69221pt.
-<./img/rave_2.png, id=196, 635.37375pt x 114.4275pt>
+<./img/rave_2.png, id=165, 635.37375pt x 114.4275pt>
 File: ./img/rave_2.png Graphic file (type png)
 <use ./img/rave_2.png>
-Package pdftex.def Info: ./img/rave_2.png  used on input line 88.
+Package pdftex.def Info: ./img/rave_2.png  used on input line 86.
 (pdftex.def)             Requested size: 364.19667pt x 65.59276pt.
-<./img/rave_3.png, id=197, 791.95876pt x 113.42375pt>
+<./img/rave_3.png, id=166, 791.95876pt x 113.42375pt>
 File: ./img/rave_3.png Graphic file (type png)
 <use ./img/rave_3.png>
-Package pdftex.def Info: ./img/rave_3.png  used on input line 89.
+Package pdftex.def Info: ./img/rave_3.png  used on input line 87.
 (pdftex.def)             Requested size: 364.19667pt x 52.15997pt.
 
 
@@ -1273,50 +1182,50 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12
+[9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.92 \end{figure}
-                 
+l.91 
+     
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.92 \end{figure}
-                 
+l.91 
+     
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.92 \end{figure}
-                  <./img/sit.png> <./img/stand.png> <./img/turn_left_1.png> <./
-img/turn_left_2.png>]
-<./img/flex.png, id=210, 313.17pt x 113.42375pt>
+l.91 
+      <./img/sit.png> <./img/stand.png> <./img/turn_left_1.png> <./img/turn_lef
+t_2.png>]
+<./img/flex.png, id=179, 313.17pt x 113.42375pt>
 File: ./img/flex.png Graphic file (type png)
 <use ./img/flex.png>
-Package pdftex.def Info: ./img/flex.png  used on input line 98.
+Package pdftex.def Info: ./img/flex.png  used on input line 96.
 (pdftex.def)             Requested size: 273.14923pt x 98.93227pt.
-<./img/hello.png, id=211, 473.77pt x 112.42pt>
+<./img/hello.png, id=180, 473.77pt x 112.42pt>
 File: ./img/hello.png Graphic file (type png)
 <use ./img/hello.png>
-Package pdftex.def Info: ./img/hello.png  used on input line 107.
+Package pdftex.def Info: ./img/hello.png  used on input line 105.
 (pdftex.def)             Requested size: 273.14923pt x 64.81596pt.
-<./img/applaud_sym.png, id=212, 633.36626pt x 111.41624pt>
+<./img/applaud_sym.png, id=181, 633.36626pt x 111.41624pt>
 File: ./img/applaud_sym.png Graphic file (type png)
 <use ./img/applaud_sym.png>
-Package pdftex.def Info: ./img/applaud_sym.png  used on input line 116.
+Package pdftex.def Info: ./img/applaud_sym.png  used on input line 115.
 (pdftex.def)             Requested size: 273.14923pt x 48.05084pt.
-<./img/applaud_wave_1.png, id=213, 633.36626pt x 113.42375pt>
+<./img/applaud_wave_1.png, id=182, 633.36626pt x 113.42375pt>
 File: ./img/applaud_wave_1.png Graphic file (type png)
 <use ./img/applaud_wave_1.png>
-Package pdftex.def Info: ./img/applaud_wave_1.png  used on input line 125.
+Package pdftex.def Info: ./img/applaud_wave_1.png  used on input line 124.
 (pdftex.def)             Requested size: 364.19667pt x 65.2216pt.
-<./img/applaud_wave_2.png, id=214, 632.3625pt x 114.4275pt>
+<./img/applaud_wave_2.png, id=183, 632.3625pt x 114.4275pt>
 File: ./img/applaud_wave_2.png Graphic file (type png)
 <use ./img/applaud_wave_2.png>
-Package pdftex.def Info: ./img/applaud_wave_2.png  used on input line 126.
+Package pdftex.def Info: ./img/applaud_wave_2.png  used on input line 125.
 (pdftex.def)             Requested size: 364.19667pt x 65.90355pt.
 
 
@@ -1327,51 +1236,51 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13
+[10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.129 \end{figure}
-                  
+l.129 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.129 \end{figure}
-                  
+l.129 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.129 \end{figure}
-                  
+l.129 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.129 \end{figure}
-                   <./img/rave_1.png> <./img/rave_2.png> <./img/rave_3.png> <./
-img/flex.png> <./img/hello.png> <./img/applaud_sym.png>]
-<./img/applaud.png, id=229, 315.1775pt x 115.43124pt>
+l.129 
+       <./img/rave_1.png> <./img/rave_2.png> <./img/rave_3.png> <./img/flex.png
+> <./img/hello.png> <./img/applaud_sym.png>]
+<./img/applaud.png, id=198, 315.1775pt x 115.43124pt>
 File: ./img/applaud.png Graphic file (type png)
 <use ./img/applaud.png>
-Package pdftex.def Info: ./img/applaud.png  used on input line 135.
+Package pdftex.def Info: ./img/applaud.png  used on input line 134.
 (pdftex.def)             Requested size: 136.57462pt x 50.01843pt.
-<./img/sputnik.png, id=230, 791.95876pt x 109.40875pt>
+<./img/sputnik.png, id=199, 791.95876pt x 109.40875pt>
 File: ./img/sputnik.png Graphic file (type png)
 <use ./img/sputnik.png>
-Package pdftex.def Info: ./img/sputnik.png  used on input line 144.
+Package pdftex.def Info: ./img/sputnik.png  used on input line 143.
 (pdftex.def)             Requested size: 364.19667pt x 50.3136pt.
-<./img/cross_1.png, id=231, 472.76625pt x 112.42pt>
+<./img/cross_1.png, id=200, 472.76625pt x 112.42pt>
 File: ./img/cross_1.png Graphic file (type png)
 <use ./img/cross_1.png>
-Package pdftex.def Info: ./img/cross_1.png  used on input line 153.
+Package pdftex.def Info: ./img/cross_1.png  used on input line 152.
 (pdftex.def)             Requested size: 364.19667pt x 86.60483pt.
-<./img/cross_2.png, id=232, 472.76625pt x 112.42pt>
+<./img/cross_2.png, id=201, 472.76625pt x 112.42pt>
 File: ./img/cross_2.png Graphic file (type png)
 <use ./img/cross_2.png>
-Package pdftex.def Info: ./img/cross_2.png  used on input line 154.
+Package pdftex.def Info: ./img/cross_2.png  used on input line 153.
 (pdftex.def)             Requested size: 364.19667pt x 86.60483pt.
 
 
@@ -1382,55 +1291,55 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14
+[11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.158 
+l.157 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.158 
+l.157 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.158 
+l.157 
        <./img/applaud_wave_1.png> <./img/applaud_wave_2.png> <./img/applaud.png
 > <./img/sputnik.png>]
-<./img/bolting.png, id=244, 658.46pt x 115.43124pt>
+<./img/bolting.png, id=213, 658.46pt x 115.43124pt>
 File: ./img/bolting.png Graphic file (type png)
 <use ./img/bolting.png>
-Package pdftex.def Info: ./img/bolting.png  used on input line 163.
+Package pdftex.def Info: ./img/bolting.png  used on input line 162.
 (pdftex.def)             Requested size: 364.19667pt x 63.84668pt.
-<./img/winx_1.png, id=245, 473.77pt x 114.4275pt>
+<./img/winx_1.png, id=214, 473.77pt x 114.4275pt>
 File: ./img/winx_1.png Graphic file (type png)
 <use ./img/winx_1.png>
-Package pdftex.def Info: ./img/winx_1.png  used on input line 172.
+Package pdftex.def Info: ./img/winx_1.png  used on input line 171.
 (pdftex.def)             Requested size: 273.14923pt x 65.97339pt.
-<./img/winx_2.png, id=246, 314.17375pt x 113.42375pt>
+<./img/winx_2.png, id=215, 314.17375pt x 113.42375pt>
 File: ./img/winx_2.png Graphic file (type png)
 <use ./img/winx_2.png>
-Package pdftex.def Info: ./img/winx_2.png  used on input line 173.
+Package pdftex.def Info: ./img/winx_2.png  used on input line 172.
 (pdftex.def)             Requested size: 273.14923pt x 98.61728pt.
-<./img/winx_3.png, id=247, 473.77pt x 114.4275pt>
+<./img/winx_3.png, id=216, 473.77pt x 114.4275pt>
 File: ./img/winx_3.png Graphic file (type png)
 <use ./img/winx_3.png>
-Package pdftex.def Info: ./img/winx_3.png  used on input line 174.
+Package pdftex.def Info: ./img/winx_3.png  used on input line 173.
 (pdftex.def)             Requested size: 273.14923pt x 65.97339pt.
-<./img/pls_1.png, id=248, 475.7775pt x 115.43124pt>
+<./img/pls_1.png, id=217, 475.7775pt x 115.43124pt>
 File: ./img/pls_1.png Graphic file (type png)
 <use ./img/pls_1.png>
-Package pdftex.def Info: ./img/pls_1.png  used on input line 183.
+Package pdftex.def Info: ./img/pls_1.png  used on input line 182.
 (pdftex.def)             Requested size: 273.14923pt x 66.2738pt.
-<./img/pls_2.png, id=249, 474.77374pt x 114.4275pt>
+<./img/pls_2.png, id=218, 474.77374pt x 114.4275pt>
 File: ./img/pls_2.png Graphic file (type png)
 <use ./img/pls_2.png>
-Package pdftex.def Info: ./img/pls_2.png  used on input line 184.
+Package pdftex.def Info: ./img/pls_2.png  used on input line 183.
 (pdftex.def)             Requested size: 273.14923pt x 65.83545pt.
 
 
@@ -1441,50 +1350,61 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15
+[12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.188 
+l.187 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.188 
+l.187 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.13})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.188 
+l.187 
        <./img/cross_1.png> <./img/cross_2.png> <./img/bolting.png> <./img/winx_
 1.png> <./img/winx_2.png> <./img/winx_3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 199--204
+Overfull \hbox (15.05612pt too wide) in paragraph at lines 192--197
+\T1/lmtt/m/n/12 arduino / blob / galactic / examples / micro-[]ros _ publisher 
+_ wifi / micro-[]ros _ publisher _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
 \T1/lmr/m/n/12 triques (par exemple, la ro-ta-tion, la trans-la-tion, l'échelle
 ).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--204
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--211
+Underfull \hbox (badness 10000) in paragraph at lines 211--217
 \T1/lmr/m/n/12 notre bat-te-rie sur l'arai-gnée.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--211
+Underfull \hbox (badness 10000) in paragraph at lines 211--217
 
  []
 
-<./img/coque.png, id=263, 333.245pt x 157.58875pt>
+<./img/coque.png, id=234, 333.245pt x 157.58875pt>
 File: ./img/coque.png Graphic file (type png)
 <use ./img/coque.png>
-Package pdftex.def Info: ./img/coque.png  used on input line 217.
+Package pdftex.def Info: ./img/coque.png  used on input line 223.
 (pdftex.def)             Requested size: 136.57462pt x 64.58534pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1494,63 +1414,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16
+[13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.14})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.229 	\item[$\bullet$]
-                        sur Mac, il y avait un problÃ¨me de dÃ©pendance pyth...
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.15})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.229 	\item[$\bullet$]
-                        sur Mac, il y avait un problÃ¨me de dÃ©pendance pyth...
- <./img/pls_1.png> <./img/pls_2.png> <./img/coque.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 233--236
+l.227 
+       <./img/pls_1.png> <./img/pls_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 239--242
 \T1/lmr/m/n/12 cker pour ROS 2.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--236
+Underfull \hbox (badness 10000) in paragraph at lines 239--242
 
  []
 
 
-Overfull \hbox (43.41846pt too wide) in paragraph at lines 237--247
-\T1/lmtt/m/n/12 galactic / examples / micro-[]ros _ publisher _ wifi / micro-[]
-ros _ publisher _ wifi . ino$[][]\T1/lmr/m/n/12 ) L'exemple
- []
-
-
-Overfull \hbox (3.00311pt too wide) in paragraph at lines 249--250
+Overfull \hbox (3.00311pt too wide) in paragraph at lines 251--252
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-51.
+53.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 254--256
-\T1/lmr/m/n/12 Cette in-ter-rup-tion per-met d'ac-ti-ver les in-ter-rup-tions d
-e ti-mer.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--256
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
 
  []
 
-
-Overfull \hbox (2.44038pt too wide) in paragraph at lines 257--259
+)
+Overfull \hbox (2.44038pt too wide) in paragraph at lines 260--137
 \T1/lmr/m/n/12 les ser-vo-mo-teurs : RP2040_ISR_Servo ([][]$\T1/lmtt/m/n/12 htt
 ps : / / github . com / khoih-[]prog / RP2040 _ ISR _
  []
 
-) (./chapitres/conclusion.tex
+(./chapitres/conclusion.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1559,7 +1459,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17]
+[14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.15})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2 	\chapter
+             {Conclusion} <./img/coque.png>]
 Chapitre 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--10
@@ -1576,142 +1482,160 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--17
 
  []
 
-) (./chapitres/glossary.tex [18
+) (./chapitres/glossary.tex [15
 
-]) (./chapitres/bibliography.tex [19
+]) (./chapitres/bibliography.tex [16
 
 ]
-Overfull \hbox (59.38095pt too wide) in paragraph at lines 6--8
-[][][]$\T1/lmtt/m/n/12 https : / / learn . sunfounder . com / category / quadru
-ped-[]crawling-[]robot-[]v2-[]0-[]for-[]arduino/$[][]
+Overfull \hbox (12.45802pt too wide) in paragraph at lines 5--8
+[]\T1/lmr/m/n/12 Documentation de la carte Ar-duino Nano RP2040 : [][]$\T1/lmtt
+/m/n/12 https : / / docs . arduino . cc / static /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--8
-
+Underfull \hbox (badness 10000) in paragraph at lines 5--8
+\T1/lmtt/m/n/12 56034f29d9e2bd28f4fd3c90268d0557 / ABX00053-[]datasheet . pdf$[
+][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-[][][]$\T1/lmtt/m/n/12 https : / / micro . ros . org/$[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
+Underfull \hbox (badness 10000) in paragraph at lines 5--8
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
-[][][]$\T1/lmtt/m/n/12 https : / / github . com / micro-[]ROS / micro _ ros _ a
-rduino$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+[]\T1/lmr/m/n/12 Tuto et kit ro-bot arai-gnée :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
-
+Overfull \hbox (41.75613pt too wide) in paragraph at lines 9--13
+[][]$\T1/lmtt/m/n/12 https : / / learn . sunfounder . com / category / quadrupe
+d-[]crawling-[]robot-[]v2-[]0-[]for-[]arduino/$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
-[][][]$\T1/lmtt/m/n/12 https : / / github . com / micro-[]ROS / micro _ ros _ e
-spidf _ component$[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
-[][][]$\T1/lmtt/m/n/12 https : / / docs . arduino . cc / hardware / nano-[]rp20
-40-[]connect$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+[]\T1/lmr/m/n/12 Site of-fi-ciel de Mi-cro ROS : [][]$\T1/lmtt/m/n/12 https : /
+ / micro . ros . org/$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--23
-[][][]$\T1/lmtt/m/n/12 https : / / store . arduino . cc / products / portenta-[
-]h7$[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--23
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-[][][]$\T1/lmtt/m/n/12 https : / / micro . ros . org / blog / 2020 / 08 / 27 / 
-esp32/$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
+\T1/lmtt/m/n/12 arduino$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-[][][]$\T1/lmtt/m/n/12 https : / / husarnet . com / blog / esp32-[]microros$[][
-]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
-[][][]$\T1/lmtt/m/n/12 https : / / www . hadabot . com / setup-[]esp32-[]to-[]w
-ork-[]with-[]ros2 . html$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
+\T1/lmtt/m/n/12 micro _ ros _ espidf _ component$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
-
- []
-
-
-Overfull \hbox (1.80592pt too wide) in paragraph at lines 33--35
-[][][]$\T1/lmtt/m/n/12 https : / / docs . ros . org / en / humble / Installatio
-n / Ubuntu-[]Install-[]Debians . html$[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--35
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--38
-[][][]$\T1/lmtt/m/n/12 https : / / gist . github . com / Redstone-[]RM/$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 26--29
+\T1/lmtt/m/n/12 nano-[]rp2040-[]connect$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--38
+Underfull \hbox (badness 10000) in paragraph at lines 26--29
+
+ []
+
+
+Overfull \hbox (37.23183pt too wide) in paragraph at lines 30--33
+[]\T1/lmr/m/n/12 Page Ar-duino de la carte Por-tenta H7 : [][]$\T1/lmtt/m/n/12 
+https : / / store . arduino . cc / products / portenta-[]h7$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
+\T1/lmtt/m/n/12 micro . ros . org / blog / 2020 / 08 / 27 / esp32/$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
+
+ []
+
+
+Overfull \hbox (42.81691pt too wide) in paragraph at lines 38--41
+[]\T1/lmr/m/n/12 Tutoriel pour mettre Mi-cro ROS sur l'ESP32 : [][]$\T1/lmtt/m/
+n/12 https : / / husarnet . com / blog / esp32-[]microros$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+\T1/lmtt/m/n/12 setup-[]esp32-[]to-[]work-[]with-[]ros2 . html$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--49
+\T1/lmtt/m/n/12 Installation / Ubuntu-[]Install-[]Debians . html$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
+\T1/lmtt/m/n/12 com / Redstone-[]RM/$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
 )
-Overfull \hbox (57.38095pt too wide) in paragraph at lines 39--175
-[][][]$\T1/lmtt/m/n/12 https : / / github . com / micro-[]ROS / micro _ ros _ a
-rduino / blob / galactic / examples / micro-[]ros _
+Overfull \hbox (10.42401pt too wide) in paragraph at lines 54--165
+[]\T1/lmr/m/n/12 Exemple code mi-cro ROS wifi : [][]$\T1/lmtt/m/n/12 https : / 
+/ github . com / micro-[]ROS / micro _ ros _ arduino /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--175
-\T1/lmtt/m/n/12 publisher _ wifi / micro-[]ros _ publisher _ wifi . ino$[][]
+Overfull \hbox (15.05612pt too wide) in paragraph at lines 54--165
+\T1/lmtt/m/n/12 blob / galactic / examples / micro-[]ros _ publisher _ wifi / m
+icro-[]ros _ publisher _ wifi . ino$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--175
+Underfull \hbox (badness 10000) in paragraph at lines 54--165
 
  []
 
@@ -1720,41 +1644,36 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[20
+[17
 
 ] (./squelette_rapport.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `squelette_rapport.out' has not changed.
 (rerunfilecheck)             Checksum: A70614276F8F6423C1C7DF0ECEEB0EA7;2251.
  ) 
 Here is how much of TeX's memory you used:
- 24154 strings out of 478268
- 404068 string characters out of 5846346
- 990144 words of memory out of 5000000
- 41844 multiletter control sequences out of 15000+600000
- 545448 words of font info for 72 fonts, out of 8000000 for 9000
+ 23899 strings out of 478268
+ 401129 string characters out of 5846346
+ 750403 words of memory out of 5000000
+ 41621 multiletter control sequences out of 15000+600000
+ 537550 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,12n,101p,1141b,1460s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,11n,91p,1141b,1253s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
-/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/
-texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist
+/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2
+022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist
 /fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/pu
 blic/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lm
-bxi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2022/texmf-
-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts
-/type1/public/lm/lmtk10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
-lic/lm/lmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmt
-t12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on squelette_rapport.pdf (21 pages, 10523374 bytes).
+csc10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-d
+ist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2022/texmf-dist/fonts/
+type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/u
+rw/times/utmr8a.pfb>
+Output written on squelette_rapport.pdf (18 pages, 10981680 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
- 290 compressed objects within 3 object streams
- 78 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 259 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 256 words of extra memory for PDF output out of 10000 (max. 10000000)
 

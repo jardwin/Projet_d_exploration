@@ -2,7 +2,6 @@
 	\chapter{Introduction}
 	%-----------------------
 
-Introduction du document - 	
 ROS2 (Robot Operating System) est un système d'exploitation open source pour les robots. 
 Il est conçu pour faciliter le développement de logiciels pour les robots en offrant des bibliothèques, 
 des outils et des standards communs pour la robotique. ROS2 offre une infrastructure logicielle pour la programmation de robots, 
@@ -11,25 +10,22 @@ la planification et l'exécution de tâches, la visualisation de données, et bi
 ROS2 est utilisé dans de nombreux types de robots, des petits robots de service aux grands robots industriels. 
 \linebreak
 
-Micro-ROS est une version légère de ROS2 (Robot Operating System) conçue pour fonctionner sur des systèmes embarqués avec 
+Micro-ROS est une version légère de ROS2 conçue pour fonctionner sur des systèmes embarqués avec 
 des ressources limitées en termes de calcul et de mémoire. Micro-ROS offre une infrastructure logicielle pour la programmation 
 de robots embarqués, y compris des fonctionnalités similaires à celles de ROS2, telles que la communication entre les composants 
-logiciels, la gestion des données, la planification et l'exécution de tâches, et bien plus encore. 
-Micro-ROS est conçu pour être facile à utiliser et à intégrer dans des projets de robotique embarquée, en offrant une grande 
+logiciels, la gestion des données, la planification et l'exécution de tâches. 
+Micro-ROS est conçu pour être facile à utiliser et à intégrer dans des projets de robotique embarqué, en offrant une grande 
 flexibilité et une grande efficacité en termes de ressources. 
 \linebreak
 
 Le but de notre projet était d’explorer les différentes options qui nous permettraient d’adapter le code des araignées 
-mécanique sur l’architecture micro-Ros. 
+mécaniques sur l’architecture Micro-Ros. 
 \linebreak
 
 Il y a plusieurs avantages à utiliser Micro-ROS pour programmer une araignée mécanique. 
 Tout d'abord, Micro-ROS est conçu pour fonctionner sur des systèmes embarqués avec des ressources limitées en termes 
 de calcul et de mémoire, ce qui est idéal pour une araignée mécanique qui a des contraintes en termes de taille et de poids. 
-En outre, Micro-ROS offre une infrastructure logicielle pour la programmation de robots, y compris des fonctionnalités telles 
-que la communication entre les composants logiciels, la gestion des données, la planification et l'exécution de tâches, 
-et bien plus encore. Cela peut faciliter le développement de logiciels pour la robotique en offrant des bibliothèques, des outils 
-et des standards communs pour la robotique. 
+En outre, Micro-ROS offre une infrastructure logicielle pour la programmation de robots. 
 Enfin, Micro-ROS est une version légère de ROS2, ce qui signifie qu'il est moins gourmand en ressources que ROS2 tout en offrant 
 les mêmes fonctionnalités de base. Cela peut améliorer les performances de l'araignée mécanique en utilisant moins de ressources 
 pour exécuter le logiciel. 
@@ -38,84 +34,3 @@ pour exécuter le logiciel.
 Dans ce rapport, nous allons présenter toutes les recherches que nous avons effectué pendant ce projet, les différentes 
 solutions que nous avons conceptualisées ainsi que la solution que nous avons choisie et sa mise en œuvre. 
 \linebreak
-
-----
-
-Nous avons qu'une personne a installé Micro ROS sur une Arduino Portenta et une carte Arduino RP2040 (\url{https://www.youtube.com/watch?v=mq1uFGsYqeU}).
-Nous avons aussi pensé à utiliser une carte ESP qui transmette les commandes à la carte Arduino fournie mais l'alimentation ne serait probablement pas suffisante.
-
-// mettre le schéma de la carte
-https://docs.arduino.cc/static/56034f29d9e2bd28f4fd3c90268d0557/ABX00053-datasheet.pdf
-
-L'étape suivante était de générer l'agent Micro ROS et le lancer. On peut retrouver à cet effet un tutoriel à cette adresse :
-\url{https://gist.github.com/Redstone-RM/0ca459c32ec5ead8700284ff56a136f7}\linebreak
-
-Nous avons testé la connection wifi entre l'agent sur l'ordinateur et la carte en utilisant le code example de la librarie micro ROS :
-\url{https://github.com/micro-ROS/micro_ros_arduino/blob/galactic/examples/micro-ros_publisher_wifi/micro-ros_publisher_wifi.ino}
-L'exemple initie la connexion wifi et envoie un message à la carte.
-Lorsque la connexion wifi échoue, la diode sur la carte se met à clignoter de manière intempestive.\linebreak
-
-Pour reset la mémoire de la carte, il faut soit tambouriner le bouton, soit appuyer longtemps. (à confirmer)
-
-Exemple tableau \& table : 
-
-\begin{tabular}{|l|c|r|}
-	\hline \textbf{case 00} & \textbf{case 01} & \textbf{case 03} \\
-	\hline case 10 & case 11 & case 13 \\ 
-	case 20 & case 21 & case 23 \\ 
-	case 20 & case 21 & case 33 \\ 
-	\hline
-\end{tabular}
-
-\begin{table}
-\begin{center}
-	\begin{tabular}{|c|c|}
-		\hline case 00 & case 01 \\
-		\hline case 10 & case 11 \\ 
-		\hline 
-	\end{tabular}
-	\caption{Légende du tableau}
-\end{center}
-\end{table}
-
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-
-Test des listes : 
-
-\begin{itemize}
-	\item Item 1
-	\item Item 2
-	\item Item 3
-	\item ...
-\end{itemize}
-
-
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-
-\begin{itemize}
-	\item[$\Rightarrow$] Item 1
-	\item[$\bullet$] Item 2
-	\item[$\circ$] Item 3
-	\item[$\times$] Item 4
-	\item[$\surd$] ...
-\end{itemize}
-
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. 
-
-\begin{enumerate}
-	\item Item 1
-	\item Item 2
-	\item ...
-\end{enumerate}
-
-Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
-
-\begin{enumerate}[a)]
-	\item Item 1
-	\item Item 2
-	\item ...
-\end{enumerate}
-
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-

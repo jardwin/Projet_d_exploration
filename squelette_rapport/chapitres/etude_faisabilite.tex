@@ -3,7 +3,7 @@
 	%-----------------------
 
 Nous avons accompli notre objectif qui était de synchroniser les mouvements de plusieurs araignées 
-entre elle grâce à Micro-ROS.
+entre elles grâce à Micro-ROS.
 Une démo peut être consultée à cette adresse : \url{https://www.youtube.com/watch?v=Oyxngs2QC1o}.
 \linebreak
 L'araignée est contrôlée par une manette Xbox et il est possible d'augmenter ou diminuer la vitesse des mouvements en appuyant sur 
@@ -12,8 +12,6 @@ les joysticks.
 		%-----------------------
 		\section{Implémentation technique}
 		%-----------------------
-
-// A confirmer / compléter par notre expert Merlin
 
 			%-----------------------
 			\subsection{Les différences entre ROS et ROS2}
@@ -37,7 +35,7 @@ Enfin, ROS et ROS2 diffèrent également en termes de langages de programmation 
 ROS prend en charge principalement le langage de programmation C++, bien qu'il soit également possible de l'utiliser avec d'autres 
 langages tels que Python. ROS2 prend en charge plusieurs langages de programmation, tels que C++, Python, Java, et bien d'autres. 
 De plus, ROS utilise principalement le système de build Catkin pour la compilation et l'intégration de logiciels, alors que 
-ROS2 utilise l'outil de buildmentament Colcon. 
+ROS2 utilise l'outil de build Colcon. 
 
 			%-----------------------
 			\subsection{Les mouvements de l'araignée}
@@ -109,7 +107,8 @@ hello : fait un salut
 	\end{center}
 \end{figure}
 
-applaud sym : l'araignée simule un applaudissement en levant lève d'abord deux pattes en diagonale et les repose puis lève et repose les deux autres
+applaud sym : l'araignée simule un applaudissement en levant d'abord deux pattes en diagonale et les repose puis lève et 
+repose les deux autres
 
 \begin{figure}[H]
 	\begin{center}
@@ -190,7 +189,14 @@ pls : position par défaut, araignée écrasée
 		\section{Synchronisation arraignées}
 		%-----------------------
 
-Les arraignées sont synchros. Elles sont connectés par wifi à l'ordinateur qui envoient les messages en UDP.
+Nous avons testé la connexion wifi entre l'agent sur l'ordinateur et la carte en utilisant le code example de la librarie micro ROS :
+\url{https://github.com/micro-ROS/micro_ros_arduino/blob/galactic/examples/micro-ros_publisher_wifi/micro-ros_publisher_wifi.ino}
+L'exemple initie la connexion wifi et envoie un message à la carte.
+Lorsque la connexion wifi échoue, la diode sur la carte se met à clignoter de manière intempestive.
+\linebreak
+
+Nous avons ensuite travaillé sur la synchronisation des arraignées : elles sont connectés par wifi à l'ordinateur qui envoient 
+les messages en UDP.
 
 		%-----------------------
 		\section{Construction de la coque}
@@ -238,11 +244,7 @@ Nous avons également dû utiliser l’IDE Platform IO (compatible Windows, Mac 
 car impossible d'utiliser l'Arduino IDE car il manquait un time.h.
 PlatformIO est designé pour faire marcher énormément de cartes et il faut donc spécifier la carte sur laquelle on travaille. 
 Il se charge ensuite de récupèrer les libraries.
-L’étape suivante était de générer l’agent Micro-ROS et le lancer.  
-Nous avons testé la connexion wifi entre l’agent sur l’ordinateur et la carte en utilisant le code exemple de la libraire micro-ROS : 
-(\url{https://github.com/micro-ROS/micro_ros_arduino/blob/galactic/examples/micro-ros_publisher_wifi/micro-ros_publisher_wifi.ino}) 
-L’exemple initie la connexion wifi et envoie un message à la carte. Lorsque la connexion wifi échoue, la diode sur la carte se 
-met à clignoter de manière intempestive. Nous avons testé ensuite le code de l’araignée SEALK pour tester les mouvements mais le code 
+Nous avons ensuite installé l’agent Micro-ROS et testé le code de l’araignée SEALK pour tester les mouvements mais le code 
 fourni ne marchait pas sur la carte. En effet, nous avions le problème de compilation suivant :  
 
 \begin{lstlisting}
@@ -251,10 +253,9 @@ that depend on a template parameter, so a declaration of 'sei'
 must be available [-fpermissive]
 sei();
 \end{lstlisting}
-Cette interruption permet d'activer les interruptions de timer.
+Cette instruction permet d'activer les interruptions de timer.
+Nous avons donc dû utiliser notre code que nous avons fait en cours avec les TP pour les mouvements de l'araignée.
 \linebreak
 
-Nous avons également dû utiliser la librarie suivante pour faire marcher correctement les servomoteurs : RP2040\_ISR\_Servo (\url{https://github.com/khoih-prog/RP2040_ISR_Servo}) 
+Nous avons également dû utiliser la librarie suivante pour faire marcher correctement les servomoteurs : RP2040\_ISR\_Servo (\url{https://github.com/khoih-prog/RP2040_ISR_Servo}).
 En effet, les mouvements envoient une instruction en dehors de la loop principale.
-
-
